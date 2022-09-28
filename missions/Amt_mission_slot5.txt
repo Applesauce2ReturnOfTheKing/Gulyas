@@ -1,0 +1,149 @@
+ARB_slot5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag  = ARB
+	}
+	ARB_Control_Beyliks= {
+		required_missions = {}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 327
+				province_id = 2302
+				area = aydin_area
+				area = dulkadir_area
+				area = erzurum_area
+				area = karaman_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			aydin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			dulkadir_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			erzurum_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			karaman_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			327 = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2302 = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			anatolia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			151 = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	ARB_Conquest_Of_Constantinople = {
+		required_missions = {ARB_Control_Beyliks}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 151
+				region = anatolia_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			anatolia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			151 = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			caucasia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	ARB_Nothern_Defense = {
+		required_missions = {ARB_Conquest_Of_Constantinople}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1856 
+				province_id = 421
+				region = caucasia_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			1856 = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			421 = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 14
+				OR = {
+					region = caucasia_region
+				}
+			}
+		}
+		effect = {
+			caucasia_region = {
+				type = all
+				add_province_modifier = {
+					name = ARB_Northern_Defense
+					duration = 7300
+				}
+			}
+			anatolia_region = {
+				type = all
+				add_province_modifier = {
+					name = ARB_Northern_Defense
+					duration = 7300
+				}
+			}
+			151 = {
+				add_province_modifier = {
+					name = ARB_Northern_Defense
+					duration = 7300
+				}
+			}
+		}
+	}
+}

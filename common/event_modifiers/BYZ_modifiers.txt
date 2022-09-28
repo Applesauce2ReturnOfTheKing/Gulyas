@@ -1,0 +1,11 @@
+the_macedonian_copper = {
+	trade_goods_size = 1
+}
+
+izmir_cotton_plants = {
+	trade_goods_size = 2
+}
+
+constatinople_manufactures = {
+	trade_goods_size = 1
+}

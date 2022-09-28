@@ -1,0 +1,23 @@
+ARB_tech_redux = {#2.5% research cost reduction
+	technology_cost = -0.025
+}
+ARB_Silk_Roads_Secured = {#caravan power +10% 
+	caravan_power = 0.1
+}
+ARB_Europe_Blockaded = {#10% trade eff
+	trade_efficiency = 0.1
+}
+ARB_East_African_Gold = {#-0,10 yearly inflation 
+	inflation_reduction = 0.1
+}
+ARB_Northern_Defense = {#autonomy reduction - 0,15 and missionary strenght +2%
+	local_autonomy = -0.15
+	local_missionary_strength = 0.02
+}
+ARB_Arabian_Prosperity = {#2.5% prod efficiency, 5% manpower in arabia
+	local_manpower_modifier = 0.05
+	local_production_efficiency = 0.025
+}
+ARB_Arabian_Renaissance = {
+	great_project_upgrade_cost = -0.25
+}

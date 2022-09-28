@@ -1,0 +1,99 @@
+country_decisions = {
+	form_anglo_dutch_union = {
+	major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+				primary_culture = english
+			}
+			was_never_end_game_tag_trigger = yes
+			NOT = { exists = ADC }
+			NOT = { tag = GER }
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			NOT = { tag = FRE }
+			NOT = { has_country_flag = formed_anglo_dutch_union_flag }
+			was_never_end_game_tag_trigger = yes
+		}
+		allow = {
+			owns_core_province = 236
+			owns_core_province = 238
+			owns_core_province = 235
+			owns_core_province = 97
+			owns_core_province = 4383
+			owns_core_province = 96
+			owns_core_province = 90
+			owns_core_province = 92
+			owns_core_province = 98
+			is_at_war = no
+			is_subject = no
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 236
+				province_id = 238
+				province_id = 235
+				province_id = 97
+				province_id = 4383
+				province_id = 96
+				province_id = 90
+				province_id = 92
+				province_id = 98
+			}
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = ADC
+			add_prestige = 25
+			add_dip_power = 25
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						is_part_of_hre = yes
+					}
+					is_elector = no
+					is_emperor = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			low_countries_region = {
+				add_permanent_claim = ADC
+			}
+			british_isles_region = {
+				add_permanent_claim = ADC
+			}
+			normandy_area = {
+				add_permanent_claim = ADC
+			}
+			hidden_effect = {
+				if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+				}
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+	}
+}

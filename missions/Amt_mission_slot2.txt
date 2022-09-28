@@ -1,0 +1,38 @@
+ARB_slot2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag  = ARB
+	}
+	ARB_Arabian_Renaissance = {
+		required_missions = {}
+		trigger = {#every province in arabia 20 dev
+			arabia_region = {
+				type = all
+				development = 20
+			}
+		}
+		effect = {#Kaaba to level 3, 7500 ducats else
+			add_country_modifier = {
+				name = ARB_Arabian_Renaissance
+				duration = 7300
+			}
+		}
+	}
+	ARB_Arabian_Prosperity = {
+		required_missions = {ARB_Arabian_Renaissance, ARB_Trade_Hegemony}
+		trigger = {
+		}
+		effect = {#2.5% prod efficiency, 5% manpower in arabia
+			arabia_region = {
+				type = all
+				add_province_modifier =  {
+					name = ARB_Arabian_Prosperity
+					duration = -1
+				}
+			}
+		}
+	}
+}

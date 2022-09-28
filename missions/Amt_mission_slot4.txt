@@ -1,0 +1,66 @@
+ARB_slot4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag  = ARB
+	}
+	ARB_Somalian_Trade = {
+		required_missions = {}
+		provinces_to_highlight = {
+			region = horn_of_africa_region
+			is_city  = yes
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			horn_of_africa_region = {
+				type = all
+				if = {
+					limit = {
+						is_city = yes
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			east_africa_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	ARB_East_Africa_Gold = {
+		required_missions = {ARB_Somalian_Trade}
+		provinces_to_highlight = {
+			region = east_africa_region
+			is_city  = yes
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			east_africa_region = {
+				type = all
+				if = {
+					limit = {
+						is_city = yes
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ARB_East_African_Gold
+				duration = 18250
+			}
+		}
+	}
+}

@@ -1,0 +1,82 @@
+country_decisions = {
+	form_latin_empire = {
+	major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { exists = LAE }
+			NOT = { tag = BYZ }
+			NOT = { tag = TUR }
+			OR = {
+				AND = {
+					OR = {
+						culture_group = french
+						culture_group = latin
+						culture_group = germanic
+						culture_group = iberian
+						culture_group = british
+					}
+					owns_core_province = 151
+				}
+				tag = KNI
+			}
+			NOT = { has_country_flag = formed_latin_empire_flag }
+		}
+		allow = {
+			thrace_area = {
+				type = all
+				owned_by = ROOT
+			}
+			hudavendigar_area = {
+				type = all
+				owned_by = ROOT
+			}
+			is_at_war = no
+			is_subject = no
+			religion_group = christian
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = thrace_area
+				area = hudavendigar_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			custom_tooltip = "byz_legitimacy_questioned"
+			if = {
+				limit = {
+					OR = {
+						was_never_end_game_tag_trigger = no
+						tag = GER
+						tag = HLR
+						tag = PAP
+						tag = FRE
+					}
+				}
+				add_prestige = 100
+				add_papal_influence = 100
+				add_church_power = 100
+				add_devotion = 100
+				thrace_area = {
+					add_core = LAE
+				}
+				hudavendigar_area = {
+					add_core = LAE
+				}
+				hidden_effect = {
+					every_known_country = {
+						limit = {
+							religion = ROOT
+							NOT = { is_rival = ROOT }
+							has_opinion = {
+								who = ROOT
+								value = -10
+							}
+						}
+						}
+					}
+				}
+			remove_country_modifier = orgd_army 
+		}
+	}
+}

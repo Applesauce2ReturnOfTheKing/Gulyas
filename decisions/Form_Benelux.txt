@@ -1,0 +1,119 @@
+country_decisions = {
+	form_benelux = {
+	major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				primary_culture = flemish
+				primary_culture = wallonian
+				primary_culture = dutch
+			}
+			NOT = { exists = BLX }
+			NOT = { tag = GER }
+			NOT = { tag = HLR }
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			NOT = { tag = FRE }
+			NOT = { tag = LOT }
+			NOT = { has_global_flag = disabled_minor }
+			NOT = { has_country_flag = formed_benelux_flag }
+			was_never_end_game_tag_trigger = yes
+		}
+		allow = {
+			flanders_area  = {
+				type = all
+				owned_by = ROOT
+			}
+			wallonia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			holland_area = {
+				type = all
+				owned_by = ROOT
+			}
+			north_brabant_area = {
+				type = all
+				owned_by = ROOT
+			}
+			frisia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			is_at_war = no
+			is_subject = no
+			adm_tech = 10
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = flanders_area 
+				area = wallonia_area
+				area = holland_area
+				area = north_brabant_area
+				area = frisia_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = BLX
+			add_prestige = 25
+			92 = { #Braban/Brussels
+				move_capital_effect = yes
+				add_base_tax = 2
+				add_base_production = 2
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			change_government = republic
+			add_government_reform = merchants_reform
+			picardy_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = {
+						province_id = 89
+					}
+				}
+				add_permanent_claim = NED
+			}
+			if = {
+				limit = {
+				primary_culture = flemish
+				}
+				add_accepted_culture = wallonian
+				add_accepted_culture = dutch
+			}
+			if = {
+				limit = {
+				primary_culture = wallonian
+				}
+				add_accepted_culture = flemish
+				add_accepted_culture = dutch
+			}
+			if = {
+				limit = {
+				primary_culture = dutch
+				}
+				add_accepted_culture = flemish
+				add_accepted_culture = wallonian
+			}
+			hidden_effect = {
+				set_country_flag = formed_benelux_flag
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+				tag = BUR
+				tag = NED
+				}
+			}
+		}
+	ai_importance = 400
+	}
+}

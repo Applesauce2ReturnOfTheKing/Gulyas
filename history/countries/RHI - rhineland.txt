@@ -1,0 +1,9 @@
+government = monarchy
+add_government_reform = administrative_monarchy
+government_rank = 1
+primary_culture = hessian
+religion = catholic
+technology_group = western
+capital = 80 
+
+

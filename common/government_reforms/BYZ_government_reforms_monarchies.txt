@@ -1,0 +1,22 @@
+
+byzantine_government = {
+	icon = "byzantine_government"
+	allow_normal_conversion = yes
+	legacy_equivalent = byzantine_government_legacy
+	valid_for_nation_designer = yes
+	potential = {
+		OR = {
+			tag = BYZ
+			was_tag = BYZ
+			has_reform = byzantine_government
+			have_had_reform = byzantine_government
+		}
+	}
+	monarchy = yes
+	nation_designer_cost = 30
+	modifiers = {
+		governing_capacity = 250
+		legitimacy = 1
+		development_cost = -0.05
+	}
+}

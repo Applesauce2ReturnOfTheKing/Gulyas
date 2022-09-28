@@ -1,0 +1,158 @@
+country_decisions = {
+
+	latinian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_latinia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = LAT }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			OR = {
+				culture_group = latin
+				culture_group = iberian
+			}	
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 15
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					region = italy_region
+					root = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 20
+								region = italy_region
+								is_core = root
+							}
+						}
+						owns_core_province = 101	
+						owns_core_province = 104	
+						owns_core_province = 116	
+						owns_core_province = 118
+						owns_core_province = 121
+						owns_core_province = 125
+					}
+				}
+				AND = {
+					region = iberia_region
+					root = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 20
+								region = iberia_region
+								is_core = root
+							}
+						}
+						owns_core_province = 213
+						owns_core_province = 220
+					}
+				}
+				province_id = 101	# Genoa
+				province_id = 104	# Milan
+				province_id = 116	# Firenze
+				province_id = 118	# Roma
+				province_id = 121	# Naples
+				province_id = 125	# Palermo
+				province_id = 213	# Barcelona
+				province_id = 220	# Valencia
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 20
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 101	# Genoa
+			owns_core_province = 104	# Milan
+			owns_core_province = 116	# Firenze
+			owns_core_province = 118	# Roma
+			owns_core_province = 121	# Naples
+			owns_core_province = 125	# Palermo
+			owns_core_province = 213	# Barcelona
+			owns_core_province = 220	# Valencia
+			num_of_owned_provinces_with = {
+				value = 20
+				region = italy_region
+				is_core = root
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				region = iberia_region
+				is_core = root
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+					is_emperor = no
+				}
+				emperor = {
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}
+				}
+				set_in_empire = no
+				emperor = {
+					country_event = { id = hre_event.5 }
+				}
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_in_empire = no
+				set_government_rank = 3
+			}
+			change_tag = LAT
+			#this is so that a tier 1 reform is always selected, preventing the user from just never selecting one and enjoying loads of absolutism
+			italy_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = LAT
+			}
+			iberia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = LAT
+			}
+			add_prestige = 25
+			LAT = {
+				set_capital = 118
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			swap_non_generic_missions = no
+			set_country_flag = formed_latinia_flag
+			remove_country_modifier = orgd_army 
+		}
+	}
+}

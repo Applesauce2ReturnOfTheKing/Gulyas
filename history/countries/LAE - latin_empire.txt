@@ -1,0 +1,9 @@
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = greek
+religion = catholic
+technology_group = eastern
+historical_rival = BYZ
+historical_friend = PAP
+historical_friend = FRA
+capital = 151

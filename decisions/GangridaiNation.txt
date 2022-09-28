@@ -1,0 +1,131 @@
+country_decisions = {
+
+	gangaridai_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_gangaridai_flag }
+			NOT = { has_country_flag = formed_india_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = GGR }
+			NOT = { tag = HIN }
+			NOT = { tag = BHA }
+			culture_group = eastern_aryan
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 50
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					region = bengal_region
+					root = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 25
+								region = bengal_region
+								is_core = root
+							}
+						}
+					}
+				}
+				AND = {
+					region = burma_region
+					root = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 15
+								region = burma_region
+								is_core = root
+							}
+						}
+					}
+				}
+				province_id = 555	# Jaunpur
+				province_id = 552	# Cuttack
+				province_id = 584	# Ava
+				province_id = 586	# Pegu
+				province_id = 596	# Melaka
+				province_id = 2673	# Pasai
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_nomad = no
+			stability = 3
+			owns_core_province = 555	# Jaunpur
+			owns_core_province = 552	# Cuttack
+			owns_core_province = 584	# Ava
+			owns_core_province = 586	# Pegu
+			owns_core_province = 596	# Melaka
+			owns_core_province = 2673	# Pasai
+			num_of_owned_provinces_with = {
+				value = 25
+				region = bengal_region
+				is_core = root
+			}
+			num_of_owned_provinces_with = {
+				value = 15
+				region = burma_region
+				is_core = root
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_in_empire = no
+				set_government_rank = 3
+			}
+			remove_non_electors_emperors_from_empire_effect = yes
+			change_tag = GGR
+			#this is so that a tier 1 reform is always selected, preventing the user from just never selecting one and enjoying loads of absolutism
+			bengal_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GGR
+			}
+			burma_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GGR
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			swap_non_generic_missions = no
+			set_country_flag = formed_gangaridai_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

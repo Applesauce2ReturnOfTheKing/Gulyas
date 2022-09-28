@@ -1,0 +1,103 @@
+country_decisions = {
+	form_angevin_empire = {
+	major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { exists = ANG }
+			NOT = { tag = HLR }
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			NOT = { tag = FRE }
+			OR = {
+				culture_group = british				
+			}
+			NOT = { has_country_flag = formed_angevin_empire_flag }
+			was_never_end_game_tag_trigger = yes
+		}
+		allow = {
+			owns_core_province = 236
+			owns_core_province = 183
+			owns_core_province = 238
+			owns_core_province = 245
+			owns_core_province = 244
+			owns_core_province = 177
+			owns_core_province = 174
+			owns_core_province = 167
+			owns_core_province = 180
+			owns_core_province = 172
+			owns_core_province = 169
+			is_at_war = no
+			is_subject = no
+			adm_tech = 20
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 236
+				province_id = 183
+				province_id = 238
+				province_id = 245
+				province_id = 244
+				province_id = 177
+				province_id = 174
+				province_id = 167
+				province_id = 180
+				province_id = 172
+				province_id = 169
+			}
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = ANG
+			set_government_rank = 4
+			add_prestige = 50
+			change_government = monarchy
+			add_government_reform = english_monarchy
+			change_primary_culture = english
+			add_accepted_culture = cosmopolitan_french
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_country_modifier = {
+				name = "angevin_empire_restored"
+				duration = 7300
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}			
+			236 = {
+				move_capital_effect = yes
+				add_base_tax = 4
+				add_base_production = 4
+			}
+			if = {
+				limit = {
+					exists = FRA
+					ile_de_france_area = {
+						controlled_by = FRA
+					}
+				}
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					target = FRA
+					months = -1
+				}
+				else = {
+					france_region = {
+						add_permanent_claim = ANG
+					}
+				}
+			}
+			british_isles_region = {
+				add_permanent_claim = ANG
+			}
+			hidden_effect = {
+				add_accepted_culture = gascon
+				add_historical_rival = FRA
+				set_country_flag = formed_angevin_empire_flag
+			}
+			remove_country_modifier = orgd_army 
+		}
+	}
+}

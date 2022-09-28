@@ -1,0 +1,74 @@
+country_decisions = {
+	form_intermarium = {
+	major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				tag = POL
+				tag = LIT
+				tag = HUN
+				tag = MOL
+				tag = PLC
+				tag = MAZ
+			}
+			NOT = { exists = INT }
+			NOT = { tag = GER }
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			NOT = { tag = BYZ }
+			NOT = { has_global_flag = disabled_minor }
+			NOT = { has_country_flag = formed_intermarium_flag }
+		}
+		allow = {
+			OR = {
+				AND = {
+					poland_region = {
+						type = all
+						owned_by = ROOT
+					}
+					ruthenia_region = {
+						type = all
+						owned_by = ROOT
+					}
+					baltic_region = {
+						type = all
+						owned_by = ROOT
+					}
+					carpathia_region = {
+						type = all
+						owned_by = ROOT
+					}
+				}
+			}
+			is_at_war = no
+			is_subject = no
+			adm_tech = 20
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = poland_region
+				region = ruthenia_region
+				region = baltic_region
+				region = carpathia_region
+			}
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = INT
+			add_prestige = 50
+			set_government_rank = 3
+			add_dip_power = 50
+			change_government = monarchy
+			add_government_reform = elective_monarchy
+			hidden_effect = {
+				add_accepted_culture = lithuanian
+				add_accepted_culture = prussian
+				add_accepted_culture = byelorussian
+				add_accepted_culture = latvian
+				add_accepted_culture = hungarian
+				set_country_flag = formed_intermarium_flag
+			}
+		}
+	ai_importance = 400
+	}
+}

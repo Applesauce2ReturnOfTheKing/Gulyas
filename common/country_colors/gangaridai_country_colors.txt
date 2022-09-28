@@ -1,0 +1,6 @@
+# Gangaridai
+GGR = {
+color1= { 200 100 25 }
+color2= { 200 100 25 }
+color3= { 200 100 25 }
+}

@@ -1,0 +1,10 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 4
+technology_group = western
+primary_culture = lombard
+add_accepted_culture = neapolitan
+add_accepted_culture = venetian
+add_accepted_culture = aragonese
+religion = catholic
+capital = 118 #Roma

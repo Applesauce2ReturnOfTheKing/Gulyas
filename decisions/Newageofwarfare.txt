@@ -1,0 +1,32 @@
+country_decisions = {	
+	org_the_army = {
+	major = yes
+		potential = {
+			mil_tech = 23
+			NOT = { has_country_modifier = orgd_army }
+			NOT = { tag = DUM }
+			NOT = { tag = GER }
+			NOT = { tag = AUH }
+			NOT = { tag = LAT }
+			NOT = { tag = FRE }
+			NOT = { tag = ANG }
+			NOT = { tag = LAE }
+			NOT = { tag = SCA }
+			
+		}
+		allow = {
+			mil_tech = 23
+			army_professionalism = 0.25
+		}
+		effect = {
+			add_country_modifier = {
+				name = "orgd_army"
+				duration = -1
+			}
+			set_country_flag = orgd_army_activated
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

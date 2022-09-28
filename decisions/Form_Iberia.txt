@@ -1,0 +1,47 @@
+country_decisions = {
+	form_iberia = {
+	major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { exists = IBE }
+			NOT = { tag = GER }
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			NOT = { tag = FRE }
+			NOT = { tag = FRA }
+			culture_group = iberian
+			NOT = { has_country_flag = formed_iberia_flag }
+		}
+		allow = {
+			iberia_region = {
+				type = all
+				owned_by = ROOT
+			}
+			is_at_war = no
+			is_subject = no
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = iberia_region
+			}
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = IBE
+			add_prestige = 50
+			set_government_rank = 3
+			add_dip_power = 50
+			217 = {
+				move_capital_effect = yes
+				add_base_production = 1
+				add_base_tax = 1
+				add_base_manpower = 1
+			}
+			hidden_effect = {
+				set_country_flag = formed_iberia_flag
+				add_historical_rival = FRA
+			}
+		}
+	ai_importance = 400
+	}
+}

@@ -1,0 +1,91 @@
+country_decisions = {
+	form_carthage = {
+	major = yes
+		potential = {
+			NOT = { exists = CTG }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { tag = GER }
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			NOT = { tag = FRE }
+			owns_core_province = 341
+			NOT = { has_country_flag = formed_carthage_flag }
+		}
+		allow = {
+			tunisia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			djerba_area = {
+				type = all
+				owned_by = ROOT
+			}
+			kabylia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			barbary_coast_area = {
+				type = all
+				owned_by = ROOT
+			}
+			tripolitania_area = {
+				type = all
+				owned_by = ROOT
+			}
+			upper_andalucia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			western_sicily_area = {
+				type = all
+				owned_by = ROOT
+			}
+			is_at_war = no
+			is_subject = no
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = djerba_area
+				area = tunisia_area
+				area = kabylia_area
+				area = barbary_coast_area
+				area = tripolitania_area
+				area = upper_andalucia_area
+				area = western_sicily_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = CTG
+			add_prestige = 25
+			set_government_rank = 3
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			341 = {
+				move_capital_effect = yes
+				add_base_tax = 3
+				add_base_manpower = 3
+				add_base_production = 3
+			}
+			sicily_area = {
+				add_core = CTG
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 }
+			}
+			hidden_effect = {
+				set_country_flag = formed_carthage_flag
+				add_historical_rival = ROM
+			}
+		}
+		ai_will_do = {
+		factor = 1
+		}
+	}
+}

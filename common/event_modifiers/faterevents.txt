@@ -1,0 +1,21 @@
+angevin_empire_restored = {
+	legitimacy = 1
+	land_morale = 0.1
+}
+carthage_monarchy_mod = {
+	yearly_absolutism = 0.1
+	mercenary_discipline = 0.025
+}
+carthage_republic_mod = {
+	diplomatic_upkeep = 2
+	vassal_income = 0.1
+}
+dual_monarchy_founded = {
+	legitimacy = 1
+	artillery_cost = -0.2
+	diplomatic_annexation_cost = -0.2
+}
+
+orgd_army = {
+	discipline = 0.05
+}

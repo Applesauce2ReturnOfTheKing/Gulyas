@@ -1,0 +1,107 @@
+country_decisions = {
+	form_dual_monarchy = {
+	major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				tag = HAB
+				tag = HUN
+			}
+			NOT = { exists = AUH }
+			NOT = { tag = GER }
+			NOT = { tag = HLR }
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			NOT = { tag = FRE }
+			NOT = { has_country_flag = formed_dual_monarchy_flag }			
+		}
+			
+		allow = {
+			is_at_war = no
+			adm_tech = 20
+			OR = {
+				AND = {
+					owns_core_province = 134
+					owns_core_province = 128
+					owns_core_province = 153
+					owns_core_province = 154
+					owns_core_province = 157
+				}
+				OR = {
+					AND = {
+						tag = HAB
+						OR = {
+							HUN = {
+								is_subject_of = HAB
+									years_in_vassalage_under = {
+									who = HAB
+									years = 25
+								}
+							}
+							HUN = {
+								is_subject_of = HAB
+								years_in_union_under = {
+									who = HAB
+									years = 25
+								}
+							}
+						}
+					}	
+					AND = {
+						tag = HUN
+						OR = {
+							HAB = {
+								is_subject_of = HUN
+								years_in_vassalage_under = {
+									who = HUN
+									years = 25
+								}
+							}
+							HAB = {
+								is_subject_of = HUN
+								years_in_union_under = {
+									who = HUN
+									years = 25
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			change_tag = AUH
+			set_government_rank = 4
+			add_prestige = 30
+			add_imperial_influence = 15
+			153 = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+				set_local_autonomy = 0
+			}
+			134 = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+				set_local_autonomy = 0
+			}	
+			remove_country_modifier = orgd_army 			
+			carinthia_area = {
+				add_permanent_claim = AUH
+			}
+			venetia_area = {
+				add_permanent_claim = AUH
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 }
+			}
+			hidden_effect = {
+				add_accepted_culture = hungarian
+				set_country_flag = formed_dual_monarchy_flag
+			}
+		}
+	}
+}

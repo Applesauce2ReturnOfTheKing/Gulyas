@@ -1,0 +1,59 @@
+country_decisions = {
+	form_rhineland = {
+	major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primary_culture = hessian
+
+			NOT = { exists = RHI }
+			NOT = { tag = GER }
+			NOT = { tag = HLR }
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			NOT = { tag = FRE }
+			NOT = { tag = LOT }
+		}
+		allow = {
+			north_rhine_area = {
+				type = all
+				owned_by = ROOT
+			}
+			lower_rhineland_area = {
+				type = all
+				owned_by = ROOT
+			}
+			upper_rhineland_area = {
+				type = all
+				owned_by = ROOT
+			}
+			hesse_area = {
+				type = all
+				owned_by = ROOT
+			}
+			palatinate_area = {
+				type = all
+				owned_by = ROOT
+			}
+			is_at_war = no
+			is_subject = no
+			adm_tech = 5
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = north_rhine_area
+				area = lower_rhineland_area
+				area = hesse_area
+				area = upper_rhineland_area
+				area = palatinate_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = RHI
+			add_prestige = 25
+			change_government = monarchy
+			add_government_reform = plutocratic_reform
+		}
+	ai_importance = 400
+	}
+}

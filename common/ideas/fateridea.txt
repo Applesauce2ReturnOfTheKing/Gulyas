@@ -1,0 +1,764 @@
+CAN_ideas = {
+	start = {
+		trade_efficiency = 0.15
+		land_attrition = -0.25
+	}
+	
+	bonus = {
+		land_morale = 0.15
+	}
+	
+	trigger = {
+		tag = CAN
+	}
+	free = yes
+	
+		
+	singing_lumberjacks = {
+		production_efficiency = 0.15
+	}	
+	the_hudson_bay_company = {
+		merchants = 1
+		trade_steering = 0.15
+	}
+    settling_the_interior = {
+		colonists = 1
+		global_colonial_growth = 20
+	}
+	the_maritimes = {
+		global_trade_goods_size_modifier = 0.15
+	}
+	the_quebec_act = {
+		build_cost = -0.10
+		development_cost = -0.1
+	}
+	legacy_of_the_empire = {
+		republican_tradition = 0.5
+		legitimacy = 1
+	}
+	the_forests_of_canada = {
+		tolerance_heretic = 3
+	}
+}
+VNZ_ideas = {
+	start = {
+		land_morale = 0.1
+		global_regiment_cost = -0.1
+	}
+	
+	bonus = {
+		development_cost = -0.1
+	}
+	
+	trigger = {
+		tag = VNZ
+	}
+	free = yes
+	
+	VNZ_colonies = {
+		global_colonial_growth = 15
+		native_uprising_chance = -0.5
+		native_assimilation = 0.5
+	}	
+	VNZ_tech_cost = {
+		mil_tech_cost_modifier = -0.1
+	}
+    VNZ_shock_dmg = {
+		shock_damage = 0.1
+	}
+	VNZ_leader_shock = {
+		idea_cost = -0.1
+	}
+	VNZ_manpower = {
+		manpower_recovery_speed = 0.15
+		land_attrition = -0.1
+	}
+	VNZ_tax_modifier = {
+		global_tax_modifier = 0.15
+	}
+	VNZ_religion_unity = {
+		religious_unity = 0.25
+		tolerance_heretic = 1
+	}
+}
+CUB_ideas = {
+	start = {
+		merchants = 1
+		navy_tradition = 1.0
+	}
+	
+	bonus = {
+		artillery_fire = 1
+	}
+	
+	trigger = {
+		tag = CUB
+	}
+	free = yes
+	
+		
+	CUB_trade_eff = {
+		trade_efficiency = 0.15
+	}	
+	CUB_cot_upgrade = {
+		center_of_trade_upgrade_cost = -0.3
+	}
+    CUB_navy_tradition = {
+		navy_tradition_decay = -0.01
+		flagship_cost = -0.5
+	}
+	CUB_trade_power = {
+		global_ship_trade_power = 0.1
+		global_trade_power = 0.1
+	}
+	CUB_ships = {
+		leader_naval_manuever = 1
+		ship_durability = 0.05
+	}
+	CUB_army_quality = {
+		infantry_power = 0.15
+	}
+	CUB_naval_morale = {
+		naval_morale = 0.15
+		land_morale = 0.10
+	}
+}
+LAP_ideas = {
+	start = {
+		production_efficiency = 0.1
+		global_trade_goods_size_modifier = 0.1
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+		tag = LAP
+	}
+	free = yes
+	
+		
+	LAP_reelection_cost = {
+		reelection_cost = -0.2
+		army_tradition_decay = -0.01
+	}	
+	LAP_advisor_cost = {
+		advisor_cost = -0.15
+	}
+    LAP_leader_fire = {
+		leader_land_fire = 2
+	}
+	LAP_leader_shock = {
+		leader_land_shock = 1
+		leader_land_manuever = 1
+	}
+	LAP_siege = {
+		leader_siege = 1
+		siege_ability = 0.15
+	}
+	LAP_spam_generals = {
+		may_recruit_female_generals = yes
+		general_cost = -0.2
+	}
+	LAP_shock_dmg = {
+		shock_damage_received = -0.1
+	}
+}
+
+
+GZW_ideas = {
+	start = {
+		hostile_attrition = 1.5 
+		inflation_reduction = 0.1
+	}
+	
+	bonus = {
+		land_morale = 0.16
+		global_manpower_modifier = 0.15
+	}	
+
+	trigger = {
+		tag = GZW
+	}
+	free = yes
+	
+	GZW_gold_mines = {
+		advisor_cost = -0.15
+	}
+	GZW_well_connected = {
+		tolerance_heathen = 3
+	}
+	GZW_trade = {
+		trade_efficiency = 0.10
+	}
+	GZW_strong_rulling= {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+	}
+	GZW_szyna_diplo = {
+		monarch_diplomatic_power = 1
+	}
+	GZW_a_lot__of_man_to_die = {
+		manpower_recovery_speed = 0.18
+		land_maintenance_modifier = -0.05
+	}
+	GZW_break_walls = {
+		leader_siege = 1
+		siege_ability = 0.12
+	}
+}
+LOU_ideas = {
+	start = {
+		colonists = 1
+		may_explore = yes
+	}
+	
+	bonus = {
+		cavalry_power = 0.3
+	}
+	
+	trigger = {
+		tag = LOU
+	}
+	free = yes
+	
+		
+	LOU_idea_cost = {
+		idea_cost = -0.15
+	}	
+	LOU_horses = {
+		cav_to_inf_ratio = 0.4
+	}
+    LOU_force_limit = {
+		land_forcelimit_modifier = 0.15
+		land_morale = 0.15
+	}
+	LOU_goods_produced = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	LOU_build_cost = {
+		build_cost = -0.15
+	}
+	LOU_leader = {
+		free_leader_pool = 1
+	}
+	LOU_cavalry = {
+		cavalry_cost = -0.15
+		cavalry_flanking = 0.5
+	}
+}
+PEU_ideas = {
+	start = {
+		development_cost = -0.05
+		inflation_reduction = 0.2
+	}
+	
+	bonus = {
+		artillery_power = 0.15
+	}
+	
+	trigger = {
+		tag = PEU
+	}
+	free = yes
+	
+		
+	PEU_admin_tech = {
+		adm_tech_cost_modifier = -0.1
+	}	
+	PEU_discipline_manpower = {
+		discipline = 0.05
+		global_manpower_modifier = 0.15
+	}
+    PEU_reinforce_time = {
+		reinforce_speed = 0.33
+	}
+	PEU_religion = {
+		papal_influence = 2
+		church_power_modifier = 0.2
+		monthly_fervor_increase = 0.2
+		yearly_patriarch_authority = 0.05
+	}
+	PEU_ship_cost = {
+		global_ship_cost = -0.1
+	}
+	PEU_nobility = {
+		army_tradition = 0.5
+	}
+	PEU_artilerry = {
+		backrow_artillery_damage = 0.1
+		artillery_cost = -0.1
+	}
+}
+
+AUH_ideas = {
+	start = {
+		land_morale = 0.15
+		cavalry_power = 0.20
+	}
+	bonus = {
+		monarch_diplomatic_power = 2
+		artillery_power = 0.10
+	}
+	trigger = {
+		tag = AUH
+	}
+	free = yes
+
+	auh_ecconomy = {
+		num_accepted_cultures = 2
+		production_efficiency = 0.15
+	}
+	bulwark_of_europe = {
+		culture_conversion_cost = -0.15
+		defensiveness = 0.20
+	}
+	habsburg_royalty = {
+		global_unrest = -1
+		legitimacy = 1
+	}
+	auh_dominance = {
+		diplomatic_reputation = 2
+		global_trade_goods_size_modifier = 0.10
+	}
+	patience_of_tolerance = {
+		no_religion_penalty = yes
+		global_missionary_strength = 0.02
+	}
+	hungarian_military = {
+		global_manpower_modifier = 0.30
+		land_forcelimit_modifier = 0.20
+	}
+	united_danube = {
+		discipline = 0.10
+	}
+}
+
+ADC_ideas = {
+	start = {
+		naval_morale = 0.25
+		global_sailors_modifier	 = 0.20
+	}
+	bonus = {
+		ship_durability = 0.15
+		leader_naval_fire = 3
+	}
+	trigger = {
+		tag = ADC
+	}
+	free = yes
+
+	two_trade_powers_united = {
+		trade_steering = 0.10
+		merchants = 1
+	}
+	new_world_wonders = {
+		colonists = 1
+		global_colonial_growth = 25
+	}
+	republic_or_monarchy = {
+		legitimacy = 1.5
+		republican_tradition = 1
+		years_of_nationalism = -2
+	}
+	end_of_anglo_dutch_wars = {
+		num_accepted_cultures = 2
+		stability_cost_modifier = -0.20
+	}
+	naval_protection= {
+		navy_tradition = 1
+		blockade_efficiency = 0.35
+	}
+	leading_industrialization = {
+		production_efficiency = 0.15
+		build_cost = -0.20
+	}
+	loyal_colonial_subjects = {
+		liberty_desire = -15
+		diplomatic_reputation = 2
+	}
+}
+
+
+ANG_ideas = {
+	start = {
+		land_morale = 0.15
+		infantry_power = 0.10
+	}
+	bonus = {
+		heavy_ship_power = 0.20
+		navy_tradition = 1
+	}
+	trigger = {
+		tag = ANG
+	}
+	free = yes
+
+	angevin_empire_restored_idea = {
+		legitimacy = 2
+		idea_cost = -0.10
+	}
+	english_merchants = {
+		merchants = 1
+		trade_efficiency = 0.10
+	}
+	colonial_might = {
+		global_colonial_growth = 20
+		governing_capacity_modifier = 0.15
+	}
+	new_world_wonders_idea = {
+		global_tariffs = 0.15
+		colonists = 1
+		naval_morale = 0.15
+	}
+	royal_crown = {
+		diplomatic_reputation = 1
+		fire_damage_received = -0.10
+	}
+	old_crusaders = {
+		warscore_cost_vs_other_religion = -0.15
+		discipline = 0.10
+	}
+	rule_the_waves = {
+		naval_forcelimit_modifier = 0.25
+		allowed_marine_fraction = 0.20
+	}
+}
+
+
+FRE_ideas = {
+	start = {
+		legitimacy = 1
+		army_tradition = 0.5
+	}
+	
+	bonus = {
+		global_manpower_modifier = 0.30
+		artillery_power = 0.10
+	}
+	
+	trigger = {
+		tag = FRE
+	}
+	free = yes		#will be added at load.
+	
+	localised_kingship_idea = {
+		administrative_efficiency = 0.15
+	}
+	converting_saxons_idea = {
+		global_unrest = -3
+	}
+	tributary_borders_idea = {
+		prestige = 3
+		manpower_recovery_speed = 0.15
+	}
+	magnus_rex_idea = {
+		discipline = 0.10
+	}
+	conquering_dynasty_idea = {
+		diplomatic_upkeep = 1
+	}
+	austrasian_eastern_holdings_idea = {
+		land_morale = 0.20
+	}
+	tribal_incorporation_idea = {
+		heavy_ship_power = 0.15
+	}
+}
+
+
+CTG_ideas = {
+    start = { 
+   		galley_power = 0.35
+		land_morale = 0.15
+		may_perform_slave_raid = yes
+    }
+    
+    bonus = { 
+		infantry_power = 0.10
+    }
+    
+    trigger = {
+        tag = CTG
+    }
+    free = yes        #will be added at load.
+    
+   mediterranean_vassals_idea= { 
+        liberty_desire_from_subject_development = -0.20
+        diplomatic_upkeep = 2
+    }
+    polyetheist_beliefs_idea = { 
+        tolerance_heretic = 2
+        tolerance_heathen = 2
+    }
+   restless_merchants_idea = { 
+        trade_efficiency = 0.15
+		discipline = 0.05
+    }
+    strict_payment_standards_idea = { 
+        colonists   = 1
+    }
+    merchant_marine_idea = { 
+        global_ship_trade_power = 0.2
+		privateer_efficiency = 0.20
+    }
+    hardened_crews_idea = { 
+        naval_morale = 0.20
+		navy_tradition = 1
+    }
+    chartagenian_artisans_idea = { 
+        production_efficiency = 0.15
+		naval_forcelimit_modifier = 0.30
+    }
+}
+
+
+DUM_ideas = {
+	start = {
+		global_manpower_modifier = 0.30
+		infantry_power = 0.10
+	}
+	bonus = {
+		discipline = 0.10
+		heavy_ship_power = 0.15
+	}
+	trigger = {
+		tag = DUM
+	}
+	free = yes
+
+	french_and_english_brotherhood = {
+		land_morale = 0.25
+	}
+	merchants_of_the_channel = {
+		merchants = 1
+		trade_efficiency = 0.10
+	}
+	technological_advancements_of_western_thinkers = {
+		technology_cost = -0.10
+	}
+	la_manche_rule_the_waves = {
+		naval_morale = 0.10
+		navy_tradition = 0.75
+	}
+	the_dual_ecconomy = {
+		global_trade_goods_size_modifier = 0.10
+		tolerance_own = 1
+	}
+	might_of_the_rivals = {
+		diplomatic_reputation = 1
+	}
+	 the_purple_nation= {
+		prestige = 1
+		naval_forcelimit_modifier = 0.33
+	}
+}
+
+LAT_ideas = {
+	start = {
+		num_accepted_cultures = 2
+		global_unrest = -2
+	}
+	
+	bonus = {
+		discipline = 0.1
+		ship_durability = 0.1
+	}	
+
+	trigger = {
+		tag = LAT
+	}
+	free = yes
+	
+	lat_northern_industry = {
+		production_efficiency = 0.15
+		global_trade_goods_size_modifier = 0.10
+	}
+	lat_army_of_the_latins = {
+		land_morale = 0.2
+		army_tradition_decay = -0.02
+	}
+	lat_the_center_of_the_trade = {
+		global_trade_power = 0.1
+		trade_efficiency = 0.15
+	}
+	lat_the_second_armada = {
+		navy_tradition = 1
+		naval_morale = 0.20
+	}
+	lat_legate_of_rome = {
+		religious_unity = 0.25
+		tolerance_own = 2
+	}
+	lat_the_country_of_institution = {
+		technology_cost = -0.1
+		global_institution_spread = 0.1
+		embracement_cost = -0.2
+	}
+	lat_intelectial_administration = {
+		administrative_efficiency = 0.05
+		advisor_cost = -0.2
+	}
+}
+
+LAE_ideas = {
+	start = {
+		diplomatic_reputation = 1
+		infantry_power = 0.15
+	}
+	
+	bonus = {
+		discipline = 0.10
+		
+	}
+	
+	trigger = {
+		tag = LAE
+	}
+	free = yes		#will be added at load.
+	
+	crusader_state_idea = {
+		warscore_cost_vs_other_religion = -0.25
+		cb_on_religious_enemies = yes
+	}
+	religious_traditions_idea = {
+		missionaries = 2
+	}
+	knightly_core_idea = {
+		land_morale = 0.20
+	}
+	crush_the_rump_states_idea = {
+		years_of_nationalism = -5
+		artillery_power = 0.10
+	}
+	french_bloodline_idea = {
+		legitimacy = 2
+		republican_tradition = 0.3
+		devotion = 1
+	}
+	land_of_the_romans_idea = {
+		build_cost = -0.1
+		development_cost = -0.15
+	}
+	road_to_middle_east_idea = {
+		ae_impact = -0.2
+		global_manpower_modifier = 0.25
+	}
+}
+
+GZI_ideas = {
+	start = {
+		fort_maintenance_modifier = -0.1
+		land_morale = 0.1
+	}
+
+	bonus = {
+		trade_efficiency = 0.2
+	}
+	
+	trigger = {
+		tag = GZI
+	}
+	free = yes
+	
+	gzi_stone_masonry = {
+		build_cost = -0.15
+		great_project_upgrade_cost = -0.1
+	}
+	gzi_ivory_trade = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	gzi_gold_deposits = {
+		global_tax_modifier = 0.1
+		monthly_gold_inflation_modifier = -0.2
+	}
+	gzi_zimbabwes_walls = {
+		defensiveness = 0.25
+	}
+	gzi_lay_of_the_land = {
+		hostile_attrition = 1
+	}
+	gzi_tributary_system = {
+		vassal_income = 0.2
+	}
+	gzi_zimbabwe_birds = {
+		production_efficiency = 0.1
+	}
+}
+
+ARB_ideas = {
+	start = {
+		global_missionary_strength = 0.02
+		manpower_recovery_speed = 0.1
+	}
+	bonus = {
+		global_manpower_modifier = 0.20
+	}
+	trigger = {
+		tag = AMT
+	}
+	free = yes
+	
+	amt_fundamentalists_of_arabia = {
+		discipline = 0.05
+	}
+	amt_muslim_traders = {
+		merchants = 1 
+	}
+	amt_sheeps_of_mecca = {
+		tolerance_own = 2 
+	}
+	amt_new_golden = {
+		idea_cost = -0.10
+	}
+	amt_center_m_world = {
+		advisor_cost = -0.15
+	}
+	amt_sword_of_islam = {
+		governing_capacity_modifier = 0.15
+	}
+	amt_rashidun_cavalry = {
+		fire_damage_received = -0.15
+	}
+}
+
+GGR_ideas = {
+	start = {
+		num_accepted_cultures = 2
+		build_cost = -0.1
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}	
+
+	trigger = {
+		tag = GGR
+	}
+	free = yes
+	
+	ggr_textile_market = {
+		global_trade_goods_size_modifier = 0.05
+	}
+	ggr_silk_road = {
+		global_trade_power = 0.1
+	}
+	ggr_cannon_efforts = {
+		backrow_artillery_damage = 0.10
+	}
+	ggr_recruit_musketeers = {
+		global_manpower_modifier = 0.25
+	}
+	ggr_sufy_scolars = {
+		idea_cost = -0.1
+	}
+	ggr_prestigous_leaders = {
+		land_morale = 0.15
+	}
+	ggr_encourge_townships = {
+		governing_capacity_modifier = 0.1
+		development_cost = -0.05
+	}
+}
