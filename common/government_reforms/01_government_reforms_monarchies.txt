@@ -886,7 +886,7 @@ tsardom = {
 		yearly_absolutism = 0.5
 		global_autonomy = -0.075
 		governing_capacity = 500
-		culture_conversion_cost = -0.15
+		culture_conversion_cost = -0.20
 		vassal_forcelimit_bonus = 1.5
 		global_unrest = -2
 		global_tax_modifier = 0.25
@@ -3004,9 +3004,10 @@ centralize_reform = {
 	}
 	modifiers = {
 		global_autonomy = -0.05
-		culture_conversion_cost = -0.15
+		culture_conversion_cost = -0.25
 		global_prosperity_growth = 0.75
 		province_warscore_cost = -0.10
+		years_of_nationalism = -15
 		free_adm_policy = 1
 		free_dip_policy = 1
 		free_mil_policy = 1
@@ -3108,11 +3109,12 @@ centralize_empire_reform = {
 		}
 	}
 	modifiers = {
-		global_autonomy = -0.05
+		global_autonomy = -0.075
 		autonomy_change_time = -0.25
 		culture_conversion_cost = -0.15
 		global_prosperity_growth = 0.5
-		province_warscore_cost = -0.10
+		province_warscore_cost = -0.20
+		years_of_nationalism = -10
 		free_adm_policy = 1
 		free_dip_policy = 1
 		free_mil_policy = 1
@@ -3237,6 +3239,7 @@ regional_council_reform = {
 		trade_efficiency = 0.10
 		global_autonomy = -0.025
 		core_creation = -0.10
+		years_of_nationalism = -10
 		free_adm_policy = 1
 		free_dip_policy = 1
 		free_mil_policy = 1
@@ -3864,7 +3867,7 @@ two_treatises_reform = {
 	#	}
 	#}
 	modifiers = {
-		expand_administration_cost = -1
+		expand_administration_cost = -0.5
 		yearly_corruption = -0.05
 		num_accepted_cultures = 1
 		manpower_recovery_speed = 0.1
@@ -3927,10 +3930,12 @@ letat_cest_moi_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		governing_capacity = 250
-		max_absolutism = 5
-		administrative_efficiency = 0.10
-		global_tax_modifier = 0.10
+		max_absolutism = 10
+		culture_conversion_cost = -0.35
+		administrative_efficiency = 0.15
+		global_tax_modifier = 0.15
 		manpower_in_own_culture_provinces = 0.35
+		years_of_nationalism = -10
 	}
 	ai = {
 		factor = 1.5
@@ -3949,7 +3954,7 @@ regional_representation_reform = {
 		administrative_efficiency = 0.10
 		advisor_cost = -0.10
 		global_tax_modifier = 0.20
-		manpower_in_accepted_culture_provinces = 0.25
+		manpower_in_accepted_culture_provinces = 0.20
 	}
 }
 
@@ -3958,6 +3963,9 @@ peoples_kingdom_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		possible_policy = 1
+		global_manpower_modifier = 0.20
+		global_prosperity_growth = 0.50
+		global_unrest = -2
 	}
 	ai = {
 		factor = 1
@@ -3970,7 +3978,8 @@ deified_monarchy_reform = {
 	modifiers = {
 		warscore_cost_vs_other_religion = -0.15
 		tolerance_own = 2
-		manpower_recovery_speed = 0.10
+		production_efficiency = 0.10
+		manpower_recovery_speed = 0.15
 		discipline = 0.025
 	}
 	ai = {
@@ -4039,9 +4048,11 @@ political_absolutism_reform = {
 	modifiers = {
 		max_absolutism = 5
 		yearly_absolutism = 0.5
-		local_heir_adm = 1
-		local_heir_dip = 1
-		local_heir_mil = 1
+		discipline = 0.025
+		global_tax_modifier = 0.15
+		country_diplomatic_power = 1
+		country_admin_power = 1
+		country_military_power = 1
 	}
 	ai = {
 		factor = 1.5
@@ -4059,11 +4070,14 @@ legislative_houses_reform = {
 		is_revolutionary = no
 	}
 	modifiers = {
-		possible_adm_policy = 1
+		possible_policy = 1
 		free_policy = 1
 		num_accepted_cultures = 2
 		manpower_recovery_speed = 0.10
 		infantry_power = 0.05
+		country_diplomatic_power = 1
+		country_admin_power = 1
+		country_military_power = 1
 	}
 }
 
@@ -4073,9 +4087,10 @@ presidential_monarchy_reform = {
 	modifiers = {
 		national_focus_years = -5
 		no_stability_loss_on_monarch_death = yes
-		monarch_diplomatic_power = 1
-		monarch_admin_power = 1
-		monarch_military_power = 1
+		country_diplomatic_power = 1
+		country_admin_power = 1
+		country_military_power = 1
+		land_forcelimit_modifier = 0.15
 	}
 }
 

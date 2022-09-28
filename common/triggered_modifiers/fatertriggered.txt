@@ -408,3 +408,18 @@ Defense_of_the_Rus = {
 	war_exhaustion = -0.1
 }
 
+
+fall_of_ming = {
+	potential = {
+		OR = {
+			tag = MNG
+		}
+	}
+	
+	trigger = {
+		OR = {
+			is_year = 1580
+		}
+	}
+	global_unrest = 25
+}

@@ -256,6 +256,7 @@ march = {
 	diplomacy_subject_sprite = GFX_diplomacy_weakmarch
 
 	# Properties:
+	overlord_protects_external = yes
 	pays_overlord = 0.0
 	military_focus = 1.5
 	base_liberty_desire = -15.0
@@ -265,10 +266,22 @@ march = {
 	manpower_to_overlord = 0.15
 	is_march = yes
 	forms_trade_companies = yes
+	extend_trading_range = yes
+	overlord_enforce_peace_attacking = yes
 	
 	max_government_rank = 0
 	
 	can_rival = {
+		independent_nations = yes
+		same_overlord = tributary_state
+		other_overlord = all
+	}
+	can_fight = {
+		independent_nations = yes
+		same_overlord = tributary_state
+		other_overlord = all
+	}
+	can_ally = {
 		independent_nations = yes
 		same_overlord = tributary_state
 		other_overlord = all
@@ -509,7 +522,7 @@ colony = {
 
 	liberty_desire_development_ratio = 0.1
 
-	max_government_rank = 1
+	max_government_rank = 0
 	cities_required_for_bonuses = 10
 
 	relative_power_class = 0

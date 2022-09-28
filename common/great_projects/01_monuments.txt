@@ -11,8 +11,6 @@ theodosian_walls = {
 		AND = {
 			religion_group = christian
 			has_owner_religion = yes
-			culture_group = greek
-			province_is_or_accepts_culture = yes
 		}
 	}
 
@@ -26,8 +24,6 @@ theodosian_walls = {
 		AND = {
 			religion_group = christian
 			has_owner_religion = yes
-			culture_group = greek
-			province_is_or_accepts_culture = yes
 		}
 	}
 
@@ -35,8 +31,6 @@ theodosian_walls = {
 		AND = {
 			religion_group = christian
 			has_owner_religion = yes
-			culture_group = greek
-			province_is_or_accepts_culture = yes
 		}
 	}
 
@@ -7752,9 +7746,6 @@ fire_temple_of_ateshgah = {
 
 	#can we build it?
 	build_trigger = {
-		province_is_or_accepts_religion = {
-			religion = zoroastrian
-		}
 	}
 
 	#what to do when it's built
@@ -7769,16 +7760,10 @@ fire_temple_of_ateshgah = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		province_is_or_accepts_religion = {
-			religion = zoroastrian
-		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		province_is_or_accepts_religion = {
-			religion = zoroastrian
-		}
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -12007,9 +11992,6 @@ etchimiadzin_cathedral = {
 	type = monument
 
 	build_trigger = {
-		province_is_or_accepts_religion = {
-			religion = coptic
-		}
 	}
 
 	on_built = {
@@ -12019,15 +12001,9 @@ etchimiadzin_cathedral = {
 	}
 
 	can_use_modifiers_trigger = {
-		province_is_or_accepts_religion = {
-			religion = coptic
-		}
 	}
 
 	can_upgrade_trigger = {
-		province_is_or_accepts_religion = {
-			religion = coptic
-		}
 	}
 
 	keep_trigger = {

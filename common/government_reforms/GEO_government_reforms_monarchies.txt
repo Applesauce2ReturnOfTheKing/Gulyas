@@ -30,6 +30,7 @@ georgian_monarchy = {
 		monarch_military_power = 3
 		global_unrest = -2
 		global_tax_modifier = 0.30
+		years_of_nationalism = -10
 		nobles_loyalty_modifier = 0.15
 		governing_capacity_modifier = -0.15
 		culture_conversion_cost = -0.15
@@ -42,5 +43,6 @@ georgian_monarchy = {
 	conditional = {
 		allow = { has_dlc = "Rights of Man" }
 		militarised_society = yes
+		claim_states = yes
 	}
 }

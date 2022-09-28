@@ -127,8 +127,8 @@ the_liquor_act = {
 		full_idea_group = administrative_ideas
 	}	
 	
-	recover_army_morale_speed = 0.10
-	reinforce_speed = 0.10
+	recover_army_morale_speed = 0.15
+	reinforce_speed = 0.15
 	infantry_power = 0.10
 	artillery_power = 0.10
 
@@ -151,7 +151,8 @@ horse_artillery = {
 	}
 	artillery_power = 0.10
 	siege_ability = 0.20
-	land_maintenance_modifier = -0.10
+	land_maintenance_modifier = -0.15
+	reinforce_cost_modifier = -0.10
 
 	ai_will_do = {
 		factor = 1
@@ -187,9 +188,10 @@ public_road_act = {
 		full_idea_group = trade_ideas
 	}
 	
-	movement_speed = 0.15
+	movement_speed = 0.20
 	trade_efficiency = 0.15
 	shock_damage = 0.10
+	fire_damage = 0.10
 	artillery_power = 0.10
 
 	ai_will_do = {
@@ -370,6 +372,7 @@ military_zeal_act = {
 	land_morale = 0.10
 	siege_ability = 0.10
 	discipline = 0.025
+	cavalry_power = 0.15
 
 	ai_will_do = {
 		factor = 1
@@ -604,6 +607,8 @@ the_maritime_intelligencer_unit = {
 	global_naval_engagement_modifier = 0.20
 	naval_forcelimit_modifier = 0.15
 	hostile_attrition = 1
+	sunk_ship_morale_hit_recieved = -0.25
+	recover_navy_morale_speed = 0.10
 	
 	ai_will_do = {
 		factor = 1
@@ -693,6 +698,7 @@ autonomous_estates = {
 	vassal_forcelimit_bonus = 1.5
 	land_forcelimit_modifier = 0.15
 	cav_to_inf_ratio = 0.20
+	cavalry_power = 0.15
 	army_tradition = 0.5
 	land_morale = 0.10
 	
@@ -846,8 +852,9 @@ foreign_conscription_centers = {
 	reinforce_cost_modifier = -0.35
 	diplomatic_upkeep = 1
 	vassal_forcelimit_bonus = 1.5
-	artillery_power = 0.10
+	artillery_power = 0.15
 	fire_damage = 0.10
+	shock_damage = 0.10
 	
 	ai_will_do = {
 		factor = 1
@@ -911,8 +918,9 @@ weapon_quality_standards = {
 	}
 	
 	discipline = 0.025
-	global_tax_modifier = 0.10
-	infantry_fire = 0.3
+	global_tax_modifier = 0.15
+	infantry_fire = 0.4
+	infantry_power = 0.10
 	
 	ai_will_do = {
 		factor = 2
@@ -936,7 +944,8 @@ noble_loyalty_act = {
 		full_idea_group = spy_ideas
 	}
 
-	cavalry_power = 0.15
+	cavalry_power = 0.20
+	army_tradition = 0.5
 	global_manpower_modifier = 0.25
 	global_unrest = -1
 	cav_to_inf_ratio = 0.20

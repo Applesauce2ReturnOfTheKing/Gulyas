@@ -318,7 +318,7 @@ interaction = {
 		else = {
 			add_estate_loyalty = {
 				estate = all
-				loyalty = -20
+				loyalty = -15
 				short = yes
 			}
 		}
