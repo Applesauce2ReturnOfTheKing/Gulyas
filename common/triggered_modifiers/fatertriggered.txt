@@ -421,5 +421,7 @@ fall_of_ming = {
 			is_year = 1580
 		}
 	}
-	global_unrest = 25
+	global_unrest = 30
+	technology_cost = 0.50
 }
+
