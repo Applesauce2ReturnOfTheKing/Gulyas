@@ -701,6 +701,7 @@ chaplains_of_the_fleet = {
 	
 	naval_morale = 0.15
 	recover_navy_morale_speed = 0.10
+	land_morale = 0.05
 	
 	ai_will_do = {
 		factor = 1
@@ -801,8 +802,8 @@ cultural_unity = {
 	
 	culture_conversion_cost = -0.30
 	diplomatic_reputation = 2
-	land_morale = 0.1
-	vassal_forcelimit_bonus = 1.5
+	land_morale = 0.05
+	vassal_forcelimit_bonus = 0.75
 	land_forcelimit_modifier = 0.15
 	
 	

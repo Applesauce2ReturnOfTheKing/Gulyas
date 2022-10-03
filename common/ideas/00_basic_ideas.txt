@@ -1149,7 +1149,7 @@ influence_ideas = {
 		movement_speed = 0.1
 	}
 	marcher_lords = {
-		vassal_forcelimit_bonus = 1.5
+		vassal_forcelimit_bonus = 0.75
 		discipline = 0.05
 	}
 

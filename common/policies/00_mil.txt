@@ -369,7 +369,7 @@ military_zeal_act = {
 		full_idea_group = religious_ideas
 	}
 	
-	land_morale = 0.10
+	land_morale = 0.05
 	siege_ability = 0.10
 	discipline = 0.025
 	cavalry_power = 0.15
@@ -396,7 +396,7 @@ field_priests = {
 		full_idea_group = quantity_ideas
 	}
 
-	land_morale = 0.15
+	land_morale = 0.05
 	recover_army_morale_speed = 0.15
 	manpower_in_true_faith_provinces = 0.25
 	land_maintenance_modifier = -0.1
@@ -666,7 +666,9 @@ zealous_captains = {
 	sunk_ship_morale_hit_recieved = -0.25
 	leader_naval_shock = 1
 	leader_naval_fire = 1
-	naval_forcelimit_modifier = 0.10
+	leader_land_manuever = 1
+	naval_forcelimit_modifier = 0.30
+	land_morale = 0.05
 	
 	ai_will_do = {
 		factor = 1
@@ -695,7 +697,7 @@ autonomous_estates = {
 	}	
 	
 	global_unrest = -2
-	vassal_forcelimit_bonus = 1.5
+	vassal_forcelimit_bonus = 0.5
 	land_forcelimit_modifier = 0.15
 	cav_to_inf_ratio = 0.20
 	cavalry_power = 0.15
@@ -851,7 +853,7 @@ foreign_conscription_centers = {
 	
 	reinforce_cost_modifier = -0.35
 	diplomatic_upkeep = 1
-	vassal_forcelimit_bonus = 1.5
+	vassal_forcelimit_bonus = 0.5
 	artillery_power = 0.15
 	fire_damage = 0.10
 	shock_damage = 0.10

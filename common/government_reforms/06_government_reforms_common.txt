@@ -583,6 +583,8 @@ head_of_the_reformed_church_reform = {
 		church_power_modifier = 0.1
 		monthly_fervor_increase = 0.25
 		idea_cost = -0.05
+		land_morale = 0.05
+		land_forcelimit_modifier = 0.10
 		global_missionary_strength = 0.02
 		missionaries = 2
 	}

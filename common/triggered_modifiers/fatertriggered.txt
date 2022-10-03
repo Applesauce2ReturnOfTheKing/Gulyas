@@ -27,59 +27,6 @@ inflation_lmao = {
 	build_cost = 0.5
 }
 
-empowered_subjects = {
-	potential = {
-			overlord = {
-				has_idea_group = influence_ideas
-				was_player = yes
-			}
-	}
-	trigger = {
-		overlord = {
-				has_idea_group = influence_ideas
-				OR = {
-					quality_ideas = 7
-					aristocracy_ideas  = 7
-					plutocracy_ideas = 7
-					innovativeness_ideas = 7
-					religious_ideas = 7 
-					offensive_ideas = 7
-					defensive_ideas = 7
-					economic_ideas = 7
-					quantity_ideas = 7
-					expansion_ideas = 7
-					administrative_ideas = 7
-				}
-				has_idea = tribute_system
-				was_player = yes 
-			}
-			is_march = yes
-		
-		NOT = { is_colonial_nation = yes }	
-		NOT = { is_lesser_in_union = yes }	
-	}
-	global_manpower = 15
-	global_manpower_modifier = 0.25
-	manpower_recovery_speed = 0.50
-	global_tax_income = 18
-	global_regiment_cost = -0.33
-	global_regiment_recruit_speed = -0.5
-	global_ship_cost = -0.33
-	land_forcelimit = 6
-	land_forcelimit_modifier = 0.35
-	global_unrest = -5
-	interest = -2
-	yearly_corruption = -1.0
-	war_exhaustion = -0.05
-	core_creation = -0.25
-	naval_forcelimit_modifier = 0.5
-	global_trade_goods_size_modifier = 0.10
-	idea_cost = -0.25
-	technology_cost = -0.10
-	loot_amount = 0.25
-}
-
-
 Minor = {
 	potential = {
 	OR = {
@@ -425,3 +372,207 @@ fall_of_ming = {
 	technology_cost = 0.50
 }
 
+
+empowered_subjects = {
+	potential = {
+			overlord = {
+				has_idea_group = influence_ideas
+				was_player = yes
+			}
+	}
+	trigger = {
+		AND = {
+			NOT = { total_development = 1000 }
+			overlord = {
+				has_idea_group = influence_ideas
+				OR = {
+					quality_ideas = 7
+					aristocracy_ideas  = 7
+					plutocracy_ideas = 7
+					innovativeness_ideas = 7
+					religious_ideas = 7 
+					offensive_ideas = 7
+					defensive_ideas = 7
+					economic_ideas = 7
+					quantity_ideas = 7
+					expansion_ideas = 7
+					administrative_ideas = 7
+				}
+				has_idea = tribute_system
+				was_player = yes 
+			}
+			is_march = yes
+		}
+		NOT = { is_colonial_nation = yes }	
+		NOT = { is_lesser_in_union = yes }	
+	}
+	global_manpower = 1
+	global_manpower_modifier = 0.10
+	manpower_recovery_speed = 0.10
+	global_tax_income = 10
+	global_regiment_cost = -0.15
+	global_regiment_recruit_speed = -0.2
+	global_ship_cost = -0.15
+	land_forcelimit = 6
+	land_forcelimit_modifier = 0.10
+	global_unrest = -1
+	yearly_corruption = -0.33
+	war_exhaustion = -0.02
+	core_creation = -0.10
+	naval_forcelimit_modifier = 0.3
+	global_trade_goods_size_modifier = 0.05
+	idea_cost = -0.10
+	technology_cost = -0.05
+	loot_amount = 0.10
+}
+
+empowered_subjects_2 = {
+	potential = {
+			overlord = {
+				has_idea_group = influence_ideas
+				was_player = yes
+				total_development = 1000
+			}
+	}
+	trigger = {
+		AND = {
+			NOT = { total_development = 2000 }
+			overlord = {
+				has_idea_group = influence_ideas
+				OR = {
+					quality_ideas = 7
+					aristocracy_ideas  = 7
+					plutocracy_ideas = 7
+					innovativeness_ideas = 7
+					religious_ideas = 7 
+					offensive_ideas = 7
+					defensive_ideas = 7
+					economic_ideas = 7
+					quantity_ideas = 7
+					expansion_ideas = 7
+					administrative_ideas = 7
+				}
+				has_idea = tribute_system
+				was_player = yes 
+			}
+			is_march = yes
+		}
+		NOT = { is_colonial_nation = yes }	
+		NOT = { is_lesser_in_union = yes }	
+	}
+	global_manpower = 1
+	global_manpower_modifier = 0.10
+	manpower_recovery_speed = 0.20
+	global_tax_income = 6
+	global_regiment_cost = -0.10
+	global_regiment_recruit_speed = -0.1
+	global_ship_cost = -0.10
+	land_forcelimit = 6
+	land_forcelimit_modifier = 0.10
+	global_unrest = -1
+	yearly_corruption = -0.33
+	war_exhaustion = -0.02
+	core_creation = -0.10
+	naval_forcelimit_modifier = 0.3
+	global_trade_goods_size_modifier = 0.05
+	idea_cost = -0.10
+	technology_cost = -0.05
+	loot_amount = 0.10
+}
+
+empowered_subjects_3 = {
+	potential = {
+			overlord = {
+				has_idea_group = influence_ideas
+				was_player = yes
+				total_development = 2000
+			}
+	}
+	trigger = {
+		AND = {
+			NOT = { total_development = 3000 }
+			overlord = {
+				has_idea_group = influence_ideas
+				OR = {
+					quality_ideas = 7
+					aristocracy_ideas  = 7
+					plutocracy_ideas = 7
+					innovativeness_ideas = 7
+					religious_ideas = 7 
+					offensive_ideas = 7
+					defensive_ideas = 7
+					economic_ideas = 7
+					quantity_ideas = 7
+					expansion_ideas = 7
+					administrative_ideas = 7
+				}
+				has_idea = tribute_system
+				was_player = yes 
+			}
+			is_march = yes
+		}
+		NOT = { is_colonial_nation = yes }	
+		NOT = { is_lesser_in_union = yes }	
+	}
+	global_manpower = 15
+	global_manpower_modifier = 0.15
+	manpower_recovery_speed = 0.20
+	global_tax_income = 6
+	global_regiment_cost = -0.10
+	global_regiment_recruit_speed = -0.2
+	global_ship_cost = -0.10
+	land_forcelimit = 6
+	land_forcelimit_modifier = 0.20
+	global_unrest = -3
+	interest = -2
+	yearly_corruption = -0.34
+	war_exhaustion = -0.02
+	core_creation = -0.15
+	naval_forcelimit_modifier = 0.5
+	global_trade_goods_size_modifier = 0.05
+	idea_cost = -0.10
+	technology_cost = -0.05
+	loot_amount = 0.15
+}
+
+colonisation_buff = {
+	potential = {
+			OR = {
+				has_idea_group = exploration_ideas
+				has_idea_group = expansion_ideas
+				was_player = yes
+			}
+	}
+	trigger = {
+			OR = {
+				is_year = 1610
+			}
+			AND = {
+				has_idea = global_empire
+				has_idea = competetive_merchants
+				was_player = yes 
+			}	
+	}
+	global_manpower_modifier = 0.35
+	manpower_recovery_speed = 0.35
+	global_regiment_cost = -0.10
+	global_regiment_recruit_speed = -0.2
+	global_ship_cost = -0.25
+	land_forcelimit_modifier = 0.35
+	global_unrest = -5
+	interest = -2
+	yearly_corruption = -1.0
+	war_exhaustion = -0.05
+	core_creation = -0.20
+	naval_forcelimit_modifier = 0.5
+	global_trade_goods_size_modifier = 0.10
+	loot_amount = 0.25
+	infantry_power = 0.10
+	cavalry_power = 0.10
+	artillery_power = 0.10
+	land_morale = 0.15
+	siege_ability = 0.10
+	fire_damage = 0.15
+	shock_damage = 0.15
+	discipline = 0.05
+}
