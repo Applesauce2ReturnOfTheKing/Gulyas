@@ -368,8 +368,15 @@ fall_of_ming = {
 			is_year = 1580
 		}
 	}
-	global_unrest = 30
-	technology_cost = 0.50
+	global_unrest = 35
+	technology_cost = 1.50
+	discipline = -0.2
+	land_morale = -0.20
+	yearly_corruption = 3
+	idea_cost = 1.5
+	stability_cost_modifier = 1.5
+	reinforce_speed = -0.5
+	
 }
 
 
