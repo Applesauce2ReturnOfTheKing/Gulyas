@@ -552,7 +552,7 @@ colonisation_buff = {
 	}
 	trigger = {
 			OR = {
-				is_year = 1610
+				is_year = 1500
 			}
 			AND = {
 				has_idea = global_empire

@@ -147,26 +147,34 @@ pirate_ideas = {
 	
 	pirates_religious_apathy = {
 		no_religion_penalty = yes
+		discipline = 0.05
+		light_ship_power = 0.15
 	}	
 	pirates_plunder = {
 		loot_amount = 0.25
+		merchant = 1
 	}
 	pirates_bucanneers_ideas = {	
-		infantry_cost = -0.1
+		infantry_power = 0.1
+		heavy_ship_power = 0.15
 	}
 	pirates_sail_in_consort = {
 		global_naval_engagement_modifier = 0.2
+		trade_efficiency = 0.1
+		light_ship_cost = -0.2
 	}
 	pirates_elected_quartermasters = {
 		global_unrest = -2
-		naval_morale = 0.1
+		naval_morale = 0.2
 	}
 	pirate_bays = {
 		own_coast_naval_combat_bonus = 1
+		navy_tradition = 1
 	}
 	pirate_life_of_liberty = {
 		rebel_support_efficiency = 0.25
-		sailors_recovery_speed = 0.1
+		sailors_recovery_speed = 0.25
+		development_cost = -0.05
 	}
 }
 
@@ -711,7 +719,7 @@ daimyo_ideas = {
 
 BAV_ideas = {
 	start = {
-		cavalry_power = 0.15
+		cavalry_power = 0.20
 		heir_chance = 0.6
 	}
 	

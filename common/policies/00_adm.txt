@@ -10,8 +10,8 @@ the_combination_act = {
 		full_idea_group = innovativeness_ideas
 	}
 	
-	production_efficiency = 0.20
-	development_cost = -0.10
+	production_efficiency = 0.25
+	cav_to_inf_ratio = 0.20
 
 	ai_will_do = {
 		factor = 1
@@ -52,6 +52,8 @@ the_court_of_wards_and_liveries = {
 		
 	development_cost = -0.10
 	cavalry_cost = -0.15
+	infantry_cost = -0.15
+	global_prosperity_growth = 0.5
 		
 	ai_will_do = {
 		factor = 1	
@@ -139,7 +141,7 @@ agricultural_cultivations = {
 	}		
 	
 	development_cost = -0.1
-	land_forcelimit_modifier = 0.1
+	land_forcelimit_modifier = 0.15
 
 	ai_will_do = {
 		factor = 1
@@ -204,7 +206,8 @@ manueline_architecture = {
 	}
 
 	build_cost = -0.20
-	manpower_recovery_speed = 0.05
+	manpower_recovery_speed = 0.25
+	infantry_power = 0.1
 	
 	ai_will_do = {
 		factor = 1
@@ -497,7 +500,8 @@ the_pioneer_policy = {
 
 	auto_explore_adjacent_to_colony = yes
 	colonist_placement_chance = 0.25
-	land_morale = 0.05
+	land_morale = 0.15
+	artillery_power = 0.10
 	
 	ai_will_do = {
 		factor = 0.6
@@ -691,6 +695,7 @@ the_loyalty_act = {
 	
 	global_autonomy = -0.075
 	global_spy_defence = 0.35
+	discipline = 0.5
  
 
 	ai_will_do = {
@@ -863,6 +868,7 @@ overseas_dominions = {
 	vassal_income = 0.75
 	global_tariffs = 0.35
 	diplomatic_upkeep = 1
+	discipline = 0.05
 	
 	
 	ai_will_do = {
@@ -905,6 +911,8 @@ enlightened_aristocracy = {
 	
 	production_efficiency = 0.15
 	religious_unity = 0.2
+	infantry_power = 0.15
+	land_forcelimit_modifier = 0.20
 	
 	ai_will_do = {
 		factor = 1
@@ -1112,6 +1120,8 @@ supply_convoys = {
 	
 	state_maintenance_modifier = -0.35
 	liberty_desire_from_subject_development = -0.4
+	artillery_power = 0.10
+	global_naval_engagement_modifier = 0.1
 	
 	ai_will_do = {
 		factor = 1
@@ -1326,7 +1336,7 @@ taxation_with_representation = {
 	}
 	
 	production_efficiency = 0.15
-	global_manpower_modifier = 0.2
+	global_manpower_modifier = 0.35
 
 	ai_will_do = {
 		factor = 1

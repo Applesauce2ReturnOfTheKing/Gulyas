@@ -4073,6 +4073,7 @@ legislative_houses_reform = {
 		possible_policy = 1
 		free_policy = 1
 		num_accepted_cultures = 2
+		claim_states = yes
 		manpower_recovery_speed = 0.10
 		infantry_power = 0.05
 		country_diplomatic_power = 1

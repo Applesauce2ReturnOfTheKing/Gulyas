@@ -204,8 +204,8 @@ blockaded = {
 	regiment_recruit_speed = 0.2
 	ship_recruit_speed = 0.25
 	local_monthly_devastation = 0.33
-	trade_goods_size_modifier = -0.25 
-	local_tax_modifier = -0.5
+	trade_goods_size_modifier = -0.35 
+	local_tax_modifier = -0.6
 	province_trade_power_modifier = -1
 	local_manpower_modifier = -1
 	local_sailors_modifier = -0.75
@@ -1097,7 +1097,7 @@ total_occupation = {
 }
 
 total_blockaded = {
-	war_exhaustion = 0.20					#increases exhaustion.
+	war_exhaustion = 0.25					#increases exhaustion.
 }
 
 uncontested_cores = {
