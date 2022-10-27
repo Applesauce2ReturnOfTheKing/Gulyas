@@ -298,7 +298,7 @@ AUH_ideas = {
 		land_morale = 0.15
 		cavalry_power = 0.20
 		can_recruit_hussars = yes
-		manpower_in_accepted_culture_provinces = 0.4
+		manpower_in_accepted_culture_provinces = 0.3
 	}
 	bonus = {
 		monarch_diplomatic_power = 2
@@ -315,7 +315,7 @@ AUH_ideas = {
 	}
 	bulwark_of_europe = {
 		culture_conversion_cost = -0.15
-		defensiveness = 0.20
+		defensiveness = 0.10
 	}
 	habsburg_royalty = {
 		global_unrest = -1
@@ -330,8 +330,8 @@ AUH_ideas = {
 		global_missionary_strength = 0.02
 	}
 	hungarian_military = {
-		global_manpower_modifier = 0.30
-		land_forcelimit_modifier = 0.20
+		global_manpower_modifier = 0.20
+		land_forcelimit_modifier = 0.15
 	}
 	united_danube = {
 		discipline = 0.10
@@ -459,6 +459,7 @@ FRE_ideas = {
 	converting_saxons_idea = {
 		global_unrest = -3
 		global_regiment_cost = -0.10
+		colonists = 1
 	}
 	tributary_borders_idea = {
 		prestige = 3
@@ -556,6 +557,7 @@ DUM_ideas = {
 	}
 	technological_advancements_of_western_thinkers = {
 		technology_cost = -0.10
+		colonists = 1
 	}
 	la_manche_rule_the_waves = {
 		naval_morale = 0.15
@@ -650,6 +652,7 @@ LAE_ideas = {
 	}
 	knightly_core_idea = {
 		land_morale = 0.20
+		colonists = 1
 	}
 	crush_the_rump_states_idea = {
 		years_of_nationalism = -5
@@ -718,6 +721,7 @@ ARB_ideas = {
 	}
 	bonus = {
 		global_manpower_modifier = 0.20
+		artillery_power = 0.10
 	}
 	trigger = {
 		tag = AMT
@@ -726,6 +730,7 @@ ARB_ideas = {
 	
 	amt_fundamentalists_of_arabia = {
 		discipline = 0.05
+		infantry_power = 0.10
 	}
 	amt_muslim_traders = {
 		merchants = 1 
@@ -738,9 +743,11 @@ ARB_ideas = {
 	}
 	amt_center_m_world = {
 		advisor_cost = -0.15
+		global_manpower_modifier = 0.20
 	}
 	amt_sword_of_islam = {
 		governing_capacity_modifier = 0.15
+		cavalry_power = 0.15
 	}
 	amt_rashidun_cavalry = {
 		fire_damage_received = -0.15
