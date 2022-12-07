@@ -946,7 +946,7 @@ noble_loyalty_act = {
 		full_idea_group = spy_ideas
 	}
 
-	cavalry_power = 0.20
+	cavalry_power = 0.10
 	army_tradition = 0.5
 	global_manpower_modifier = 0.25
 	global_unrest = -1

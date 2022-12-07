@@ -255,6 +255,8 @@ development = {
 	province_trade_power_value = 0.2
 	local_amount_of_banners = 0.066
 	local_amount_of_cawa = 0.125
+	local_amount_of_carolean = 0.1
+	local_amount_of_hussars = 0.05
 }
 
 development_scaled = {
@@ -1723,13 +1725,13 @@ cawa_regiment = {
 }
 
 hussars_regiment = {
-	cavalry_shock = 1.5
-	morale_damage = 0.6
+	cavalry_shock = 1
+	morale_damage = 0.5
 	reinforce_speed = -0.5
 }
 
 marine_regiment = {
-    shock_damage_received = 0.15
+    fire_damage = 0.10
     regiment_disembark_speed = 2 #requires a new country modifier
 }
 

@@ -1150,7 +1150,7 @@ POR_ideas = {
 
 POL_ideas = {
 	start = {
-		cavalry_cost = -0.15
+		cavalry_cost = -0.1
 		num_accepted_cultures = 2
 	}
 	
@@ -1177,7 +1177,7 @@ POL_ideas = {
 		infantry_power = 0.1
 	}
 	winged_hussars = {
-		cavalry_power = 0.30
+		cavalry_power = 0.20
 		can_recruit_hussars = yes
 	}
 	wojsko_komputoe = {
@@ -2754,12 +2754,11 @@ PLC_ideas = {
 	free = yes
 	
 	plc_prosperous_folwarks = { #Same for all of them
-		global_trade_goods_size_modifier = 0.10
-		cavalry_fire = 1
+		global_trade_goods_size_modifier = 0.20
 	}
 	pol_jagiellonian_university = {
-		idea_cost = -0.15
-		land_morale = 0.10
+		idea_cost = -0.5
+		land_morale = 0.15
 	}
 	plc_the_obrona_potoczna = { #Same for all of them
 		drill_gain_modifier = 0.25
@@ -2993,12 +2992,13 @@ GRA_ideas = {
 PAP_ideas = {
 	start = {
 		diplomatic_reputation = 1
-		religious_unity = 0.35
+		religious_unity = 0.3
 		missionaries = 1
 	}
 
 	bonus = {
 		discipline = 0.05
+		manpower_in_true_faith_provinces  = 0.20
 	}
 	
 	trigger = {
@@ -3017,7 +3017,7 @@ PAP_ideas = {
 		prestige_decay = -0.01
 	}
 	donation_of_constantine = {
-		fabricate_claims_cost = -0.30
+		fabricate_claims_cost = -0.20
 	}
 	centralize_the_states = {
 		production_efficiency = 0.15
@@ -3027,7 +3027,6 @@ PAP_ideas = {
 		infantry_power = 0.15
 	}
 	holy_father = {
-		ae_impact = -0.20
 		artillery_power = 0.10
 	}
 }

@@ -725,12 +725,12 @@ ARB_ideas = {
 	}
 	trigger = {
 		tag = AMT
+		tag = ARB
 	}
 	free = yes
 	
 	amt_fundamentalists_of_arabia = {
 		discipline = 0.05
-		infantry_power = 0.10
 	}
 	amt_muslim_traders = {
 		merchants = 1 
@@ -740,6 +740,7 @@ ARB_ideas = {
 	}
 	amt_new_golden = {
 		idea_cost = -0.10
+		land_morale = 0.15
 	}
 	amt_center_m_world = {
 		advisor_cost = -0.15
@@ -747,7 +748,7 @@ ARB_ideas = {
 	}
 	amt_sword_of_islam = {
 		governing_capacity_modifier = 0.15
-		cavalry_power = 0.15
+		cavalry_power = 0.20
 	}
 	amt_rashidun_cavalry = {
 		fire_damage_received = -0.15

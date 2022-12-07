@@ -19,7 +19,7 @@ NDefines.NDiplomacy.VASSALIZE_BASE_DEVELOPMENT_CAP = 1000
 NDefines.NDiplomacy.MARCH_BASE_DEVELOPMENT_CAP = 1000
 NDefines.NDiplomacy.SPY_NETWORK_SIEGE_EFFECT = 0.10
 NDefines.NDiplomacy.SPY_NETWORK_AE_EFFECT = -0.33
-NDefines.NDiplomacy.INTEGRATE_UNION_MIN_YEARS = 5
+NDefines.NDiplomacy.INTEGRATE_UNION_MIN_YEARS = 40
 NDefines.NDiplomacy.INTEGRATE_VASSAL_MIN_YEARS = 5
 NDefines.NDiplomacy.MONTHS_BEFORE_TOTAL_OCCUPATION = 6
 NDefines.NDiplomacy.GREAT_PROJECT_WARSCORE_COST_MODIFIER = 0
@@ -169,6 +169,12 @@ NDefines.NMilitary.LEADER_GAIN_PERSONALITY_BASE_CHANCE = 25.0
 NDefines.NMilitary.SUPPLY_DEPOT_MIL_COST = 0
 NDefines.NMilitary.NAVAL_DOCTRINE_SAILORS_COST = 0.05			-- Cost for switching naval doctrine (Share of sailors)
 NDefines.NMilitary.NAVAL_DOCTRINE_MIN_FORCE_LIMIT = 15
+NDefines.NMilitary.CREATE_HUSSARS_MIL_COST = 0
+NDefines.NMilitary.HUSSARS_BASE_COST_MODIFIER = 1.0
+NDefines.NMilitary.HUSSARS_MANPOWER_COST_MODIFIER = 1.0
+NDefines.NMilitary.HUSSARS_STARTING_STRENGTH = 1.0
+NDefines.NMilitary.HUSSARS_STARTING_MORALE = 0.15
+NDefines.NMilitary.HUSSARS_USES_CONSTRUCTION = 1
 
 
 
@@ -186,8 +192,8 @@ NDefines.NReligion.YEARLY_HARMONY_INCREASE_WHEN_HARMONIZING = -5.0
 NDefines.NReligion.YEARLY_HARMONIZATION_PROGRESS = 0.05
 NDefines.NReligion.CHANGE_SECONDARY_PRESTIGE_HIT = 0
 NDefines.NReligion.MIN_CARDINALS = 15										-- Least amount of cardinals/ Starting cardinals
-NDefines.NReligion.MAX_CARDINALS = 100
-NDefines.NReligion.MAX_CARDINALS_PER_COUNTRY = 20
+NDefines.NReligion.MAX_CARDINALS = 120
+NDefines.NReligion.MAX_CARDINALS_PER_COUNTRY = 30
 NDefines.NReligion.YEARLY_POPE_INVESTED_INFLUENCE_PER_CARDINAL = 0
 NDefines.NReligion.MAX_PAPAL_INFLUENCE = 999								-- The maximum stored amount of papal influence for each country.
 NDefines.NReligion.REFORM_DESIRE_PER_YEAR = 0.005
