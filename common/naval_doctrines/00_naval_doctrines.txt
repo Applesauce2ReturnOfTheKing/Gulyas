@@ -134,3 +134,18 @@ sex =
 	
 	button_gfx = 8
 }
+
+french_two_seas = 
+{
+	can_select = {
+		is_primitive = no
+		culture_group = french
+	}
+	
+	country_modifier = {
+		heavy_ship_power = 0.10
+		galley_power = 0.15
+		}
+		
+		button_gfx = 6
+}

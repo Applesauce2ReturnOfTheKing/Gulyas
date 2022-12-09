@@ -298,6 +298,7 @@ hagia_sophia = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
+			galley_power = 0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -329,6 +330,7 @@ hagia_sophia = {
 			tolerance_own = 0.25
 			tolerance_heretic = 0.25
 			church_loyalty_modifier = 0.05
+			galley_power = 0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -363,6 +365,7 @@ hagia_sophia = {
 			yearly_patriarch_authority = 0.002
 			papal_influence = 0.5
 			church_loyalty_modifier = 0.1
+			galley_power = 0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -403,6 +406,7 @@ hagia_sophia = {
 			yearly_patriarch_authority = 0.005
 			papal_influence = 1
 			church_loyalty_modifier = 0.15
+			galley_power = 0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -725,6 +729,8 @@ tower_of_london = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
+		global_ship_cost = -0.10
+		sailors_recovery_speed = 0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -755,6 +761,8 @@ tower_of_london = {
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			army_tradition = 0.25
+			global_ship_cost = -0.10
+			sailors_recovery_speed = 0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -786,6 +794,8 @@ tower_of_london = {
 		country_modifiers = {
 			army_tradition = 0.25
 			prestige = 0.25
+			global_ship_cost = -0.10
+			sailors_recovery_speed = 0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -817,6 +827,8 @@ tower_of_london = {
 		country_modifiers = {
 			army_tradition = 0.5
 			prestige = 0.5
+			global_ship_cost = -0.10
+			sailors_recovery_speed = 0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -2119,6 +2131,7 @@ kremlin = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
+			global_manpower_modifier = 0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -2149,6 +2162,7 @@ kremlin = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
+			global_manpower_modifier = 0.15
 		}
 
 		#what effects happen when this tier is achieved
@@ -2181,6 +2195,7 @@ kremlin = {
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			global_regiment_cost = -0.1
+			global_manpower_modifier = 0.20
 		}
 
 		#what effects happen when this tier is achieved
@@ -3029,6 +3044,7 @@ stpeters_cathedral = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
+			global_sailors_modifier = 0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -3058,7 +3074,8 @@ stpeters_cathedral = {
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			appoint_cardinal_cost = -0.05
-			curia_powers_cost = -0.05			
+			curia_powers_cost = -0.05
+			global_sailors_modifier = 0.10	
 		}
 
 		#what effects happen when this tier is achieved
@@ -3090,6 +3107,7 @@ stpeters_cathedral = {
 			appoint_cardinal_cost = -0.1
 			curia_powers_cost = -0.1
 			idea_cost = -0.05
+			global_sailors_modifier = 0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -3128,6 +3146,7 @@ stpeters_cathedral = {
 			curia_powers_cost = -0.1
 			idea_cost = -0.1
 			church_influence_modifier = 0.1
+			global_sailors_modifier = 0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -3764,6 +3783,7 @@ notre_dame_cathedral = {
 			monthly_fervor_increase = 0.25
 			church_power_modifier = 0.05
 			tolerance_own = 0.5
+			reform_progress_growth = 0.1
 		}
 
 		#what effects happen when this tier is achieved
@@ -3796,6 +3816,7 @@ notre_dame_cathedral = {
 			monthly_fervor_increase = 0.5
 			church_power_modifier = 0.1
 			tolerance_own = 1
+			reform_progress_growth = 0.2
 		}
 
 		#what effects happen when this tier is achieved
@@ -3829,6 +3850,7 @@ notre_dame_cathedral = {
 			church_power_modifier = 0.15
 			tolerance_own = 2
 			religious_unity = 0.1
+			reform_progress_growth = 0.3
 		}
 
 		#what effects happen when this tier is achieved
@@ -7086,6 +7108,7 @@ pyramid_of_cheops = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
+		galley_power = 0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -8353,6 +8376,7 @@ belem_tower = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
+			trade_efficiency = 0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -8385,6 +8409,7 @@ belem_tower = {
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			global_trade_power = 0.05
+			trade_efficiency = 0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -8417,6 +8442,7 @@ belem_tower = {
 		country_modifiers = {
 			global_trade_power = 0.1
 			global_sailors_modifier = 0.1
+			trade_efficiency = 0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -8449,6 +8475,7 @@ belem_tower = {
 		country_modifiers = {
 			global_trade_power = 0.15
 			global_sailors_modifier = 0.25
+			trade_efficiency = 0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -9087,6 +9114,8 @@ versailles = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
+			dip_tech_cost_modifier = -0.10
+			leader_naval_manuever = 1
 		}
 
 		#what effects happen when this tier is achieved
@@ -9120,6 +9149,8 @@ versailles = {
 			improve_relation_modifier = 0.1
 			nobles_loyalty_modifier = 0.05
 			nobles_influence_modifier = 0.05
+			dip_tech_cost_modifier = -0.10
+			leader_naval_manuever = 1
 		}
 
 		#what effects happen when this tier is achieved
@@ -9153,6 +9184,8 @@ versailles = {
 			vassal_income = 0.1
 			nobles_loyalty_modifier = 0.1
 			nobles_influence_modifier = 0.1
+			dip_tech_cost_modifier = -0.10
+			leader_naval_manuever = 1
 		}
 
 		#what effects happen when this tier is achieved
@@ -9186,6 +9219,8 @@ versailles = {
 			vassal_income = 0.2
 			nobles_loyalty_modifier = 0.15
 			nobles_influence_modifier = 0.1
+			dip_tech_cost_modifier = -0.10
+			leader_naval_manuever = 1
 		}
 
 		#what effects happen when this tier is achieved
@@ -9275,6 +9310,8 @@ el_escorial = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
+			heavy_ship_power = 0.05
+			trade_efficiency = 0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -9306,7 +9343,9 @@ el_escorial = {
 		country_modifiers = {
 			global_autonomy = -0.01	
 			global_tariffs = 0.05
-			treasure_fleet_income = 0.05			
+			treasure_fleet_income = 0.05
+			heavy_ship_power = 0.05
+			trade_efficiency = 0.10			
 		}
 
 		#what effects happen when this tier is achieved
@@ -9339,6 +9378,8 @@ el_escorial = {
 			governing_capacity_modifier = 0.05
 			global_tariffs = 0.1
 			treasure_fleet_income = 0.1
+			heavy_ship_power = 0.05
+			trade_efficiency = 0.10			
 		}
 
 		#what effects happen when this tier is achieved
@@ -9371,6 +9412,8 @@ el_escorial = {
 			governing_capacity_modifier = 0.1
 			global_tariffs = 0.2
 			treasure_fleet_income = 0.2
+			heavy_ship_power = 0.05
+			trade_efficiency = 0.10			
 		}
 
 		#what effects happen when this tier is achieved
@@ -11400,6 +11443,8 @@ doges_palace = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			ship_power_propagation = 0.15
+			galley_power = 0.10
 		}
 		on_upgraded = {
 		}
@@ -11419,6 +11464,8 @@ doges_palace = {
 		country_modifiers = {
 			reform_progress_growth = 0.1
 			republican_tradition = 0.1 
+			ship_power_propagation = 0.15
+			galley_power = 0.10
 		}
 		on_upgraded = {
 		}
@@ -11439,6 +11486,8 @@ doges_palace = {
 			reform_progress_growth = 0.2
 			republican_tradition = 0.25 
 			prestige = 0.5
+			ship_power_propagation = 0.15
+			galley_power = 0.10
 		}
 		on_upgraded = {
 		}
@@ -11459,6 +11508,8 @@ doges_palace = {
 			reform_progress_growth = 0.3
 			republican_tradition = 0.5 
 			prestige = 1
+			ship_power_propagation = 0.15
+			galley_power = 0.10
 		}
 		on_upgraded = {
 		}
@@ -11514,6 +11565,7 @@ duomo_milano = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			naval_morale = 0.10
 		}
 		on_upgraded = {
 		}
@@ -11538,6 +11590,7 @@ duomo_milano = {
 			church_power_modifier = 0.05
 			global_religious_conversion_resistance = 0.15
 			church_loyalty_modifier = 0.05
+			naval_morale = 0.10
 		}
 		on_upgraded = {
 		}
@@ -11562,6 +11615,7 @@ duomo_milano = {
 			church_power_modifier = 0.1
 			global_religious_conversion_resistance = 0.30
 			church_loyalty_modifier = 0.1
+			naval_morale = 0.10
 		}
 		on_upgraded = {			
 		}
@@ -11586,6 +11640,7 @@ duomo_milano = {
 			church_power_modifier = 0.15
 			global_religious_conversion_resistance = 0.5
 			church_loyalty_modifier = 0.15
+			naval_morale = 0.10
 		}
 		on_upgraded = {			
 		}
@@ -11650,6 +11705,8 @@ dutch_polders = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			heavy_ship_power = 0.10
+			trade_efficiency = 0.10
 		}
 		on_upgraded = {
 		}
@@ -11671,6 +11728,8 @@ dutch_polders = {
 		country_modifiers = {
 			global_trade_goods_size_modifier = 0.05
 			burghers_loyalty_modifier = 0.05
+			heavy_ship_power = 0.10
+			trade_efficiency = 0.10
 		}
 		on_upgraded = {
 		}
@@ -11692,6 +11751,8 @@ dutch_polders = {
 		country_modifiers = {
 			global_trade_goods_size_modifier = 0.05
 			burghers_loyalty_modifier = 0.1
+			heavy_ship_power = 0.10
+			trade_efficiency = 0.10
 		}
 		on_upgraded = {
 		}
@@ -11713,6 +11774,8 @@ dutch_polders = {
 		country_modifiers = {
 			global_trade_goods_size_modifier = 0.1
 			burghers_loyalty_modifier = 0.15
+			heavy_ship_power = 0.10
+			trade_efficiency = 0.10
 		}
 		on_upgraded = {
 		}
@@ -13770,6 +13833,7 @@ malta_forts = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			leader_naval_siege = 1
 		}
 		on_upgraded = {
 		}
@@ -13790,6 +13854,7 @@ malta_forts = {
 		}
 		country_modifiers = {
 			warscore_cost_vs_other_religion = -0.05
+			leader_naval_siege = 1
 		}
 		on_upgraded = {
 		}
@@ -13811,6 +13876,7 @@ malta_forts = {
 		}
 		country_modifiers = {
 			warscore_cost_vs_other_religion = -0.1
+			leader_naval_siege = 1
 		}
 		on_upgraded = {
 		}
@@ -13832,6 +13898,7 @@ malta_forts = {
 		}
 		country_modifiers = {
 			warscore_cost_vs_other_religion = -0.15
+			leader_naval_siege = 1
 		}
 		on_upgraded = {
 		}
@@ -14563,6 +14630,7 @@ royal_palace_caserta = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			galley_power = 0.10
 		}
 		on_upgraded = {
 		}
@@ -14582,6 +14650,7 @@ royal_palace_caserta = {
 		country_modifiers = {
 			prestige = 0.25
 			reform_progress_growth = 0.05
+			galley_power = 0.10
 		}
 		on_upgraded = {
 		}
@@ -14602,6 +14671,7 @@ royal_palace_caserta = {
 			prestige = 0.5
 			reform_progress_growth = 0.1
 			governing_capacity = 50
+			galley_power = 0.10
 		}
 		on_upgraded = {
 		}
@@ -14622,6 +14692,7 @@ royal_palace_caserta = {
 			prestige = 1
 			reform_progress_growth = 0.15
 			governing_capacity = 100
+			galley_power = 0.10
 		}
 		on_upgraded = {
 		}
@@ -14903,6 +14974,7 @@ santa_maria_del_fiore = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			global_ship_cost = -0.1
 		}
 		on_upgraded = {
 		}
@@ -14922,6 +14994,7 @@ santa_maria_del_fiore = {
 		country_modifiers = {
 			monthly_splendor = 0.5
 			prestige_decay = -0.005
+			global_ship_cost = -0.1
 		}
 		on_upgraded = {
 		}
@@ -14942,6 +15015,7 @@ santa_maria_del_fiore = {
 			advisor_cost = -0.1
 			monthly_splendor = 1
 			prestige_decay = -0.01
+			global_ship_cost = -0.1
 		}
 		on_upgraded = {
 		}
@@ -14962,6 +15036,7 @@ santa_maria_del_fiore = {
 			advisor_cost = -0.2
 			monthly_splendor = 2
 			prestige_decay = -0.01
+			global_ship_cost = -0.1
 		}
 		on_upgraded = {
 		}
@@ -15152,6 +15227,7 @@ sultan_ahmed_mosque = {
 		country_modifiers = {
 			prestige_per_development_from_conversion = 0.1
 			tolerance_own = 0.25
+			galley_power = 0.10
 		}
 		on_upgraded = {
 		}
@@ -15172,6 +15248,7 @@ sultan_ahmed_mosque = {
 		country_modifiers = {
 			prestige_per_development_from_conversion = 0.2
 			tolerance_own = 0.5
+			galley_power = 0.10
 		}
 		on_upgraded = {
 		}
@@ -15192,6 +15269,7 @@ sultan_ahmed_mosque = {
 		country_modifiers = {
 			prestige_per_development_from_conversion = 0.3
 			tolerance_own = 1
+			galley_power = 0.10
 		}
 		on_upgraded = {
 		}
@@ -16162,6 +16240,8 @@ winter_palace = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			trade_efficiency = 0.10
+			galley_power = 0.10
 		}
 		on_upgraded = {
 		}
@@ -16182,6 +16262,8 @@ winter_palace = {
 		country_modifiers = {
 			yearly_absolutism = 0.25
 			reform_progress_growth = 0.1
+			trade_efficiency = 0.10
+			galley_power = 0.10
 		}
 		on_upgraded = {
 		}
@@ -16203,6 +16285,8 @@ winter_palace = {
 		country_modifiers = {
 			yearly_absolutism = 0.5
 			reform_progress_growth = 0.15
+			trade_efficiency = 0.10
+			galley_power = 0.10
 		}
 		on_upgraded = {
 		}
@@ -16224,6 +16308,8 @@ winter_palace = {
 		country_modifiers = {
 			yearly_absolutism = 0.5
 			reform_progress_growth = 0.2
+			trade_efficiency = 0.10
+			galley_power = 0.10
 		}
 		on_upgraded = {
 		}
@@ -16483,6 +16569,7 @@ kronborg = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			ship_durability = 0.1
 		}
 		on_upgraded = {
 		}
@@ -16502,6 +16589,7 @@ kronborg = {
 		}
 		country_modifiers = {
 			naval_tradition_from_trade = 0.25
+			ship_durability = 0.1
 		}
 		on_upgraded = {
 			owner = {
@@ -16525,6 +16613,7 @@ kronborg = {
 		}
 		country_modifiers = {
 			naval_tradition_from_trade = 0.5
+			ship_durability = 0.1
 		}
 		on_upgraded = {
 			owner = {
@@ -16548,6 +16637,7 @@ kronborg = {
 		}
 		country_modifiers = {
 			naval_tradition_from_trade = 1
+			ship_durability = 0.1
 		}
 		on_upgraded = {
 			owner = {
@@ -16597,6 +16687,7 @@ visby_city = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			galley_power = 0.10
 		}
 		on_upgraded = {
 		}
@@ -16616,7 +16707,8 @@ visby_city = {
 		area_modifier = {
 		}
 		country_modifiers = {		
-			privateer_efficiency = 0.2	
+			privateer_efficiency = 0.2
+			galley_power = 0.10
 		}
 		on_upgraded = {
 		}
@@ -16638,6 +16730,7 @@ visby_city = {
 		country_modifiers = {		
 			privateer_efficiency = 0.33
 			global_own_trade_power = 0.15
+			galley_power = 0.10
 		}
 		on_upgraded = {
 		}
@@ -16659,6 +16752,7 @@ visby_city = {
 		country_modifiers = {		
 			privateer_efficiency = 0.5
 			global_own_trade_power = 0.25
+			galley_power = 0.10
 		}
 		on_upgraded = {
 		}

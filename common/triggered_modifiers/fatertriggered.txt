@@ -583,3 +583,89 @@ colonisation_buff = {
 	shock_damage = 0.15
 	discipline = 0.05
 }
+
+non_player_nerf = {
+	potential = {
+		was_player = no
+		NOT = {
+			capital_scope = {
+				continent = europe
+			}
+		}
+	}
+	
+	trigger  = {
+		was_player = no
+		NOT = {
+			capital_scope = {
+				continent = europe
+			}
+		}
+	}
+	
+	technology_cost = 0.80
+	development_cost = 0.40
+	discipline = -0.10
+}
+
+
+naval_expansion = {
+	potential = { 
+		num_of_ports = 1
+	}
+	
+	trigger = {
+		num_of_ports = 10
+	}
+	
+	naval_morale = 0.10
+}
+
+naval_expansion_1 = {
+	potential = { 
+		num_of_ports = 10
+	}
+	
+	trigger = {
+		num_of_ports = 20
+	}
+	
+	galley_power = 0.10
+}
+
+naval_expansion_2 = {
+	potential = { 
+		num_of_ports = 20
+	}
+	
+	trigger = {
+		num_of_ports = 30
+	}
+	
+	heavy_ship_power = 0.10
+}
+
+naval_expansion_3 = {
+	potential = { 
+		num_of_ports = 30
+	}
+	
+	trigger = {
+		num_of_ports = 40
+	}
+	
+	ship_durability = 0.1
+}
+
+naval_expansion_4 = {
+	potential = { 
+		num_of_ports = 40
+	}
+	
+	trigger = {
+		num_of_ports = 50
+	}
+	
+	global_naval_engagement_modifier = 0.1
+}
+
