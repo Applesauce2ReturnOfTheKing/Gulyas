@@ -11,8 +11,9 @@ the_recruiting_act = {
 		full_idea_group = economic_ideas
 	}
 	
-	global_sailors_modifier = 0.45
+	global_sailors_modifier = 0.35
 	allowed_marine_fraction = 0.25
+	global_manpower_modifier = 0.1
 	
 	ai_will_do = {
 		factor = 0.6
@@ -55,8 +56,8 @@ hold_the_weather_gauge = {
 	leader_naval_manuever = 1
 	leader_naval_fire = 1
 	ship_durability = 0.10
-	leader_land_fire = 1
 	global_manpower_modifier = 0.25
+	recover_navy_morale_speed = 0.1
 	
 	ai_will_do = {
 		factor = 1
@@ -76,10 +77,11 @@ the_wooden_wall = {
 		full_idea_group = defensive_ideas
 	}
 
-	global_ship_cost = -0.15
-	naval_forcelimit_modifier = 0.35
-	global_regiment_cost = -0.10
-	reinforce_speed = 0.10
+	global_ship_cost = -0.1
+	naval_forcelimit_modifier = 0.2
+	global_ship_recruit_speed = -0.1
+	fire_damage_received = -0.10
+	fire_damage = 0.1
 	
 	ai_will_do = {
 		factor = 0.6
@@ -146,9 +148,8 @@ colonial_expansions = {
 	}		
 
 	global_colonial_growth = 30
-	native_uprising_chance = -0.7
+	native_uprising_chance = -0.5
 	global_manpower_modifier = 0.10
-	discipline = 0.05
 	global_naval_engagement_modifier = 0.1
 	
 	ai_will_do = {
@@ -233,11 +234,9 @@ restrictions_for_colonies = {
 
 
 
-	global_tariffs = 0.35
-	liberty_desire_from_subject_development = -0.25
+	global_tariffs = 0.2
+	liberty_desire_from_subject_development = -0.2
 	manpower_recovery_speed = 0.10
-	land_morale = 0.15
-	heavy_ship_power = 0.10
 
 	ai_will_do = {
 		factor = 1
@@ -302,7 +301,8 @@ naval_infrastructure_act = {
 	}
 
 
-	naval_forcelimit_modifier = 0.45
+	naval_forcelimit_modifier = 0.2
+	global_ship_cost = -0.1
 	naval_morale = 0.10
 
 
@@ -343,9 +343,9 @@ new_naval_tactis = {
 		full_idea_group = maritime_ideas
 	}
 
-	leader_naval_manuever = 2
+	leader_naval_manuever = 1
 	leader_naval_shock = 1
-	heavy_ship_power = 0.15
+	heavy_ship_power = 0.1
 
 
 	ai_will_do = {
@@ -373,6 +373,7 @@ trade_connection_policy = {
 	merchants = 1
 	trade_steering = 0.15
 	cavalry_cost = -0.10
+	mercantilism_cost = -0.225
 
 	ai_will_do = {
 		factor = 0.8		
@@ -407,10 +408,11 @@ naval_secrecy_act = {
 		full_idea_group = defensive_ideas
 	}
 
-	global_spy_defence = 0.30
-	naval_morale = 0.15
-	global_naval_engagement_modifier = 0.1
-	heavy_ship_power = 0.10
+	global_ship_cost = -0.1
+	naval_forcelimit_modifier = 0.15
+	global_regiment_cost = -0.10
+	reinforce_speed = 0.10
+	global_spy_defence = 0.2
 
 	ai_will_do = {
 		factor = 0.8
@@ -460,7 +462,9 @@ cloth_quality_edict = {
 		full_idea_group = quality_ideas
 	}
 	trade_efficiency = 0.2
-	ship_durability = 0.10
+	mercantilism_cost = -0.225
+	center_of_trade_upgrade_cost = -0.1
+	infantry_cost = -0.1
 	infantry_power = 0.05
 
 	ai_will_do = {
@@ -524,7 +528,8 @@ encouragement_of_merchant_navy = {
 	
 	trade_efficiency = 0.1
 	trade_steering = 0.2
-	global_trade_goods_size_modifier = 0.10
+	light_ship_cost = -0.20
+	light_ship_power = 0.25
  
 
 	ai_will_do = {
@@ -568,7 +573,7 @@ commercial_embassies = {
 	
 	global_trade_power = 0.1
 	diplomatic_reputation = 1
-	global_trade_goods_size_modifier = 0.15
+	global_trade_goods_size_modifier = 0.1
 
 	ai_will_do = {
 		factor = 0.8		
@@ -610,6 +615,7 @@ mandatory_service = {
 	meritocracy = 0.5
 	may_recruit_female_generals = yes
 	female_advisor_chance = 0.25
+	manpower_recovery_speed = 0.15
 
 	ai_will_do = {
 		factor = 0
@@ -630,9 +636,10 @@ professional_diplomatic_corps = {
 	}
 	
 	diplomatic_reputation = 1
-	war_exhaustion = -0.05
+	morale_damage = 0.10
+	army_tradition_decay = -0.003
 	recover_army_morale_speed = 0.10
-	infantry_power = 0.05
+	infantry_power = 0.10
 
 	ai_will_do = {
 		factor = 0.7
@@ -708,9 +715,9 @@ chaplains_of_the_fleet = {
 		full_idea_group = maritime_ideas
 	}
 	
-	naval_morale = 0.15
+	naval_morale = 0.1
 	recover_navy_morale_speed = 0.10
-	land_morale = 0.15
+	global_ship_cost = -0.1
 	
 	ai_will_do = {
 		factor = 1
@@ -759,6 +766,7 @@ native_assimilation_act = {
 	
 	global_colonial_growth = 15
 	native_assimilation = 0.5
+	native_uprising_chance = -0.5
 	heavy_ship_power = 0.10
 	
 	ai_will_do = {
@@ -812,9 +820,8 @@ cultural_unity = {
 	
 	culture_conversion_cost = -0.30
 	diplomatic_reputation = 2
-	land_morale = 0.10
+	land_morale = 0.05
 	vassal_forcelimit_bonus = 0.75
-	land_forcelimit_modifier = 0.15
 	
 	
 	ai_will_do = {
@@ -836,8 +843,9 @@ terms_of_surrender_statute = {
 	}	
 	
 	capture_ship_chance = 0.33
-	naval_forcelimit_modifier = 0.35
+	naval_forcelimit_modifier = 0.25
 	global_naval_engagement_modifier = 0.10
+	galley_power = 0.1
 
 	
 	ai_will_do = {
@@ -858,8 +866,8 @@ skilled_cartographers = {
 		full_idea_group = exploration_ideas
 	}	
 	
-	global_naval_engagement_modifier = 0.2
-	naval_forcelimit_modifier = 0.45
+	global_naval_engagement_modifier = 0.1
+	naval_forcelimit_modifier = 0.2
 	heavy_ship_power = 0.10
 	navy_tradition = 1
 	
@@ -891,6 +899,7 @@ fortified_trading_posts = {
 	
 	global_ship_trade_power = 0.4
 	light_ship_cost = -0.15
+	naval_forcelimit_modifier = 0.15
 	
 	ai_will_do = {
 		factor = 0.9
@@ -973,10 +982,11 @@ the_cooperation_act = {
 		full_idea_group = influence_ideas
 	}	
 	
-	caravan_power = 0.45
+	caravan_power = 0.3
 	merchants = 1
-	naval_morale = 0.15
-	global_naval_engagement_modifier = 0.15
+	naval_morale = 0.1
+	global_naval_engagement_modifier = 0.1
+	liberty_desire_from_subject_development = -0.15
 	
 	ai_will_do = {
 		factor = 0.7
@@ -1005,7 +1015,7 @@ record_keeping_act = {
 
 	diplomats = 1
 	diplomatic_reputation = 1
-	development_cost = -0.1
+	development_cost = -0.05
 	land_attrition = -0.1
 
 	ai_will_do = {
@@ -1027,7 +1037,6 @@ colonial_administration_act = {
 	
 	global_colonial_growth = 25
 	colonist_placement_chance = 0.25
-	development_cost = -0.10
 	heavy_ship_power = 0.10
 	global_naval_engagement_modifier = 0.1
 
@@ -1088,8 +1097,8 @@ the_foreign_support_act = {
 	}
 
 	rebel_support_efficiency = 0.75
-	diplomats = 1
-	production_efficiency = 0.15
+	spy_offence = 0.25
+	production_efficiency = 0.1
 	development_cost = -0.05
 	
 	ai_will_do = {
@@ -1110,8 +1119,9 @@ the_stamp_act = {
 	}
 	
 	global_tariffs = 0.25
-	development_cost = -0.10
-	global_naval_engagement_modifier = 0.2
+	development_cost = -0.05
+	global_naval_engagement_modifier = 0.1
+	global_trade_power = 0.15
 	
 	ai_will_do = {
 		factor = 1
@@ -1153,7 +1163,9 @@ black_chamber_act = {
 	
 	spy_offence = 0.25
 	diplomats = 1
-	artillery_power = 0.10
+	recover_army_morale_speed = 0.10
+	manpower_recovery_speed = 0.20
+	siege_ability = 0.15
 
 	ai_will_do = {
 		factor = 0.6
@@ -1174,8 +1186,10 @@ diplomatic_defence_act = {
 
 	diplomats = 1
 	diplomatic_upkeep = 1
-	defensiveness = 0.15
+	defensiveness = 0.2
 	land_morale = 0.05
+	prestige = 1
+	hostile_attrition = 1
 	
 	ai_will_do = {
 		factor = 0.7
@@ -1202,8 +1216,8 @@ armed_neutrality_act = {
 	
 	trade_steering = 0.25
 	merchants = 1
-	fire_damage_received = -0.05
-	shock_damage_received = -0.05
+	trade_efficiency = 0.1
+	fort_maintenance_modifier = -0.15
 
 	ai_will_do = {
 		factor = 0.6
@@ -1246,6 +1260,8 @@ the_naval_supremacy_act = {
 	privateer_efficiency = 0.75
 	blockade_efficiency = 0.75
 	naval_morale = 0.15
+	ship_durability = 0.15
+	leader_naval_shock = 1
 	
 	ai_will_do = {
 		factor = 0.8
@@ -1272,6 +1288,8 @@ letters_of_marque = {
 	privateer_efficiency = 0.5
 	ship_durability = 0.15
 	discipline = 0.025
+	leader_naval_manuever = 1
+	siege_blockade_progress = 1
 
 	
 	ai_will_do = {
@@ -1296,8 +1314,11 @@ trained_marines_act = {
 		full_idea_group = maritime_ideas
 	}
 	
-	naval_morale = 0.2
-	infantry_power = 0.05
+	naval_morale = 0.1
+	ship_durability = 0.1
+	leader_naval_manuever = 1
+	leader_naval_fire = 1
+	navy_tradition_decay = -0.01
 
 	ai_will_do = {
 		factor = 1
@@ -1323,6 +1344,10 @@ steppe_nomad_migrations_policy = {
 	
 	colonist_placement_chance = 0.05
 	native_uprising_chance = -0.5
+	leader_land_manuever = 1
+	land_attrition = -0.1
+	movement_speed = 0.1
+	global_colonial_growth = 15
 
 	ai_will_do = {
 		factor = 0
@@ -1342,8 +1367,11 @@ riverine_navy_policy = {
 		full_idea_group = maritime_ideas
 	}
 	
-	naval_forcelimit_modifier = 0.1
+	naval_forcelimit_modifier = 0.2
 	navy_tradition = 1
+	naval_morale = 0.1
+	navy_tradition_decay = -0.02
+	ship_durability = 0.10
 
 	ai_will_do = {
 		factor = 1.0
@@ -1367,8 +1395,11 @@ passport_to_merchants_policy = {
 		full_idea_group = trade_ideas
 	}
 	
-	mercantilism_cost = -0.2
-	global_own_trade_power = 0.1
+	mercantilism_cost = -0.225
+	global_own_trade_power = 0.2
+	merchants = 1
+	trade_steering = 0.15
+	cavalry_cost = -0.1
 
 	ai_will_do = {
 		factor = 0			
@@ -1396,6 +1427,10 @@ faith_advisors_policy = {
 	yearly_karma_decay = 0.05
 	monthly_piety = 0.001
 	diplomatic_reputation = 1
+	diplomats = 1
+	diplomatic_upkeep = 1
+	province_warscore_cost = -0.15
+	same_culture_advisor_cost = -0.2
 
 	ai_will_do = {
 		factor = 1	
@@ -1415,8 +1450,11 @@ one_and_true = {
 		full_idea_group = influence_ideas
 	}
 	
-	reduced_liberty_desire = 10
-	global_missionary_strength = 0.01
+	reduced_liberty_desire = 15
+	diplomatic_annexation_cost = -0.25
+	vassal_income = 0.5
+	global_unrest = -2
+	vassal_forcelimit_bonus = 1.0
 
 	ai_will_do = {
 		factor = 0
@@ -1438,6 +1476,9 @@ maritime_scribes = {
 	
 	naval_tradition_from_battle = 0.5
 	prestige_from_naval = 0.5
+	naval_forcelimit_modifier = 0.2
+	navy_tradition = 1
+	navy_tradition_decay = -0.02
 
 	ai_will_do = {
 		factor = 0
@@ -1460,6 +1501,9 @@ solidarity_policy = { #change name
 	
 	improve_relation_modifier = 0.15
 	trade_efficiency = 0.15
+	merchants = 1
+	trade_steering = 0.15
+	global_own_trade_power = 0.1
 
 	ai_will_do = {
 		factor = 1.2

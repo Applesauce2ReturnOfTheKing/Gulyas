@@ -12,6 +12,7 @@ the_combination_act = {
 	
 	production_efficiency = 0.25
 	cav_to_inf_ratio = 0.20
+	cavalry_power = 0.15
 
 	ai_will_do = {
 		factor = 1
@@ -50,7 +51,7 @@ the_court_of_wards_and_liveries = {
 		full_idea_group = economic_ideas
 	}
 		
-	development_cost = -0.10
+	development_cost = -0.05
 	cavalry_cost = -0.15
 	infantry_cost = -0.15
 	global_prosperity_growth = 0.5
@@ -108,7 +109,7 @@ formalized_measures = {
 
 	global_tax_modifier = 0.25
 	republican_tradition = 0.2
-	development_cost = -0.10
+	development_cost = -0.05
 
 	ai_will_do = {
 		factor = 1
@@ -142,6 +143,7 @@ agricultural_cultivations = {
 	
 	development_cost = -0.1
 	land_forcelimit_modifier = 0.15
+	global_regiment_cost = -0.05
 
 	ai_will_do = {
 		factor = 1
@@ -183,9 +185,9 @@ the_espionage_act = {
 		full_idea_group = spy_ideas
 	}
 
-	stability_cost_modifier = -0.25
-	diplomats = 1
-	development_cost = -0.15
+	stability_cost_modifier = -0.2
+	technology_cost = -0.05
+	province_warscore_cost = -0.1
 	
 	ai_will_do = {
 		factor = 0.6
@@ -232,8 +234,8 @@ the_royal_commission_act = {
 		full_idea_group = administrative_ideas
 	}
 
-	yearly_corruption = -0.2
-	global_spy_defence = 0.45
+	yearly_corruption = -0.08
+	global_spy_defence = 0.25
 	development_cost = -0.05
 	global_unrest = -1
 	
@@ -257,10 +259,9 @@ edict_of_resistance = {
 
 
 	global_unrest = -2
-	hostile_attrition = 3
-	land_morale = 0.15
+	hostile_attrition = 2
+	land_morale = 0.1
 	manpower_recovery_speed = 0.15
-	reinforce_cost_modifier = -0.20
 
 	ai_will_do = {
 		factor = 1
@@ -299,8 +300,9 @@ public_welfare_act = {
 		full_idea_group = economic_ideas
 	}
 
-	global_unrest = -2
-	stability_cost_modifier = -0.25
+	global_regiment_cost = -0.1
+	reinforce_cost_modifier = -0.15
+	build_cost = -0.05
 	development_cost = -0.05
 
 	ai_will_do = {
@@ -342,11 +344,9 @@ the_spy_discovery_act = {
 		full_idea_group = administrative_ideas
 	}
 
-	yearly_corruption = -0.2
-	global_spy_defence = 0.2
+	yearly_corruption = -0.05
 	development_cost = -0.05
 	land_morale = 0.10
-	siege_ability = 0.10
 	fire_damage_received = -0.10
 	shock_damage_received = -0.10
 
@@ -370,9 +370,8 @@ enforce_religious_law = {
 
 	global_missionary_strength = 0.02
 	global_spy_defence = 0.2
-	land_forcelimit_modifier = 0.15
+	global_tax_modifier = 0.2
 	reinforce_cost_modifier = -0.10
-	land_morale = 0.10
 
 	ai_will_do = {
 		factor = 1
@@ -412,9 +411,10 @@ the_tolerance_act = {
 		full_idea_group = plutocracy_ideas
 	}
 
-	tolerance_heretic = 3
+	global_missionary_strength = 0.02
 	rival_border_fort_maintenance = -0.5
 	land_morale = 0.10
+	manpower_in_true_faith_provinces = 0.1
 
 	ai_will_do = {
 		factor = 1
@@ -454,8 +454,8 @@ vassal_taxation_policy = {
 		full_idea_group = administrative_ideas
 	}
 
-	vassal_income = 0.75
-	development_cost = -0.10
+	vassal_forcelimit_bonus = 0.75
+	global_tax_modifier = 0.2
 	artillery_power = 0.10
 	shock_damage = 0.10
 	fire_damage = 0.10
@@ -500,7 +500,8 @@ the_pioneer_policy = {
 
 	auto_explore_adjacent_to_colony = yes
 	colonist_placement_chance = 0.25
-	land_morale = 0.15
+	global_colonial_growth = 15
+	land_morale = 0.1
 	artillery_power = 0.10
 	
 	ai_will_do = {
@@ -523,8 +524,9 @@ land_inheritance_act = {
 	}
 
 	global_tax_modifier = 0.2
-	global_manpower_modifier = 0.20
-	development_cost = -0.10
+	state_maintenance_modifier = -0.1
+	development_cost = -0.05
+	culture_conversion_cost = -0.15
 	
 	ai_will_do = {
 		factor = 1
@@ -563,13 +565,14 @@ the_witchcraft_act = {
 		full_idea_group = aristocracy_ideas
 	}
 	
-	global_unrest = -2
+	global_unrest = -1
 	global_missionary_strength = 0.03
 	legitimacy = 1
-	manpower_in_true_faith_provinces = 0.20
+	manpower_in_true_faith_provinces = 0.10
 	reinforce_cost_modifier = -0.15
 	shock_damage = 0.10
 	land_morale = 0.10
+	cav_to_inf_ratio = 0.20
 
 	ai_will_do = {
 		factor = 1
@@ -628,7 +631,7 @@ the_education_act = {
 	}
 
 	prestige = 2
-	advisor_cost = -0.2
+	advisor_cost = -0.15
 	development_cost = -0.05
 
 	ai_will_do = {
@@ -649,9 +652,8 @@ policy_of_calculate_delay = {
 		full_idea_group = diplomatic_ideas
 	}
 	
-	religious_unity = 0.25
+	religious_unity = 0.2
 	global_missionary_strength = 0.02
-	infantry_power = 0.10
 	land_morale = 0.10
  
 
@@ -694,8 +696,8 @@ the_loyalty_act = {
 	}
 	
 	global_autonomy = -0.075
-	global_spy_defence = 0.35
-	discipline = 0.05
+	global_spy_defence = 0.3
+	global_trade_power  = 0.2
  
 
 	ai_will_do = {
@@ -736,8 +738,10 @@ exchange_of_ideas = {
 		full_idea_group = trade_ideas
 	}	
 	
-	idea_cost = -0.15
+	idea_cost = -0.1
 	global_institution_spread = 0.2
+	embracement_cost = -0.25
+	monthly_reform_progress_modifier = 0.25
 	
 	ai_will_do = {
 		factor = 0.8
@@ -757,8 +761,9 @@ vassal_obligations_act = {
 		full_idea_group = economic_ideas
 	}	
 	
-	vassal_income = 0.60
+	vassal_income = 0.50
 	vassal_forcelimit_bonus = 0.75
+	build_cost = -0.15
 	
 	ai_will_do = {
 		factor = 1
@@ -800,6 +805,8 @@ foreign_advisors = {
 	
 	advisor_cost = -0.15
 	ae_impact = -0.15
+	technology_cost = -0.025
+	innovativeness_gain = 0.25
 	
 	ai_will_do = {
 		factor = 1
@@ -819,12 +826,11 @@ vassal_integration_act = {
 		full_idea_group = administrative_ideas
 	}	
 	
-	diplomatic_annexation_cost = -0.25
-	diplomatic_reputation = 2
+	diplomatic_annexation_cost = -0.2
+	diplomatic_reputation = 1
 	diplomatic_upkeep = 1
 	movement_speed = 0.15
-	fire_damage = 0.10
-	shock_damage = 0.10
+	development_cost = -0.05
 	
 	ai_will_do = {
 		factor = 1
@@ -866,9 +872,9 @@ overseas_dominions = {
 	}	
 	
 	vassal_income = 0.75
-	global_tariffs = 0.35
+	global_tariffs = 0.25
 	diplomatic_upkeep = 1
-	discipline = 0.05
+	global_colonial_growth = 20
 	
 	
 	ai_will_do = {
@@ -911,8 +917,8 @@ enlightened_aristocracy = {
 	
 	production_efficiency = 0.15
 	religious_unity = 0.2
-	infantry_power = 0.15
-	land_forcelimit_modifier = 0.20
+	cavalry_power = 0.15
+	land_forcelimit_modifier = 0.1
 	
 	ai_will_do = {
 		factor = 1
@@ -976,6 +982,7 @@ the_liberation_act = {
 	global_unrest = -2
 	years_of_nationalism = -5
 	discipline = 0.025
+	war_exhaustion = -0.05
 	
 	ai_will_do = {
 		factor = 1
@@ -1014,7 +1021,8 @@ visionary_thinkers = {
 	
 	prestige = 1
 	prestige_decay = -0.02
-	infantry_power = 0.05
+	infantry_power = 0.15
+	manpower_in_accepted_culture_provinces = 0.1
 	
 	ai_will_do = {
 		factor = 0.6
@@ -1163,6 +1171,7 @@ cultural_recognition_act = {
 	
 	num_accepted_cultures = 2
 	global_institution_spread = 0.25
+	manpower_in_accepted_culture_provinces = 0.2
 	
 	ai_will_do = {
 		factor = 1
@@ -1187,10 +1196,10 @@ the_licensing_of_the_press_act = {
 	devotion = 1
 	horde_unity = 1
 	meritocracy = 0.5
-	development_cost = -0.15
+	development_cost = -0.05
 	province_warscore_cost = -0.15
-	cavalry_cost = -0.05
-	cavalry_power = 0.10
+	cavalry_cost = -0.1
+	cav_to_inf_ratio = 0.20
 	
 	ai_will_do = {
 		factor = 0.8
@@ -1210,9 +1219,9 @@ the_dissolution_act = {
 		full_idea_group = economic_ideas
 	}
 	
-	global_tax_modifier = 0.30
+	global_tax_modifier = 0.20
 	global_autonomy = -0.075
-	development_cost = -0.15
+	state_maintenance_modifier = -0.15
 
 	ai_will_do = {
 		factor = 1
@@ -1273,8 +1282,9 @@ the_statute_of_monopolies = {
 		full_idea_group = economic_ideas
 	}
 
-	production_efficiency = 0.15
-	trade_efficiency = 0.15
+	production_efficiency = 0.2
+	trade_efficiency = 0.2
+	mercantilism_cost = -0.225
 
 
 	ai_will_do = {
@@ -1335,8 +1345,9 @@ taxation_with_representation = {
 		full_idea_group = plutocracy_ideas
 	}
 	
-	production_efficiency = 0.15
-	global_manpower_modifier = 0.35
+	production_efficiency = 0.1
+	global_manpower_modifier = 0.25
+	global_colonial_growth = 15
 
 	ai_will_do = {
 		factor = 1
@@ -1379,6 +1390,8 @@ cultural_understanding = {
 	
 	global_unrest = -2
 	rebel_support_efficiency = 0.30
+	num_accepted_cultures = 2
+	religious_unity = 0.20
 	
 	ai_will_do = {
 		factor = 1
@@ -1420,6 +1433,7 @@ the_citrus_statute = {
 	
 	global_trade_goods_size_modifier = 0.10
 	sunk_ship_morale_hit_recieved = -0.33
+	recover_navy_morale_speed = 0.1
 	
 	ai_will_do = {
 		factor = 0.6
@@ -1444,6 +1458,7 @@ diplomatic_cooperation_act = {
 	advisor_cost = -0.15
 	diplomatic_reputation = 1
 	diplomatic_upkeep = 1
+	diplomats = 1
 
 
 	ai_will_do = {
@@ -1467,6 +1482,8 @@ the_banking_system = {
 
 	interest = -0.5
 	trade_efficiency = 0.15
+	global_own_trade_power = 0.1
+	monthly_reform_progress_modifier = 0.25
 
 
 	ai_will_do = {
@@ -1504,8 +1521,8 @@ church_sponsored_guilds = {
 		full_idea_group = trade_ideas
 	}
 	
-	global_trade_goods_size_modifier = 0.15
-	global_missionary_strength = 0.02
+	global_trade_goods_size_modifier = 0.1
+	global_missionary_strength = 0.01
 	land_morale = 0.10
 	
 	ai_will_do = {
@@ -1546,10 +1563,11 @@ anti_heresy_act = {
 		full_idea_group = offensive_ideas
 	}
 	
-	religious_unity = 0.25
-	global_missionary_strength = 0.04
-	land_morale = 0.10
-	artillery_power = 0.10
+	religious_unity = 0.2
+	global_missionary_strength = 0.02
+	land_morale = 0.1
+	shock_damage = 0.10
+	fire_damage = 0.10
 
 	ai_will_do = {
 		factor = 1
@@ -1589,8 +1607,10 @@ steppe_supplies_policy = {
 		full_idea_group = horde_gov_ideas
 	}
 	
+	horde_unity = 1.0
 	global_manpower_modifier = 0.15
 	manpower_recovery_speed = 0.15
+	raze_power_gain = 0.3
 	
 	ai_will_do = {
 		factor = 1
@@ -1615,8 +1635,9 @@ to_the_ground_policy = {
 		full_idea_group = horde_gov_ideas
 	}
 	
-	raze_power_gain = 0.40
-	horde_unity = 1
+	development_cost = -0.05
+	cavalry_cost = -0.15
+	raze_power_gain = 0.5
 	
 	ai_will_do = {
 		factor = 1
@@ -1637,7 +1658,10 @@ calming_the_tides_policy = {
 	}
 	
 	global_unrest = -2
+	num_accepted_cultures = 2
 	prestige = 0.5
+	horde_unity = 0.5
+	manpower_in_accepted_culture_provinces = 0.1
 	
 	ai_will_do = {
 		factor = 1
@@ -1674,9 +1698,10 @@ esprit_de_corps_policy = {
 		full_idea_group = horde_gov_ideas
 	}
 	
-	years_of_nationalism = -5
-	global_missionary_strength = 0.01
-	land_morale = 0.10
+	global_missionary_strength = 0.02
+	land_morale = 0.1
+	cav_to_inf_ratio = 0.2
+	cavalry_power = 0.1
 	
 	ai_will_do = {
 		factor = 1
@@ -1713,8 +1738,10 @@ otto_per_mille = {
 		full_idea_group = theocracy_gov_ideas
 	}
 	
-	core_creation = -0.15
-	years_of_nationalism = -5
+	global_tax_modifier = 0.2
+	development_cost = -0.05
+	infantry_cost = -0.15
+	reinforce_cost_modifier = -0.10
 	
 	ai_will_do = {
 		factor = 1
@@ -1751,8 +1778,11 @@ religious_spread_policy = {
 		full_idea_group = theocracy_gov_ideas
 	}
 	
-	global_missionary_strength = 0.01
-	missionary_maintenance_cost = -0.15
+	global_missionary_strength = 0.02
+	missionary_maintenance_cost = -0.2
+	manpower_in_true_faith_provinces = 0.2
+	colonist_placement_chance = 0.25
+	global_colonial_growth = 15
 	
 	ai_will_do = {
 		factor = 1
@@ -1794,6 +1824,11 @@ omnism_policy = {
 	
 	tolerance_heathen = 2
 	tolerance_heretic = 2
+	global_unrest = -2
+	num_accepted_cultures = 2
+	prestige = 1
+	manpower_in_accepted_culture_provinces = 0.1
+	religious_unity = 0.2
 	
 	ai_will_do = {
 		factor = 1
@@ -1835,6 +1870,8 @@ ora_et_labora_policy = {
 	
 	global_trade_goods_size_modifier = 0.05
 	land_attrition = -0.2
+	innovativeness_gain = 0.25
+	production_efficiency = 0.25
 	
 	ai_will_do = {
 		factor = 0.6

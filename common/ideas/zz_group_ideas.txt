@@ -911,7 +911,7 @@ arabian_ideas = {
 	
 	arab_indian_ocean_trade = {
 		cavalry_power = 0.20
-		cavalry_cost = 0.1
+		cavalry_cost = -0.1
 	}
 	arabian_horses = {
 		merchants = 1 
