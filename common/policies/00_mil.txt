@@ -13,11 +13,8 @@ privy_council_establishment_act = {
 	}
 
 	defensiveness = 0.15
-	yearly_corruption = -0.05
 	manpower_recovery_speed = 0.15
 	land_attrition = -0.15
-	fire_damage_received = -0.1
-	shock_damage_received = -0.1
 	
 	ai_will_do = {
 		factor = 0.6
@@ -45,9 +42,6 @@ the_mercenary_registration_act = {
 	mercenary_manpower = 0.35
 	merc_maintenance_modifier = -0.20
 	mercenary_cost = -0.15
-	manpower_recovery_speed = 0.1
-	land_attrition = -0.05
-	hostile_attrition = 1
 	
 	ai_will_do = {
 		factor = 1
@@ -71,7 +65,6 @@ the_provincial_taxation_system = {
 	}
 	
 	land_forcelimit_modifier = 0.1
-	manpower_recovery_speed = 0.1
 	development_cost = -0.05
 	global_regiment_cost = -0.05
 	
@@ -98,8 +91,6 @@ the_mining_act = {
 	}
 	
 	leader_land_fire = 1
-	leader_land_shock = 1
-	infantry_cost = -0.1
 	infantry_power = 0.10
 	discipline = 0.025
 	
@@ -129,8 +120,6 @@ the_liquor_act = {
 	recover_army_morale_speed = 0.15
 	reinforce_speed = 0.1
 	infantry_power = 0.10
-	artillery_power = 0.10
-	state_maintenance_modifier = -0.1
 
 	ai_will_do = {
 		factor = 0.6
@@ -152,8 +141,6 @@ horse_artillery = {
 	development_cost = -0.05
 	artillery_power = 0.10
 	siege_ability = 0.1
-	land_maintenance_modifier = -0.15
-	reinforce_cost_modifier = -0.10
 
 	ai_will_do = {
 		factor = 1
@@ -189,10 +176,8 @@ public_road_act = {
 		full_idea_group = trade_ideas
 	}
 	
-	movement_speed = 0.20
-	trade_efficiency = 0.15
-	shock_damage = 0.10
-	fire_damage = 0.10
+	movement_speed = 0.2
+	trade_efficiency = 0.2
 
 	ai_will_do = {
 		factor = 1
@@ -232,11 +217,9 @@ superior_supply_system = {
 		full_idea_group = exploration_ideas
 	}
 	
-	manpower_recovery_speed = 0.15
 	land_attrition = -0.15
-	global_colonial_growth = 15
+	global_colonial_growth = 20
 	naval_forcelimit_modifier = 0.1
-	artillery_cost = -0.15
 
 	ai_will_do = {
 		factor = 1
@@ -263,8 +246,7 @@ modern_siege_weapons = {
 	
 	siege_ability = 0.15
 	leader_siege = 1
-	artillery_power = 0.15
-	movement_speed = 0.10
+	artillery_power = 0.1
 
 	ai_will_do = {
 		factor = 1
@@ -288,11 +270,9 @@ superior_fortification_act = {
 		full_idea_group = defensive_ideas
 	}
 	
-	war_exhaustion = -0.05
 	defensiveness = 0.15
 	fire_damage_received = -0.15
 	shock_damage_received = -0.15
-	recover_army_morale_speed = 0.1
 
 
 	ai_will_do = {
@@ -313,12 +293,9 @@ modern_firearm_techniques = {
 		full_idea_group = quality_ideas
 	}
 	
-	infantry_power = 0.15
-	war_exhaustion = -0.05
-	drill_gain_modifier = 0.33
-	drill_decay_modifier = -0.1
-	yearly_army_professionalism = 0.001
-	manpower_recovery_speed = 0.10
+	infantry_power = 0.1
+	army_tradition = 0.5
+	leader_cost = -0.1
 
 	ai_will_do = {
 		factor = 1.2		
@@ -350,11 +327,9 @@ the_garrison_act = {
 		full_idea_group = quantity_ideas
 	}
 	
-	fort_maintenance_modifier = -0.10
+	fort_maintenance_modifier = -0.15
 	garrison_size = 0.20
 	land_attrition = -0.1
-	shock_damage_received = -0.15
-	shock_damage = 0.1
 
 	ai_will_do = {
 		factor = 1
@@ -374,11 +349,8 @@ military_zeal_act = {
 		full_idea_group = religious_ideas
 	}
 	
-	land_morale = 0.10
-	siege_ability = 0.10
+	land_morale = 0.1
 	discipline = 0.025
-	cavalry_power = 0.1
-	infantry_power = 0.1
 
 	ai_will_do = {
 		factor = 1
@@ -403,9 +375,7 @@ field_priests = {
 	}
 
 	land_morale = 0.05
-	recover_army_morale_speed = 0.05
 	manpower_in_true_faith_provinces = 0.2
-	manpower_recovery_speed = 0.1
 	reserves_organisation = 0.1
 	
 	ai_will_do = {
@@ -432,8 +402,6 @@ pen_rely_on_sword_act = {
 	diplomatic_reputation = 2
 	land_forcelimit_modifier = 0.1
 	global_manpower_modifier = 0.1
-	global_regiment_cost = -0.05
-	land_attrition = -0.1
 
 	
 	ai_will_do = {
@@ -473,11 +441,9 @@ local_army_organisation = {
 		full_idea_group = defensive_ideas
 	}
 
-	defensiveness = 0.10
 	recover_army_morale_speed = 0.25
 	reinforce_speed = 0.15
 	manpower_recovery_speed = 0.15
-	global_trade_goods_size_modifier = 0.05
 
 	ai_will_do = {
 		factor = 1
@@ -496,9 +462,7 @@ underhanded_diplomacy_act = {
 		full_idea_group = offensive_ideas
 	}
 	
-	mercenary_manpower = 0.5
 	diplomatic_reputation = 1
-	siege_ability = 0.15
 	shock_damage = 0.15
 	fire_damage = 0.15
 
@@ -522,8 +486,6 @@ hired_adventurers_act = {
 
 	global_manpower_modifier = 0.1
 	leader_land_manuever = 1
-	leader_land_fire = 1
-	land_attrition = -0.1
 	naval_forcelimit_modifier = 0.15
 
 
@@ -550,14 +512,9 @@ the_tenures_abolition_act = {
 		full_idea_group = aristocracy_ideas
 	}
 
-	diplomats = 1
-	diplomatic_reputation = 1
 	diplomatic_upkeep = 1
-	province_warscore_cost = -0.15
-	shock_damage = 0.05
-	cavalry_power = 0.15
-	manpower_recovery_speed = 0.10
-	cav_to_inf_ratio = 0.20
+	shock_damage = 0.1
+	cavalry_power = 0.1
 		
 	ai_will_do = {
 		factor = 0.6
@@ -577,9 +534,7 @@ colonial_garrisons = {
 		full_idea_group = expansion_ideas
 	}
 
-	land_forcelimit_modifier = 0.15
-	global_colonial_growth = 15
-	global_manpower_modifier = 0.1
+	global_colonial_growth = 20
 	land_attrition = -0.1
 	recover_navy_morale_speed = 0.10
 
@@ -610,10 +565,8 @@ the_maritime_intelligencer_unit = {
 	}	
 	
 	siege_blockade_progress = 2
-	global_naval_engagement_modifier = 0.11
 	naval_forcelimit_modifier = 0.1
 	hostile_attrition = 1
-	recover_navy_morale_speed = 0.10
 	
 	ai_will_do = {
 		factor = 1
@@ -640,7 +593,6 @@ the_nautic_education_act = {
 	recover_navy_morale_speed = 0.15
 	leader_naval_fire = 1
 	leader_naval_manuever = 1
-	ship_durability = 0.1
 	
 	ai_will_do = {
 		factor = 1
@@ -669,9 +621,7 @@ zealous_captains = {
 	}	
 	
 	sunk_ship_morale_hit_recieved = -0.25
-	leader_naval_fire = 1
-	naval_forcelimit_modifier = 0.15
-	naval_morale = 0.1
+	naval_morale = 0.15
 	
 	ai_will_do = {
 		factor = 1
@@ -700,12 +650,8 @@ autonomous_estates = {
 	}	
 	
 	global_unrest = -2
-	vassal_forcelimit_bonus = 1.0
-	land_forcelimit_modifier = 0.1
-	cav_to_inf_ratio = 0.20
-	cavalry_power = 0.15
-	army_tradition = 0.5
-	land_morale = 0.05
+	vassal_forcelimit_bonus = 0.5
+	cavalry_power = 0.1
 	
 	ai_will_do = {
 		factor = 1
@@ -745,12 +691,9 @@ inspirational_leaders = {
 		full_idea_group = quantity_ideas
 	}	
 	
-	leader_land_shock = 1
-	global_manpower_modifier = 0.15
 	recover_army_morale_speed = 0.10
 	religious_unity = 0.15
-	global_unrest = -1
-	land_morale = 0.05
+	land_morale = 0.1
 	
 	
 	ai_will_do = {
@@ -802,7 +745,6 @@ the_preparation_act = {
 	}	
 	
 	defensiveness = 0.10
-	land_attrition = -0.15
 	reinforce_speed = 0.20
 	land_morale = 0.10
 	
@@ -831,7 +773,6 @@ local_militias = {
 	diplomatic_reputation = 1
 	defensiveness = 0.20
 	land_morale = 0.10
-	land_forcelimit_modifier = 0.1
 	
 	
 	ai_will_do = {
@@ -852,12 +793,9 @@ foreign_conscription_centers = {
 		full_idea_group = offensive_ideas
 	}	
 	
-	reinforce_cost_modifier = -0.10
 	diplomatic_upkeep = 1
-	vassal_forcelimit_bonus = 1.0
+	vassal_forcelimit_bonus = 0.5
 	artillery_power = 0.1
-	fire_damage = 0.10
-	shock_damage = 0.10
 	
 	ai_will_do = {
 		factor = 1
@@ -897,11 +835,9 @@ guerilla_warfare = {
 		full_idea_group = quantity_ideas
 	}	
 	
-	vassal_forcelimit_bonus = 0.75
+	vassal_forcelimit_bonus = 0.5
 	global_garrison_growth = 0.25
 	manpower_recovery_speed = 0.15
-	land_forcelimit_modifier = 0.10
-	land_morale = 0.05
 	
 	ai_will_do = {
 		factor = 0.8
@@ -922,9 +858,7 @@ weapon_quality_standards = {
 	
 	discipline = 0.025
 	build_cost = -0.05
-	production_efficiency = 0.1
-	infantry_power = 0.05
-	artillery_power = 0.10
+	infantry_power = 0.075
 	
 	ai_will_do = {
 		factor = 2
@@ -948,12 +882,9 @@ noble_loyalty_act = {
 		full_idea_group = spy_ideas
 	}
 
-	cavalry_power = 0.15
+	cavalry_power = 0.1
 	army_tradition = 0.5
-	global_manpower_modifier = 0.15
-	global_unrest = -1
-	cav_to_inf_ratio = 0.20
-	land_maintenance_modifier = -0.05
+	global_manpower_modifier = 0.1
 	
 	ai_will_do = {
 		factor = 1
@@ -989,9 +920,7 @@ the_colonial_nobility_act = {
 	}
 
 	global_manpower_modifier = 0.15
-	global_colonial_growth = 15
-	infantry_power = 0.15
-	infantry_cost = -0.10
+	global_colonial_growth = 20
 	recover_army_morale_speed = 0.10
 
 	ai_will_do = {
@@ -1012,9 +941,7 @@ nobles_in_navy_act = {
 	}
 
 	navy_tradition_decay = -0.02
-	ship_durability = 0.10
 	sailors_recovery_speed = 0.15
-	naval_forcelimit_modifier = 0.15
 	shock_damage = 0.10
 
 	ai_will_do = {
@@ -1039,7 +966,7 @@ military_allotment_act = {
 		full_idea_group = plutocracy_ideas
 	}
 
-	global_manpower_modifier = 0.25
+	global_manpower_modifier = 0.2
 	global_unrest = -2
 	can_fabricate_for_vassals = yes
 
@@ -1062,8 +989,7 @@ unified_army_command = {
 	}	
 	
 	reduced_liberty_desire = 15
-	vassal_forcelimit_bonus = 0.75
-	vassal_income = 0.5
+	vassal_forcelimit_bonus = 0.5
 	global_manpower = 20
 	
 	ai_will_do = {
@@ -1144,8 +1070,8 @@ deserteur_act = {
 		full_idea_group = quality_ideas
 	}
 
-	reinforce_speed = 0.15
-	infantry_power = 0.10
+	reinforce_speed = 0.1
+	infantry_power = 0.1
 	discipline = 0.025
 	
 	ai_will_do = {
@@ -1185,7 +1111,6 @@ war_horses_policy = {
 	army_tradition = 0.5
 	shock_damage = 0.15
 	advisor_cost = -0.1
-	cav_to_inf_ratio = 0.20
 	
 	ai_will_do = {
 		factor = 0.75
@@ -1221,9 +1146,9 @@ the_best_defense_policy = {
 		full_idea_group = innovativeness_ideas
 	}
 
-	shock_damage = 0.15
-	fire_damage_received = -0.15
-	cavalry_power = 0.15
+	shock_damage = 0.1
+	fire_damage_received = -0.1
+	cavalry_power = 0.1
 	
 	ai_will_do = {
 		factor = 1.0
@@ -1247,7 +1172,6 @@ omne_datum_optimum_policy = {
 		full_idea_group = administrative_ideas
 	}
 
-	manpower_in_true_faith_provinces = 0.15
 	recover_army_morale_speed = 0.05
 	development_cost = -0.05
 	state_maintenance_modifier = -0.1
@@ -1276,8 +1200,6 @@ wielders_of_the_flaming_sword_policy = {
 
 	land_morale = 0.10
 	shock_damage = 0.15
-	global_missionary_strength = 0.02
-	leader_land_shock = 1
 	infantry_power = 0.10
 	
 	ai_will_do = {
@@ -1380,7 +1302,6 @@ fear_tactics_policy = {
 	shock_damage = 0.1
 	diplomatic_reputation = 1
 	land_forcelimit_modifier = 0.1
-	land_attrition = -0.1
 	
 	ai_will_do = {
 		factor = 1.0
@@ -1406,7 +1327,6 @@ psychological_warfare_policy = {
 
 	cavalry_flanking = 0.3
 	cavalry_power = 0.1
-	cav_to_inf_ratio = 0.20
 
 	ai_will_do = {
 		factor = 1.0
@@ -1432,8 +1352,7 @@ kharash_policy = {
 
 	cavalry_power = 0.1
 	land_morale = 0.05
-	vassal_forcelimit_bonus = 0.75
-	cav_to_inf_ratio = 0.20
+	vassal_forcelimit_bonus = 0.5
 
 	ai_will_do = {
 		factor = 1.0
@@ -1457,8 +1376,6 @@ my_word_is_my_bond_policy = {
 		full_idea_group = spy_ideas
 	}
 
-	siege_ability = 0.15
-	land_morale = 0.10
 	spy_offence = 0.25
 	fabricate_claims_cost = -0.2
 	embargo_efficiency = 0.5
@@ -1485,9 +1402,8 @@ render_unto_caesar_policy = {
 		full_idea_group = exploration_ideas
 	}
 
-	global_manpower_modifier = 0.15
-	land_forcelimit_modifier = 0.10
-	global_colonial_growth = 15
+	global_manpower_modifier = 0.1
+	global_colonial_growth = 20
 	siege_blockade_progress = 1
 
 	ai_will_do = {

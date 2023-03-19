@@ -103,38 +103,6 @@ portuguese_marines =
 	button_gfx = 7
 }
 
-sex = 
-{
-	can_select = {
-		is_primitive = no
-		OR = {
-			primary_culture = russian
-			primary_culture = novgorodian
-		}
-	}
-	
-	country_modifier = {
-		sailors_recovery_speed = 0.30
-		allowed_marine_fraction = 0.25
-		heavy_ship_power = 0.20
-		naval_morale = 0.15
-		global_naval_engagement_modifier = 0.1
-		galley_power = 0.25
-		ship_durability = 0.15
-		sunk_ship_morale_hit_recieved = -0.40
-		movement_speed_in_fleet_modifier = 1
-		global_ship_repair = 0.15
-		sailor_maintenance_modifer = -0.2
-		naval_forcelimit_modifier = 0.50
-		global_ship_cost = -0.2
-		sea_repair = yes
-		recover_navy_morale_speed = 0.15
-		global_ship_recruit_speed = -0.35
-	}
-	
-	button_gfx = 8
-}
-
 french_two_seas = 
 {
 	can_select = {

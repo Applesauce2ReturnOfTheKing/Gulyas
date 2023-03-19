@@ -53,7 +53,7 @@ marketplace = {
 	}
 
 	ai_will_do = {
-		factor = 1.5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
+		factor = 0 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
 	}
 }
 
@@ -83,16 +83,21 @@ workshop = {
 	allow_in_gold_provinces = no
 
 	ai_will_do = {
-		factor = 1
+			factor = 350
+            modifier = {
+                    factor = 10
+                    base_production = 4
+                    is_state = yes
+            }
 	}
 }
 
 temple = {
-	cost = 100
+	cost = 50
 	time = 12
 	modifier = {
 		local_missionary_strength = 0.02
-		local_tax_modifier = 0.70
+		local_tax_modifier = 0.50
 	}
 	on_built = {
 		on_province_tax_building_built_estate_privileges_effect = yes
@@ -145,7 +150,12 @@ temple = {
 	on_obsolete = {
 	}
 	ai_will_do = {
-		factor = 1
+			factor = 1
+            modifier = {
+                    factor = 250
+                    base_tax = 4
+                    is_state = yes
+            }
 	}
 }
 
@@ -216,7 +226,12 @@ barracks = {
 #	}
 
 	ai_will_do = {
-		factor = 1
+			factor = 1
+			modifier = {
+                    factor = 250
+                    base_manpower = 3        
+                    is_state = yes
+            }		
 	}
 }
 
@@ -254,15 +269,7 @@ shipyard = {
 	}
 
 	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5 # bit more likely if close to the naval force limit
-			FROM = { navy_size_percentage = 0.95 }
-		}
-		modifier = {
-			factor = 1.1
-			local_autonomy = 50
-		}
+		factor = 0
 	}
 }
 
@@ -791,6 +798,7 @@ coastal_defence = {
 	modifier = {
 		blockade_force_required = 1
 		hostile_disembark_speed = 1.0
+		hostile_fleet_attrition = 1
 		block_slave_raid = yes
 	}
 
@@ -831,62 +839,7 @@ courthouse = {
 	}
 
 	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 2
-			FROM = { governing_capacity_percentage = 0.8 }
-		}
-		modifier = {
-			factor = 3
-			FROM = { governing_capacity_percentage = 1 }
-		}
-		modifier = {
-			factor = 5
-			FROM = { governing_capacity_percentage = 1.1 }
-		}
-		modifier = {
-			factor = 0.75
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0.25
-			FROM = { num_of_loans = 2 }
-		}
-		modifier = {
-			factor = 0
-			FROM = { num_of_loans = 3 }
-		}
-		modifier = {
-			factor = 0.5
-			FROM = { is_in_deficit = yes }
-		}
-		modifier = {
-			factor = 1.25
-			development = 10
-		}
-		modifier = {
-			factor = 1.25
-			development = 20
-		}
-		modifier = {
-			factor = 1.25
-			development = 30
-		}
-		modifier = {
-			factor = 0.5
-			FROM = { NOT = { treasury = 200 } }
-		}
-		modifier = {
-			factor = 1.25
-			FROM = { treasury = 300 }
-		}
-		#Provinces in the Capital Area don't need a courthouse
-		modifier = {
-			factor = 0
-			area_for_scope_province = {
-				is_capital_of = FROM
-			}
-		}
+		factor = 250
 	}
 }
 
@@ -940,51 +893,7 @@ dock = {
 	}
 
 	ai_will_do = {
-		factor = 1
-		modifier = {
-			current_age = age_of_discovery 
-			owner = { NOT = { navy_size = 25 } }
-			factor = 0.25
-		}
-		modifier = {
-			current_age = age_of_reformation
-			owner = { NOT = { navy_size = 50 } }
-			factor = 0.35
-		}
-		modifier = {
-			current_age = age_of_absolutism
-			owner = { NOT = { navy_size = 75 } }
-			factor = 0.5
-		}
-		modifier = {
-			current_age = age_of_revolutions 
-			owner = { NOT = { navy_size = 100 } }
-			factor = 0.75
-		}
-		modifier = {
-			owner = {
-				OR = {
-					has_idea_group = naval_ideas 
-					has_idea_group = maritime_ideas
-				}
-			}
-			factor = 1.25
-		}
-		modifier = {
-			owner = {
-				capital_scope = { 
-					has_port = yes 
-					is_island = yes 
-				}
-			}
-			factor = 1.35
-		}
-		modifier = {
-			owner = {
-				sailors_percentage = 0.75 
-			}
-			factor = 0
-		}
+		factor = 0
 	}
 }
 
@@ -1035,14 +944,10 @@ regimental_camp = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 250
 		modifier = {
 			factor = 1.5 # more likely if we have an army close to the force limit
 			FROM = { army_size_percentage = 0.95 }
-		}
-		modifier = {
-			factor = 1.1
-			local_autonomy = 50
 		}
 	}
 }
@@ -1589,11 +1494,11 @@ naval_battery = {
 cathedral = {
 	make_obsolete = temple
 
-	cost = 300
+	cost = 150
 	time = 12
 	modifier = {
-		local_missionary_strength = 0.04
-		local_tax_modifier = 1.5
+		local_missionary_strength = 0.03
+		local_tax_modifier = 1.2
 	}
 	on_built = {
 		on_province_tax_building_built_estate_privileges_effect = yes
@@ -1655,11 +1560,12 @@ cathedral = {
 
 
 university = {
-	cost = 300
+	cost = 150
 	time = 12
 	modifier = {
-		local_development_cost = -0.20
+		local_development_cost = -0.10
 		allowed_num_of_buildings = 1
+		local_institution_spread = 1
 	}
 
 	on_built = {
@@ -1681,7 +1587,7 @@ university = {
 
 	ai_will_do = {
 		# Hard coded AI sees no value in this above the 0.01 ducats base. Let's multiply that
-		factor = 12 # Base of 0.01 ducats per MONTH
+		factor = 250 # Base of 0.01 ducats per MONTH
 		modifier = {
 			factor = 10
 			development = 16
@@ -1782,55 +1688,31 @@ trade_depot = {
 }
 
 grand_shipyard = {
-	cost = 300
+	cost = 1000
 	time = 12
-
-	make_obsolete = shipyard
 
 	build_trigger = {
 		has_port = yes
 	}
+	
 	modifier = {
-		naval_forcelimit = 4
-		ship_recruit_speed = -0.50
-		local_ship_repair = 0.50
-		land_forcelimit = 1
+		global_ship_cost = -0.1
+		ship_recruit_speed = -0.75
+		local_ship_repair = 0.75
+		navy_tradition = 1
 	}
-
 	on_built = {
-		add_development_from_upgrading_or_building = {
-			building = grand_shipyard
-			obsolete_building = shipyard
-			type = production
-			value = 2
-			upgrade_value = 1
-		}
+ 
 	}
 	on_destroyed = {
-		remove_development_from_building = {
-			building = grand_shipyard
-			type = production
-			value = 2
-		}
-		if = {
-			limit = { has_province_modifier = sca_swe_danish_shipyard }
-			remove_province_modifier = sca_swe_danish_shipyard
-		}
+ 
 	}
 	on_obsolete = {
 	}
-
 	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5 # bit more likely if close to the force limit
-			FROM = { navy_size_percentage = 0.95 }
-		}
-		modifier = {
-			factor = 1.1
-			local_autonomy = 50
-		}
+		factor = 0
 	}
+	one_per_country = yes
 }
 
 training_fields = {
@@ -1906,7 +1788,7 @@ training_fields = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 250
 	}
 }
 
@@ -2519,7 +2401,7 @@ counting_house = {
 	allow_in_gold_provinces = no
 
 	ai_will_do = {
-		factor = 1
+		factor = 250
 	}
 }
 
@@ -2538,6 +2420,7 @@ town_hall = {
 		local_governing_cost = -0.5
 		allowed_num_of_buildings = 1
 		local_friendly_movement_speed = 0.50
+		local_development_cost = -0.1
 	}
 
 	on_built = {
@@ -2560,66 +2443,7 @@ town_hall = {
 	}
 
 	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 10
-			has_building = courthouse
-		}
-		modifier = {
-			factor = 2
-			FROM = { governing_capacity_percentage = 0.8 }
-		}
-		modifier = {
-			factor = 3
-			FROM = { governing_capacity_percentage = 1 }
-		}
-		modifier = {
-			factor = 5
-			FROM = { governing_capacity_percentage = 1.1 }
-		}
-		modifier = {
-			factor = 0.75
-			FROM = { num_of_loans = 1 }
-		}
-		modifier = {
-			factor = 0.25
-			FROM = { num_of_loans = 2 }
-		}
-		modifier = {
-			factor = 0
-			FROM = { num_of_loans = 3 }
-		}
-		modifier = {
-			factor = 0.5
-			FROM = { is_in_deficit = yes }
-		}
-		modifier = {
-			factor = 1.25
-			development = 10
-		}
-		modifier = {
-			factor = 1.25
-			development = 20
-		}
-		modifier = {
-			factor = 1.25
-			development = 30
-		}
-		modifier = {
-			factor = 0.5
-			FROM = { NOT = { treasury = 300 } }
-		}
-		modifier = {
-			factor = 1.25
-			FROM = { treasury = 400 }
-		}
-		#Provinces in the Capital Area don't need a courthouse
-		modifier = {
-			factor = 0
-			area_for_scope_province = {
-				is_capital_of = FROM
-			}
-		}
+		factor = 250
 	}
 }
 
@@ -2680,7 +2504,7 @@ drydock = {
 
 
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -2737,9 +2561,9 @@ conscription_center = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 250
 		modifier = {
-			factor = 1.5 # more likely if we have an army close to the force limit
+			factor = 400 # more likely if we have an army close to the force limit
 			FROM = { army_size_percentage = 0.95 }
 		}
 		modifier = {
@@ -3308,7 +3132,7 @@ wharf = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 3000
 
 		modifier = {
 			factor = 0.4
@@ -3361,7 +3185,7 @@ weapons = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 3000
 	}
 }
 
@@ -3391,7 +3215,7 @@ textile = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 3000
 	}
 }
 
@@ -3423,7 +3247,7 @@ plantations = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 3000
 	}
 }
 
@@ -3455,7 +3279,7 @@ tradecompany = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 3000
 	}
 }
 
@@ -3484,7 +3308,7 @@ farm_estate = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 250
 	}
 }
 
@@ -3515,7 +3339,7 @@ mills = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 3000
 	}
 }
 
@@ -3551,7 +3375,7 @@ furnace = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 3000
 	}
 }
 
@@ -3583,6 +3407,7 @@ soldier_households = {
 		fish
 		livestock
 		wine
+		wool
 	}
 
 	modifier = {
@@ -3611,7 +3436,7 @@ soldier_households = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 3000
 	}
 }
 
