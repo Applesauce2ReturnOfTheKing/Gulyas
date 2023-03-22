@@ -540,12 +540,11 @@ FRA_ideas = {
 TUR_ideas = {
 	start = {
 		discipline = 0.05
-		tolerance_heathen = 3
+		tolerance_heathen = 2
 	}
 	
 	bonus = {
-		land_forcelimit_modifier = 0.3
-		infantry_power = 0.10
+		land_forcelimit_modifier = 0.33
 	}
 
 	trigger = {
@@ -554,24 +553,25 @@ TUR_ideas = {
 	free = yes		#will be added at load.
 	
 	millets = {
-		core_creation = -0.15
+		core_creation = -0.2
 		num_accepted_cultures = 1
 	}	
 	ghazi = {
-		manpower_recovery_speed = 0.25
+		manpower_recovery_speed = 0.15
+		global_manpower_modifier = 0.15
 	}		
 	timariot_system = {
-		cavalry_power = 0.1
+		cavalry_power = 0.15
 	}
 	autonmous_pashas = {
 		war_exhaustion_cost = -0.2
 	}		
 	lawcode_of_suleiman_01 = {
-		global_tax_modifier = 0.25
-		artillery_power = 0.15
+		global_tax_modifier = 0.2
+		artillery_power = 0.1
 	}
 	tulip_period = {
-		trade_efficiency = 0.10
+		trade_efficiency = 0.1
 	}
 	imperial_school_of_naval_engineering = {
 		global_ship_cost = -0.1
@@ -1198,7 +1198,7 @@ HAB_ideas = {
 	}
 	
 	bonus = {
-		heir_chance = 0.60
+		heir_chance = 0.50
 	}
 	
 	trigger = {
@@ -1214,7 +1214,7 @@ HAB_ideas = {
 
 	imperial_ambitions = {
 		imperial_authority = 0.3
-		diplomatic_annexation_cost = -0.25
+		diplomatic_annexation_cost = -0.2
 	}
 	military_border = {
 		global_garrison_growth = 0.20
@@ -1232,10 +1232,10 @@ HAB_ideas = {
 	}
 	austrian_court = {
 		diplomatic_upkeep = 1
-		infantry_power = 0.10
+		infantry_power = 0.1
 	}
 	hofkriegsrat = {
-		reinforce_speed = 0.5
+		reinforce_speed = 0.3
 		discipline = 0.05
 	}
 }
@@ -1325,12 +1325,11 @@ BUR_Ideas = {
 	start = {
 		land_morale = 0.15
 		diplomatic_upkeep = 2
-		infantry_power = 0.10
 	}
 	
 	bonus = {
 		global_trade_goods_size_modifier = 0.15
-		artillery_power = 0.10
+		artillery_power = 0.1
 	}
 	
 	trigger = {
@@ -1339,25 +1338,26 @@ BUR_Ideas = {
 	free = yes
 	
 	golden_fleece = {
-		prestige = 2
+		prestige = 1
 	}
 	compagnies_ordonnance = {
 		merc_maintenance_modifier = -0.20
+		infantry_power = 0.1
 	}
 	bur_estates_general = {
-		mercenary_manpower = 0.75
+		land_forcelimit_modifier = 0.2
 	}
 	reform_of_feudal_army = {
 		discipline = 0.05
 	}
 	integrated_towns = {
-		trade_efficiency = 0.15
+		trade_efficiency = 0.1
 	}
 	freedom_of_worship = {
-		tolerance_heretic = 3
+		tolerance_heretic = 2
 	}
 	bur_regimental_system = {
-		global_manpower_modifier = 0.30
+		global_manpower_modifier = 0.2
 	}
 }
 
@@ -1444,13 +1444,13 @@ SCO_Ideas = {
 
 HUN_ideas = {
 	start = {
-		cavalry_power = 0.20
-		recover_army_morale_speed = 0.1
+		cavalry_power = 0.2
+		recover_army_morale_speed = 0.2
 	}
 	
 	bonus = {
 		artillery_power = 0.1
-		infantry_power = 0.1
+		no_religion_penalty = yes
 	}
 	
 	trigger = {
@@ -1459,31 +1459,31 @@ HUN_ideas = {
 	free = yes
 	
 	hun_renaissanse_knowledge = {
-		global_unrest = -2
-		technology_cost = -0.05
+		idea_cost = -0.05
+		development_cost = -0.05
 	}
-	bulwark_of_christianity = {
-		global_manpower_modifier = 0.25
-		core_creation = -0.10
+	hunyadis_ambition = {
+		ae_impact = -0.10
+		imperial_authority = 0.1
+		reasons_to_elect = 10
+	}
+	the_danube = {
+		ship_durability = 0.05
+		trade_steering = 0.10
 	}
 	found_the_black_army = {
 		discipline = 0.05
 	}
-	national_heroes = {
-		land_morale = 0.15
-		prestige = 2
+	bulwark_of_christianity = {
+		global_manpower_modifier = 0.2
+		core_creation = -0.10
 	}
 	curtailed_peasantry = {
 		production_efficiency = 0.15
 	}
 	strengthened_towns = {
-		global_own_trade_power = 0.30
+		global_own_trade_power = 0.25
 		trade_efficiency = 0.10
-	}
-	hungarian_estates_general = {
-		no_religion_penalty = yes
-		cavalry_cost = -0.15
-		can_recruit_hussars = yes
 	}
 }
 
@@ -1867,7 +1867,6 @@ BYZ_ideas = {
 	}
 	
 	bonus = {
-		diplomatic_reputation = 1
 		prestige_decay = -0.01
 		artillery_power = 0.10
 	}
@@ -1879,28 +1878,27 @@ BYZ_ideas = {
 	
 	regulations_for_mercenaries = {
 		global_manpower_modifier = 0.20
-		cavalry_power = 0.15
 	}
 	repopulation_of_countryside = {
 		global_trade_goods_size_modifier = 0.10
+		culture_conversion_cost = -0.1
 	}
 	byz_state_admin_reform = {
 		technology_cost = -0.1
 	}
 	byz_admin_power = {
 		stability_cost_modifier = -0.15
-		cavalry_cost = -0.20
+		core_creation = -0.2
 	}
 	merchant_class = {
 		global_trade_power = 0.15
 	}
 	new_imperial_army = {
 		land_morale = 0.15
-		infantry_power = 0.10
 	}
 	ecumenical_patriarch = {
-		global_missionary_strength = 0.05
-		tolerance_own = 2
+		global_missionary_strength = 0.02
+		tolerance_own = 1
 	}
 }
 
@@ -3312,7 +3310,7 @@ ASS_ideas = {
 
 TUS_ideas = {
 	start = {
-		papal_influence = 3
+		papal_influence = 2
 		development_cost = -0.05
 	}
 	
@@ -3334,23 +3332,23 @@ TUS_ideas = {
 		technology_cost = -0.05
 	}
 	tuscan_condottieri = {
-		land_morale = 0.15
+		land_morale = 0.1
 	}
 	tuscan_banking = {
 		interest = -0.5
 	}
 	tuscan_arts = {
-		prestige = 3
+		prestige = 1
 	}
 	porto_franco = {
-		trade_efficiency = 0.25
+		trade_efficiency = 0.2
 	}
 	tuscan_administrative_reforms = {
-		production_efficiency = 0.20
-		infantry_power = 0.10
+		production_efficiency = 0.15
+		infantry_power = 0.1
 	}
 	tuscan_grand_duchy = {
-		global_manpower_modifier = 0.30
+		global_manpower_modifier = 0.2
  	}
 }
 

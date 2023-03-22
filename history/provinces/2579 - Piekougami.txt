@@ -1,5 +1,6 @@
 # No previous file for Piekougami
 
+
 culture = innu
 religion = totemism
 capital = "Piekougami"
