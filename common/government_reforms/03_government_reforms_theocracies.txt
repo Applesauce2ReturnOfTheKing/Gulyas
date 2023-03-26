@@ -375,7 +375,7 @@ reformer_state_reform = {
 	nation_designer_cost = 40
 	modifiers = {
 		governing_capacity_modifier = -0.25
-		development_cost = -0.1
+		development_cost = -0.05
 		enforce_religion_cost = -0.33
 		advisor_pool = 1
 		church_power_modifier = 0.15
@@ -432,14 +432,9 @@ papacy_reform = {
 	potential = {
 		tag = PAP
 	}
-
 	modifiers = {
 		manpower_in_true_faith_provinces = 0.15
-		governing_capacity = 250
-		vassal_forcelimit_bonus = 0.5
-		global_tax_modifier = 0.20
-		diplomatic_annexation_cost = -0.10
-		diplomatic_reputation = 1
+		global_tax_modifier = 0.1
 		prestige_per_development_from_conversion = 0.33
 		tolerance_own = 1
 		church_influence_modifier = 0.2
@@ -465,9 +460,17 @@ internal_mission_reform = {
 	icon = "clergyman"
 	allow_normal_conversion = yes
 	modifiers = {
-		global_tax_modifier = 0.10
+		global_tax_modifier = 0.1
 		discipline = 0.025
-		nobles_influence_modifier = -0.15
+		nobles_influence_modifier = -0.1
+	}
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+	}
+	custom_attributes = {
+		seizing_land_no_rebels = yes
 	}
 }
 
@@ -475,9 +478,17 @@ external_mission_reform = {
 	icon = "soldiers"
 	allow_normal_conversion = yes
 	modifiers = {
-		global_manpower_modifier = 0.15
-		nobles_loyalty_modifier = 0.05
-		infantry_power = 0.05
+		manpower_in_own_culture_provinces = 0.15
+		manpower_in_accepted_culture_provinces = 0.15
+		manpower_in_culture_group_provinces = 0.15
+	}
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+	}
+	custom_attributes = {
+		seizing_land_no_rebels = yes
 	}
 }
 
@@ -505,10 +516,16 @@ mission_to_kill_pirates_reform = {
 	}
 	modifiers = {
 		global_sailors_modifier = 0.15
-		naval_forcelimit_modifier = 0.25
-		capture_ship_chance = 0.33
-		allowed_marine_fraction = 0.2
-		galley_power = 0.10
+		naval_forcelimit_modifier = 0.2
+		galley_power = 0.15
+	}
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+	}
+	custom_attributes = {
+		seizing_land_no_rebels = yes
 	}
 }
 
@@ -517,8 +534,16 @@ balanced_mission_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		devotion = 0.5
-		national_focus_years = -10
-		land_morale = 0.05
+		national_focus_years = -5
+		land_morale = 0.075
+	}
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+	}
+	custom_attributes = {
+		seizing_land_no_rebels = yes
 	}
 }
 
@@ -526,9 +551,17 @@ commercial_mission_reform = {
 	icon = "merchant"
 	allow_normal_conversion = yes
 	modifiers = {
-		global_trade_power = 0.1
+		free_policy = 1
 		merchants = 1
 		trade_efficiency = 0.10
+	}
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+	}
+	custom_attributes = {
+		seizing_land_no_rebels = yes
 	}
 }
 
@@ -536,11 +569,17 @@ mission_to_protect_reform = {
 	icon = "castle"
 	allow_normal_conversion = yes
 	modifiers = {
-		defensiveness = 0.1
-		missionaries = 1
-		prestige_per_development_from_conversion = 0.2
-		fort_maintenance_modifier = -0.15
+		defensiveness = 0.15
 		rival_border_fort_maintenance = -0.25
+		possible_policy = 1
+	}
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+	}
+	custom_attributes = {
+		seizing_land_no_rebels = yes
 	}
 }
 
@@ -587,29 +626,13 @@ kingdom_of_god_reform = {
 	custom_attributes = {
 		education_focus_enabled = yes
 	}
-	conditional = {
-		allow = {
-		}
-		claim_states = yes
-	}
 }
 
 education_of_the_bishop_reform = {
 	icon = "reformer"
 	allow_normal_conversion = yes
 	modifiers = {
-		monarch_lifespan = 0.15
-		build_cost = -0.05
-		diplomatic_upkeep = 1
-		diplomatic_annexation_cost = -0.25
-		diplomatic_reputation = 2
-		global_prosperity_growth = 0.50
-		free_adm_policy = 1
-		free_dip_policy = 1
-		free_mil_policy = 1
-		possible_adm_policy = 1
-		possible_dip_policy = 1
-		possible_mil_policy = 1
+		monarch_lifespan = 0.2
 	}
 	effect = {
 		hidden_effect = {
@@ -637,17 +660,9 @@ education_of_the_advisors_reform = {
 	icon = "arabic_scripture"
 	allow_normal_conversion = yes
 	modifiers = {
-		num_accepted_cultures = 3
-		advisor_pool = 2
+		advisor_pool = 1
 		advisor_cost = -0.1
 		reform_progress_growth = 0.2
-		all_estate_loyalty_equilibrium = 0.10
-		free_adm_policy = 1
-		free_dip_policy = 1
-		free_mil_policy = 1
-		possible_adm_policy = 1
-		possible_dip_policy = 1
-		possible_mil_policy = 1
 	}
 }
 
@@ -655,23 +670,11 @@ education_of_the_missionaries_reform = {
 	icon = "church"
 	allow_normal_conversion = yes
 	modifiers = {
-		global_missionary_strength = 0.02
 		#power_points_per_development_from_conversion = 0.25	#For 1.35
-		missionary_maintenance_cost = -0.2
-		max_absolutism = 5
-		state_maintenance_modifier = -0.20
-		global_unrest = -3
+		global_missionary_strength = 0.02
+		missionary_maintenance_cost = -0.5
+		max_absolutism = 10
 		development_cost = -0.05
-		trade_efficiency = 0.15
-		global_autonomy = -0.025
-		core_creation = -0.10
-		years_of_nationalism = -5
-		free_adm_policy = 1
-		free_dip_policy = 1
-		free_mil_policy = 1
-		possible_adm_policy = 1
-		possible_dip_policy = 1
-		possible_mil_policy = 1
 	}
 }
 
@@ -681,16 +684,7 @@ education_of_the_people_reform = {
 	modifiers = {
 		idea_cost = -0.05
 		institution_spread_from_true_faith = 0.33
-		global_manpower_modifier = 0.1
-		vassal_forcelimit_bonus = 0.5
-		province_warscore_cost = -0.10
 		global_tax_modifier = 0.15
-		free_adm_policy = 1
-		free_dip_policy = 1
-		free_mil_policy = 1
-		possible_adm_policy = 1
-		possible_dip_policy = 1
-		possible_mil_policy = 1
 	}
 }
 
@@ -702,15 +696,7 @@ subservient_administrators_reform = {
 	modifiers = {
 		yearly_corruption = -0.1
 		all_estate_influence_modifier = -0.05
-		free_adm_policy = 1
-		global_tax_modifier = 0.20
-		production_efficiency = 0.10
-		naval_forcelimit_modifier = 0.25
-		land_forcelimit_modifier = 0.10
-		stability_cost_modifier = -0.20
-		monarch_admin_power = 1
-		church_influence_modifier = 0.1
-		church_loyalty_modifier = 0.05
+		production_efficiency = 0.1
 	}
 }
 
@@ -720,10 +706,7 @@ religious_administrators_reform = {
 	modifiers = {
 		stability_cost_modifier = -0.1
 		church_loyalty_modifier = 0.1
-		culture_conversion_cost = -0.15
-		all_estate_influence_modifier = -0.15
 		advisor_cost = -0.1
-		advisor_pool = 1
 	}
 }
 
@@ -733,11 +716,11 @@ pious_merchants_reform = {
 	modifiers = {
 		global_trade_power = 0.1
 		placed_merchant_power = 5
+		trade_efficiency = 0.10
 		burghers_influence_modifier = 0.1
 		burghers_loyalty_modifier = 0.05
-		advisor_cost = -0.10
-		trade_efficiency = 0.10
-		monarch_diplomatic_power = 1
+		vaisyas_loyalty_modifier = 0.05
+		vaisyas_influence_modifier = 0.1
 	}
 }
 
@@ -747,15 +730,13 @@ loyal_nobility_reform = {
 	modifiers = {
 		free_leader_pool = 1
 		army_tradition = 0.5
+		leader_cost = -0.2
 		nobles_influence_modifier = 0.1
+		maratha_exclusive_influence_modifier = 0.1
+		rajput_exclusive_influence_modifier = 0.1
 		nobles_loyalty_modifier = 0.05
-		leader_cost = -0.1
-		manpower_recovery_speed = 0.10
-		land_morale = 0.10
-		monarch_military_power = 1
-		nobles_influence_modifier = 0.1
-		nobles_loyalty_modifier = 0.05
-
+		maratha_exclusive_loyalty_modifier = 0.05
+		rajput_exclusive_loyalty_modifier = 0.05
 	}
 }
 
@@ -876,9 +857,7 @@ maintain_religious_head_reform = {
 	modifiers = {
 		yearly_absolutism = 1
 		max_absolutism = 10
-		administrative_efficiency = 0.10
-		global_tax_modifier = 0.15
-		church_loyalty_modifier = 0.15
+		church_loyalty_modifier = 0.1
 	}
 }
 
@@ -888,12 +867,8 @@ partial_secularisation_reform = {
 	modifiers = {
 		tolerance_of_heathens_capacity = 1
 		tolerance_of_heretics_capacity = 1
-		stability_cost_modifier = -0.10
-		global_trade_goods_size_modifier = 0.05
+		stability_cost_modifier = -0.1
 		global_unrest = -2
-		nobles_loyalty_modifier = 0.05
-		church_loyalty_modifier = 0.05
-		burghers_loyalty_modifier = 0.05
 	}
 }
 
@@ -908,9 +883,6 @@ battle_pope_reform = {
 		manpower_in_true_faith_provinces = 0.15
 		leader_land_fire = 1
 		army_tradition_decay = -0.003
-		discipline = 0.025
-		diplomatic_reputation = 1
-		nobles_loyalty_modifier = 0.15
 	}
 	ai = {
 		factor = 3
@@ -924,14 +896,9 @@ conciliarism_reform = {
 		tag = PAP
 	}
 	modifiers = {
-		appoint_cardinal_cost = -0.1
+		appoint_cardinal_cost = -0.33
 		monthly_favor_modifier = 0.5
-		production_efficiency = 0.10
-		global_trade_goods_size_modifier = 0.05
-		burghers_loyalty_modifier = 0.15
-		monthly_reform_progress_modifier = 0.1
-		all_estate_influence_modifier = 0.05
-		all_estate_loyalty_equilibrium = 0.1
+		production_efficiency = 0.1
 	}
 	ai = {
 		factor = 3
@@ -994,16 +961,12 @@ safeguard_holy_sites_reform = {
 	icon = "church"
 	allow_normal_conversion = yes
 	modifiers = {
-		global_tax_modifier = 0.1
 		discipline = 0.025
+		defensiveness = 0.1
 		church_loyalty_modifier = 0.1
 		brahmins_hindu_loyalty_modifier = 0.1
 		brahmins_other_loyalty_modifier = 0.1
 		jains_loyalty_modifier = 0.1
-		defensiveness = 0.1
-		possible_adm_policy = 1
-		possible_dip_policy = 1
-		possible_mil_policy = 1
 	}
 }
 
@@ -1014,10 +977,6 @@ combat_heresy_reform = {
 		land_morale = 0.05
 		shock_damage = 0.15
 		fire_damage = 0.15
-		land_maintenance_modifier = -0.1
-		possible_adm_policy = 1
-		possible_dip_policy = 1
-		possible_mil_policy = 1
 	}
 }
 
@@ -1027,10 +986,6 @@ expel_heathens_reform = {
 	modifiers = {
 		development_cost = -0.05
 		culture_conversion_cost = -0.15
-		manpower_recovery_speed = 0.20
-		possible_adm_policy = 1
-		possible_dip_policy = 1
-		possible_mil_policy = 1
 	}
 	#custom_attributes = {
 	#	reduced_building_cost_in_heathen_heretic_provinces = yes	#1.35, -20% Local Construction Cost
@@ -1043,14 +998,11 @@ pursuit_of_knowledge_reform = {
 	modifiers = {
 		technology_cost = -0.05
 		idea_cost = -0.05
-		global_manpower_modifier = 0.25
-		possible_adm_policy = 1
-		possible_dip_policy = 1
-		possible_mil_policy = 1
+		institution_spread_from_true_faith = 0.33
 	}
-	custom_attributes = {
-		can_see_theocratic_heir_stats = yes
-	}
+	#custom_attributes = {
+	#	can_see_theocratic_heir_stats = yes
+	#}
 }
 
 #Separation of Powers
@@ -1061,15 +1013,8 @@ clerical_commission_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		global_unrest = -1
-		diplomatic_upkeep = 1	
-		envoy_travel_time = -0.25
 		governing_capacity = 250
 		max_absolutism = 10
-		culture_conversion_cost = -0.35
-		administrative_efficiency = 0.10
-		global_tax_modifier = 0.15
-		manpower_in_own_culture_provinces = 0.35
-		years_of_nationalism = -10
 	}
 	
 	ai = {
@@ -1081,11 +1026,9 @@ divine_guidance_reform = {
 	icon = "divine_guidance_reform"
 	allow_normal_conversion = yes
 	modifiers = {
-		min_autonomy_in_territories = -0.40
-		administrative_efficiency = 0.10
-		advisor_cost = -0.15
-		global_tax_modifier = 0.25
-		manpower_in_accepted_culture_provinces = 0.25
+		min_autonomy_in_territories = -0.20
+		advisor_cost = -0.1
+		global_tax_modifier = 0.15
 	}
 	
 	ai = {
@@ -1102,10 +1045,7 @@ theocratic_democracy_reform = {
 	fixed_rank = 0
 	modifiers = {
 		global_unrest = -1
-		possible_policy = 1
-		global_manpower_modifier = 0.30
-		global_prosperity_growth = 0.50
-		global_unrest = -2
+		global_prosperity_growth = 0.5
 	}
 	
 	potential = {
@@ -1133,7 +1073,7 @@ theocratic_democracy_reform = {
 		has_parliament = yes
 		custom_attributes = {
 			blocked_call_diet = yes
-			disables_nobility = yes
+			disables_estate_nobles = yes
 		}
 	}
 	ai = {
@@ -1169,10 +1109,6 @@ constitional_theocracy_reform = {
 	modifiers = {
 		years_of_nationalism = -10
 		warscore_cost_vs_other_religion = -0.15
-		tolerance_own = 2
-		production_efficiency = 0.10
-		manpower_recovery_speed = 0.1
-		discipline = 0.025
 	}
 	
 	ai = {
@@ -1350,11 +1286,8 @@ church_and_state_reform = {
 	icon = "church_and_state_reform"
 	allow_normal_conversion = yes
 	modifiers = {
-		max_absolutism = 5
-		yearly_absolutism = 0.5
+		max_absolutism = 10
 		discipline = 0.025
-		global_tax_modifier = 0.2
-		manpower_in_culture_group_provinces = 0.1
 	}
 	ai = {
 		factor = 0
@@ -1372,12 +1305,7 @@ god_and_man_reform = {
 	modifiers = {
 		missionaries = 1
 		tolerance_own = 2
-		possible_policy = 1
-		free_policy = 1
-		num_accepted_cultures = 2
-		claim_states = yes
-		manpower_recovery_speed = 0.10
-		infantry_power = 0.05
+		infantry_power = 0.1
 	}
 	ai = {
 		factor = 0
@@ -1444,8 +1372,7 @@ belief_and_unity_reform = {
 	modifiers = {
 		religious_unity = 0.5
 		num_accepted_cultures = 2
-		land_morale = 0.1
-		manpower_in_own_culture_provinces = 0.2
+		manpower_in_accepted_culture_provinces = 0.25
 	}
 	ai = {
 		factor = 0
@@ -1459,9 +1386,7 @@ religious_culture_reform = {
 	allow_normal_conversion = yes
 
 	modifiers = {
-		governing_capacity = 200
-		production_efficiency = 0.20
-		global_trade_goods_size_modifier = 0.10
+		governing_capacity = 250
 	}
 	ai = {
 		factor = 1
@@ -1473,10 +1398,9 @@ harmonization_of_cultures_reform = {
 	allow_normal_conversion = yes
 
 	modifiers = {
+		same_culture_advisor_cost = -0.25
 		promote_culture_cost = -0.5
-		same_culture_advisor_cost = -0.2
-		global_tax_modifier = 0.25
-		governing_capacity = 200
+		global_tax_modifier = 0.1
 	}
 	ai = {
 		factor = 1
@@ -1488,9 +1412,8 @@ cultural_safe_haven_reform = {
 	allow_normal_conversion = yes
 
 	modifiers = {
-		manpower_in_accepted_culture_provinces = 0.3
-		manpower_in_culture_group_provinces = 0.2
-		governing_capacity = 200
+		manpower_in_accepted_culture_provinces = 0.15
+		manpower_in_culture_group_provinces = 0.25
 	}
 	#custom_attributes = {
 	#	unrest_per_accepted_culture = yes	#Reduces Global Unrest by 0.25 per accepted culture	#For 1.35, not implemented yet.
@@ -1506,8 +1429,7 @@ taxation_of_the_foreigners_reform = {
 
 	modifiers = {
 		yearly_absolutism = 0.5
-		global_tax_modifier = 0.5
-		governing_capacity = 200
+		global_tax_modifier = 0.25
 	}
 	conditional = {
 		allow = { has_dlc = "Cradle of Civilization" }
@@ -1537,12 +1459,9 @@ religion_in_one_country_reform = {
 		}
 	}
 	modifiers = {
-		infantry_power = 0.05
-		manpower_recovery_speed = 0.1
+		infantry_power = 0.1
 		warscore_cost_vs_other_religion = -0.3
 		country_diplomatic_power = 1
-		country_admin_power = 1
-		country_military_power = 1
 	}
 	ai = {
 		factor = 3
@@ -1570,10 +1489,7 @@ religious_permanent_revolution_reform = {
 	}
 	modifiers = {
 		enforce_religion_cost = -0.5
-		land_morale = 0.05
-		manpower_recovery_speed = 0.1
-		country_diplomatic_power = 1
-		country_admin_power = 1
+		manpower_recovery_speed = 0.15
 		country_military_power = 1
 	}
 	ai = {
@@ -1604,13 +1520,9 @@ priestly_autonomy_reform = {
 	allow_normal_conversion = yes
 	
 	modifiers = {
-		administrative_efficiency = 0.10
-		min_autonomy_in_territories = -0.05
+		administrative_efficiency = 0.1
 		discipline = 0.025
-		manpower_recovery_speed = 0.1
-		country_diplomatic_power = 1
 		country_admin_power = 1
-		country_military_power = 1
 	}
 	ai = {
 		factor = 3
@@ -1622,11 +1534,8 @@ state_of_theologians_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		advisor_pool = 2
-		advisor_cost = -0.15
-		production_efficiency = 0.10
-		country_diplomatic_power = 1
-		country_admin_power = 1
-		country_military_power = 1
+		advisor_cost = -0.2
+		development_cost = -0.5
 	}
 	ai = {
 		factor = 3
@@ -1637,11 +1546,8 @@ divinity_through_craftsmanship_reform = {
 	icon = "peasant_republic"
 	allow_normal_conversion = yes
 	modifiers = {
-		development_cost_modifier = -0.05
 		global_trade_goods_size_modifier = 0.1
-		country_diplomatic_power = 1
-		country_admin_power = 1
-		country_military_power = 1
+		production_efficiency = 0.2
 	}
 	ai = {
 		factor = 3

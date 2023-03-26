@@ -39,6 +39,33 @@ oligarchy_reform = {
 	}
 	modifiers = {
 		global_tax_modifier = 0.05
+		max_absolutism = -40
+	}
+	boost_income = yes
+	
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
 	}
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
@@ -52,7 +79,7 @@ oligarchy_reform = {
 signoria_reform = {
 	icon = "signoria_reform"
 	allow_normal_conversion = yes
-	duration = 12
+	duration = 6
 	legacy_equivalent = signoria
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -64,7 +91,7 @@ signoria_reform = {
 		culture_group = latin
 	}
 	modifiers = {
-		global_tax_modifier = 0.05
+		global_tax_modifier = 0.1
 		max_absolutism = 10
 	}
 	custom_attributes = {
@@ -279,6 +306,7 @@ venice_merchants_reform = {
 		max_absolutism = -10
 		merchants = 1
 		yearly_corruption = -0.1
+		accept_vassalization_reasons = 10
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
@@ -687,8 +715,8 @@ peasants_republic = {
 	legacy_equivalent = peasants_republic_legacy
 	modifiers = {
 		production_efficiency = 0.1
-		land_morale = 0.05
-		max_absolutism = -10
+		land_morale = 0.1
+		max_absolutism = -15
 	}
 	effect = {
 		hidden_effect = {
@@ -842,9 +870,9 @@ ambrosian_republic = {
 	nation_designer_cost = 25
 	modifiers = {
 		global_tax_modifier = 0.1
-		land_morale = 0.05
-		governing_capacity = 50
-		max_absolutism = 10
+		land_morale = 0.1
+		governing_capacity = 75
+		max_absolutism = 15
 	}
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
@@ -1437,10 +1465,12 @@ dutch_republic = {
 	}
 
 	modifiers = {
-		heavy_ship_power = 0.1
-		trade_efficiency = 0.1
-		governing_capacity = 50
-		max_absolutism = 10
+		global_trade_goods_size_modifier = 0.10
+		expand_administration_cost = -0.25
+		governing_capacity = 100
+		max_absolutism = -30
+		artillery_fire = 0.25
+		republican_tradition = 1
 	}
 
 	removed_effect = {
@@ -1462,7 +1492,7 @@ dutch_republic = {
 
 		states_general_mechanic = {
 			statists = {
-				naval_forcelimit_modifier = 0.10
+				heavy_ship_power = 0.1
 				global_trade_power = 0.05
 				republican_tradition = 1
 			}
@@ -1548,13 +1578,18 @@ republican_authoritarianism_reform = {
 	}
 	modifiers = {
 		global_unrest = -1
-		max_absolutism = 5
-		free_adm_policy = 1
-		free_dip_policy = 1
-		free_mil_policy = 1
+		max_absolutism = 10
 		possible_adm_policy = 1
 		possible_dip_policy = 1
 		possible_mil_policy = 1
+	}
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+	}
+	custom_attributes = {
+		seizing_land_no_rebels = yes
 	}
 	ai = {
 		factor = 1
@@ -1590,16 +1625,15 @@ nepotism_reform = {
 	}
 	modifiers = {
 		candidate_random_bonus = 1
-		free_adm_policy = 1
-		free_dip_policy = 1
-		free_mil_policy = 1
-		possible_adm_policy = 1
-		possible_dip_policy = 1
-		possible_mil_policy = 1
 	}
-
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+	}
 	custom_attributes = {
 		enables_nepotism = yes
+		seizing_land_no_rebels = yes
 	}
 	ai = {
 		factor = 1
@@ -1623,9 +1657,14 @@ republicanism_reform = {
 		free_adm_policy = 1
 		free_dip_policy = 1
 		free_mil_policy = 1
-		possible_adm_policy = 1
-		possible_dip_policy = 1
-		possible_mil_policy = 1
+	}
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+	}
+	custom_attributes = {
+		seizing_land_no_rebels = yes
 	}
 	ai = {
 		factor = 1.5
@@ -1645,7 +1684,8 @@ democratic_values_reform = {
 		}
 	}
 	modifiers = {
-		global_trade_goods_size_modifier = 0.05
+		global_trade_goods_size_modifier = 0.1
+		global_manpower_modifier = 0.1
 		maratha_muslim_influence_modifier = 0.1
 		rajput_muslim_influence_modifier = 0.1
 		burghers_influence_modifier = 0.1
@@ -1653,12 +1693,14 @@ democratic_values_reform = {
 		vaisyas_non_muslim_influence_modifier = 0.1
 		may_recruit_female_generals = yes
 		female_advisor_chance = 0.25
-		free_adm_policy = 1
-		free_dip_policy = 1
-		free_mil_policy = 1
-		possible_adm_policy = 1
-		possible_dip_policy = 1
-		possible_mil_policy = 1
+	}
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+		custom_attributes = {
+		seizing_land_no_rebels = yes
+	}
 	}
 	ai = {
 		factor = 1
@@ -1678,19 +1720,23 @@ aristocratic_values_reform = {
 		}
 	}
 	modifiers = {
-		global_manpower_modifier = 0.1
+		manpower_in_own_culture_provinces = 0.2
+		manpower_in_accepted_culture_provinces = 0.15
+		manpower_in_culture_group_provinces = 0.15
 		nobles_influence_modifier = 0.1
 		maratha_exclusive_influence_modifier = 0.1
 		rajput_exclusive_influence_modifier = 0.1
 		nobles_loyalty_modifier = 0.05
 		maratha_exclusive_loyalty_modifier = 0.05
 		rajput_exclusive_loyalty_modifier = 0.05
-		free_adm_policy = 1
-		free_dip_policy = 1
-		free_mil_policy = 1
-		possible_adm_policy = 1
-		possible_dip_policy = 1
-		possible_mil_policy = 1
+	}
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+		custom_attributes = {
+		seizing_land_no_rebels = yes
+	}
 	}
 	ai = {
 		factor = 1
@@ -1711,18 +1757,21 @@ religious_values_reform = {
 	}
 	modifiers = {
 		missionaries = 1
+		discipline = 0.025
 		
 		brahmins_hindu_influence_modifier = 0.1
 		brahmins_hindu_loyalty_modifier = 0.05
 
 		church_influence_modifier = 0.1
 		church_loyalty_modifier = 0.05
-		free_adm_policy = 1
-		free_dip_policy = 1
-		free_mil_policy = 1
-		possible_adm_policy = 1
-		possible_dip_policy = 1
-		possible_mil_policy = 1
+	}
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+		custom_attributes = {
+		seizing_land_no_rebels = yes
+	}
 	}
 	ai = {
 		factor = 1
@@ -1753,12 +1802,15 @@ council_of_captains_reform = {
 	modifiers = {
 		pr_captains_influence = 0.1
 		privateer_efficiency = 0.33
-		free_adm_policy = 1
-		free_dip_policy = 1
-		free_mil_policy = 1
-		possible_adm_policy = 1
-		possible_dip_policy = 1
-		possible_mil_policy = 1
+		global_ship_cost = -0.1
+	}
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+		custom_attributes = {
+		seizing_land_no_rebels = yes
+	}
 	}
 	ai = {
 		factor = 2.5
@@ -1792,9 +1844,14 @@ articles_of_agreement_reform = {
 		free_adm_policy = 1
 		free_dip_policy = 1
 		free_mil_policy = 1
-		possible_adm_policy = 1
-		possible_dip_policy = 1
-		possible_mil_policy = 1
+	}
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+		custom_attributes = {
+		seizing_land_no_rebels = yes
+	}
 	}
 	ai = {
 		factor = 2.5
@@ -1824,12 +1881,17 @@ smugglers_haven_reform = {
 	modifiers = {
 		pr_smugglers_influence = 0.1
 		global_foreign_trade_power = 0.3
-		free_adm_policy = 1
-		free_dip_policy = 1
-		free_mil_policy = 1
 		possible_adm_policy = 1
 		possible_dip_policy = 1
 		possible_mil_policy = 1
+	}
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+		custom_attributes = {
+		seizing_land_no_rebels = yes
+	}
 	}
 	ai = {
 		factor = 2.5
@@ -1848,12 +1910,14 @@ the_pirate_ways_reform = {
 		naval_morale = 0.1
 		naval_maintenance_modifier = -0.10
 		republican_tradition = 1
-		free_adm_policy = 1
-		free_dip_policy = 1
-		free_mil_policy = 1
-		possible_adm_policy = 1
-		possible_dip_policy = 1
-		possible_mil_policy = 1
+	}
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+		custom_attributes = {
+		seizing_land_no_rebels = yes
+	}
 	}
 	effect = {
 		custom_tooltip = break_every_non_pirate_alliance_tt
@@ -1888,12 +1952,14 @@ liberte_reform = {
 		rr_girondists_influence = 0.1
 		num_accepted_cultures = 2
 		promote_culture_cost = -0.75
-		free_adm_policy = 1
-		free_dip_policy = 1
-		free_mil_policy = 1
-		possible_adm_policy = 1
-		possible_dip_policy = 1
-		possible_mil_policy = 1
+	}
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+		custom_attributes = {
+		seizing_land_no_rebels = yes
+	}
 	}
 	ai = {
 		factor = 2.5
@@ -1912,12 +1978,14 @@ egalite_reform = {
 		republican_tradition = 0.25
 		legitimacy = 1
 		advisor_pool = 1
-		free_adm_policy = 1
-		free_dip_policy = 1
-		free_mil_policy = 1
-		possible_adm_policy = 1
-		possible_dip_policy = 1
-		possible_mil_policy = 1
+	}
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+		custom_attributes = {
+		seizing_land_no_rebels = yes
+	}
 	}
 	ai = {
 		factor = 2.5
@@ -1936,12 +2004,14 @@ fraternite_reform = {
 		culture_conversion_cost = -0.2
 		harsh_treatment_cost = -0.25
 		reform_progress_growth = 0.1
-		free_adm_policy = 1
-		free_dip_policy = 1
-		free_mil_policy = 1
-		possible_adm_policy = 1
-		possible_dip_policy = 1
-		possible_mil_policy = 1
+	}
+	conditional = {
+		allow = {
+		}
+		claim_states = yes
+		custom_attributes = {
+		seizing_land_no_rebels = yes
+	}
 	}
 	ai = {
 		factor = 2.5
@@ -2116,7 +2186,8 @@ consolidate_power_in_doge_reform = {
 		}
 	}
 	modifiers = {
-		governing_capacity = 250
+		governing_capacity = 200
+		max_absolutism = 10
 	}
 	has_term_election = no
 	ai = {
@@ -2150,11 +2221,11 @@ consolidate_power_in_cities_reform = {
 		}
 	}
 	modifiers = {
-		diplomatic_upkeep = 1
-		global_foreign_trade_power = 0.1
+		merchants = 1
+		global_foreign_trade_power = 0.2
 	}
 	has_term_election = yes
-	duration = 4
+	duration = 5
 	ai = {
 		factor = 10
 		modifier = {
@@ -2303,7 +2374,7 @@ provincial_governments_reform = {
 	icon = "landscape"
 	allow_normal_conversion = yes
 	modifiers = {
-		state_maintenance_modifier = -0.25
+		state_maintenance_modifier = -0.4
 		global_prosperity_growth = 0.5
 	}
 	ai = {
@@ -2356,6 +2427,7 @@ union_of_states_reform = {
 	}
 	modifiers = {
 		global_trade_power = 0.1
+		trade_efficiency = 0.1
 	}
 	conditional = {
 		allow = {
@@ -2413,8 +2485,9 @@ presidential_reform = {
 	icon = "man_on_podium"
 	allow_normal_conversion = yes
 	modifiers = {
-		embracement_cost = -0.1
-		max_absolutism = 5
+		embracement_cost = -0.2
+		max_absolutism = 15
+		republican_tradition = 0.2
 	}
 	ai = {
 		factor = 1
@@ -2434,7 +2507,8 @@ estate_council_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		all_estate_loyalty_equilibrium = 0.1
-		max_absolutism = -25
+		stability_cost_modifier = -0.1
+		max_absolutism = -15
 	}
 	potential = {
 		is_revolutionary = no
@@ -2592,7 +2666,7 @@ broaden_executive_powers_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		stability_cost_modifier = -0.15
-		all_power_cost = -0.02
+		all_power_cost = -0.01
 	}
 	ai = {
 		factor = 1
@@ -2793,7 +2867,7 @@ absolute_president_reform = {
 		has_dlc = "Emperor"
 	}
 	modifiers = {
-		all_power_cost = -0.05
+		all_power_cost = -0.02
 		election_cycle = 1
 	}
 	ai = {
@@ -2954,7 +3028,7 @@ political_principle_reform = {
 	icon = "paper_with_seal_3"
 	allow_normal_conversion = yes
 	modifiers = {
-		possible_adm_policy = 1
+		free_adm_policy = 1
 	}
 }
 
@@ -2962,7 +3036,7 @@ moral_principle_reform = {
 	icon = "parliament_hall"
 	allow_normal_conversion = yes
 	modifiers = {
-		possible_dip_policy = 1
+		free_dip_policy = 1
 	}
 }
 
@@ -2970,7 +3044,7 @@ stability_principle_reform = {
 	icon = "soldiers_6"
 	allow_normal_conversion = yes
 	modifiers = {
-		possible_mil_policy = 1
+		free_mil_policy = 1
 	}
 }
 
@@ -3065,6 +3139,7 @@ landholders_reform = {
 	}
 	modifiers = {
 		manpower_recovery_speed = 0.1
+		global_manpower_modifier = 0.15
 	}
 	ai = {
 		factor = 1
@@ -3101,9 +3176,9 @@ admiralty_reform = {
 	}
 	modifiers = {
 		leader_naval_fire = 1
+		leader_naval_shock = 1
 		naval_tradition_from_battle = 1
-		republican_tradition = -0.5
-		max_absolutism = 10
+		naval_morale = 0.1
 	}
 	custom_attributes = {
 		admirals_become_rulers = yes
@@ -3124,10 +3199,9 @@ military_rulership_reform = {
 		NOT = { has_government_attribute = is_pirate_republic_reform }
 	}
 	modifiers = {
-		leader_land_shock = 1
+		leader_land_fire = 1
 		army_tradition = 0.5
-		republican_tradition = -0.5
-		max_absolutism = 10
+		discipline = 0.025
 	}
 	custom_attributes = {
 		generals_become_rulers = yes
@@ -3147,7 +3221,9 @@ dynastic_rulership_reform = {
 	}
 	modifiers = {
 		diplomatic_reputation = 2
-		republican_tradition = -0.25
+		vassal_forcelimit_bonus = 0.5
+		diplomatic_annexation_cost = -0.1
+		republican_tradition = -0.2
 	}
 	queen = yes
 	royal_marriage = yes
@@ -3243,7 +3319,7 @@ appointment_by_committee_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		advisor_pool = 1
-		advisor_cost = -0.05
+		advisor_cost = -0.1
 	}
 }
 
@@ -3251,7 +3327,8 @@ bureaucratic_aparatus_reform = {
 	icon = "map_2"
 	allow_normal_conversion = yes
 	modifiers = {
-		min_autonomy_in_territories = -0.10
+		min_autonomy_in_territories = -0.2
+		governing_capacity = 150
 	}
 }
 
@@ -3259,7 +3336,7 @@ universal_suffrage_reform = {
 	icon = "paper_with_seal"
 	allow_normal_conversion = yes
 	modifiers = {
-		free_dip_policy = 1
+		monarch_diplomatic_power = 2
 	}
 	ai = {
 		factor = 1
@@ -3383,7 +3460,11 @@ strengthen_executive_powers_reform = {
 		is_revolutionary = no 
 	}
 	modifiers = {
-		max_absolutism = 25
+		max_absolutism = 10
+		yearly_absolutism = 0.5
+		discipline = 0.025
+		global_tax_modifier = 0.15
+		country_admin_power = 1
 	}
 }
 
@@ -3391,8 +3472,10 @@ reinforce_republican_values_reform = {
 	icon = "parliament_hall"
 	allow_normal_conversion = yes
 	modifiers = {
-		free_adm_policy = 1
-		reelection_cost = -0.1
+		free_policy = 1
+		manpower_recovery_speed = 0.1
+		infantry_power = 0.1
+		country_military_power = 1
 	}
 }
 
@@ -3404,7 +3487,9 @@ federal_senate_reform = {
 	}
 	modifiers = {
 		expand_administration_cost = -1
-		candidate_random_bonus = 1
+		country_diplomatic_power = 1
+		land_forcelimit_modifier = 0.15
+		possible_policy = 1
 	}
 
 	conditional = {
