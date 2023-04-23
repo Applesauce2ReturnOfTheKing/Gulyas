@@ -2,6 +2,51 @@
 # Do not change tags in here without changing every other reference to them.
 # If adding new groups or ideas, make sure they are unique.
 
+# This one is the first for the case that some country manages to become fully Norse.
+
+norse_ideas = {
+	start = {
+		land_morale = 0.15	
+		may_perform_slave_raid_on_same_religion = yes
+	}
+	
+	bonus = {
+		infantry_power = 0.15
+	}
+	
+	trigger = {
+		has_country_flag = accepted_norse_ideas_flag
+		NOT = { has_country_flag = refused_norse_ideas }
+	}
+	free = yes
+	
+	norse_ideas_eternal_struggle = {
+		manpower_recovery_speed = 0.15
+		war_exhaustion = -0.03
+	}
+	norse_ideas_norse_seamen = {
+		own_coast_naval_combat_bonus = 1
+		naval_morale = 0.15	
+	}
+	norse_ideas_a_wall_of_shields_for_the_king = {
+		leader_land_shock = 1
+		leader_naval_shock = 1
+	}
+	norse_ideas_norse_artisans = {
+		development_cost = -0.1
+	}
+	norse_ideas_berserkir = {
+		shock_damage = 0.2
+	}
+	norse_ideas_leifs_legacy = {
+		may_explore = yes
+		colonists = 1
+	}
+	norse_ideas_ancestral_faith = {
+		tolerance_own = 2
+	}
+}
+
 ### Nation specific idea groups
 
 HLR_ideas = {
@@ -177,6 +222,93 @@ GBR_ideas = {
 		leader_naval_manuever = 1
 		blockade_efficiency = 0.30
 		allowed_marine_fraction = 0.5
+	}
+}
+
+AVE_ideas = {
+	start = {
+		global_manpower_modifier = 0.2
+		improve_relation_modifier = 0.3
+	}
+
+	bonus = {
+		years_of_nationalism = -5
+	}
+	
+	trigger = {
+		tag = AVE
+	}
+	free = yes		#will be added at load.
+
+	angevin_decentralized_rule = {
+		core_creation = -0.2
+	}
+	english_common_law = {
+		global_tax_modifier = 0.15
+		num_of_parliament_issues = 1
+	}
+	lessons_of_the_anglo_french_wars = {
+		discipline = 0.05
+	}
+	the_many_thrones = {
+		heir_chance = 0.5
+		years_to_integrate_personal_union = -10
+	}
+	reformed_angevin_infantry = {
+		infantry_power = 0.1
+	}
+	seneschal_of_france = {
+		governing_capacity_modifier = 0.15
+	}
+	rule_of_the_plantagenet = {
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+	}
+}
+
+EIC_ideas = {
+	start = {
+		global_prov_trade_power_modifier = 0.2
+		no_religion_penalty = yes
+	}
+
+	bonus = {
+		global_trade_power = 0.15
+	}
+	
+	trigger = {
+		tag = EIC
+	}
+	free = yes		#will be added at load.
+
+	eic_governors_general = {
+		global_unrest = -1
+		governing_capacity_modifier = 0.1
+	}
+	eic_indian_trade = {
+		global_trade_goods_size_modifier = 0.15
+	}
+	eic_chartered_merchants = {
+		merchants = 1
+		placed_merchant_power = 10
+	}
+	eic_presidency_armies = {
+		global_manpower_modifier = 0.1
+		global_sailors_modifier = 0.2
+	}
+	eic_intercontinental_trade = {
+		trade_steering = 0.25
+		trade_range_modifier = 0.1
+	}
+	eic_colonial_monopoly = {
+		trade_efficiency = 0.1
+	}
+	eic_colonial_exploitation = {
+		trade_company_investment_cost = -0.1
+		build_cost = -0.1
 	}
 }
 
@@ -533,6 +665,53 @@ FRA_ideas = {
 		tolerance_heathen = 2
 		tolerance_heretic = 2
 		artillery_power = 0.1
+	}
+}
+
+FRA_ideas_2 = {
+	start = {
+		max_revolutionary_zeal = 5 
+		harsh_treatment_cost = -0.5
+	}
+	
+	bonus = {
+		siege_ability = 0.15
+	}	
+
+	trigger = {
+		tag = FRA
+		if = {
+			limit = { has_dlc = "Emperor" }
+			is_revolution_target = yes 
+		}
+		else = { is_revolutionary = yes } 
+	}
+	free = yes		#will be added at load.
+	
+	revolutionary_tribunal = {
+		years_of_nationalism = -10
+	}
+	elan = {
+		land_morale = 0.15
+		morale_damage = 0.05
+	}
+	mandats_territoriaux = {
+		production_efficiency = 0.15
+		inflation_reduction = 0.05
+	} 
+	liberty_egalite_fraternity = {
+		tolerance_heretic = 1 
+		tolerance_heathen = 1 
+	}
+	jourdan_law = {
+		manpower_recovery_speed = 0.2
+	}
+	napoleonic_tactics = {
+		military_tactics = 0.1
+		drill_gain_modifier = 0.5
+	}
+	european_ambitions = {
+		core_creation = -0.2
 	}
 }
 
@@ -9367,6 +9546,50 @@ YUA_ideas = {
 	}
 }
 
+BUK_ideas = {
+	start = {
+		cavalry_power = 0.20
+		development_cost = -0.1
+	}
+	bonus = {
+		build_cost = -0.15
+	}
+	trigger = {
+		tag = BUK
+	}
+	free = yes
+	
+	buk_jochid_patrimony = {
+		core_creation = -0.2
+		legitimacy = 0.5
+		devotion = 0.5
+		republican_tradition = 0.15
+		meritocracy = 0.5
+		horde_unity = 0.5
+	}
+	buk_naqshbandi_patronage = {
+		monthly_piety_accelerator = 0.001
+		global_institution_spread = 0.15
+	}
+	buk_mahalla_schools = {
+		technology_cost = -0.05
+	}
+	buk_the_jews_of_bukhara = {
+		tolerance_of_heathens_capacity = 1
+		dhimmi_loyalty_modifier = 0.05
+	}
+	buk_the_ark = {
+		fort_maintenance_modifier = -0.25
+	}
+	buk_the_tower_of_death = {
+		global_unrest = -2
+	}
+	buk_sahih_al-bukhari = {
+		tolerance_own = 1
+		global_heretic_missionary_strength = 0.02
+	}
+}
+
 ANS_ideas = {
 	start = {
 		diplomatic_reputation = 1
@@ -11539,7 +11762,7 @@ AKK_ideas = {
 		leader_land_shock = 1
 	}
 	akk_unite_the_federation = {
-		yearly_tribal_allegiance = 1
+		yearly_government_power = 1
 		cavalry_cost = -0.2
 	}
 	akk_turko_iranian_bureaucracy = {

@@ -3,10 +3,10 @@ spriteTypes = {
 		name = "government_reform_king_2"
 		texturefile = "gfx//interface//government_reform_icons//king_2.dds"
 	}
-	spriteType = {
-		name = "government_reform_byzantine_government"
-		texturefile = "gfx//interface//government_reform_icons//byzantine_empire_reform.dds"
-	}
+#	spriteType = {
+#		name = "government_reform_byzantine_government"
+#		texturefile = "gfx//interface//government_reform_icons//byzantine_empire_reform.dds"
+#	}
 	spriteType = {
 		name = "government_reform_landscape"
 		texturefile = "gfx//interface//government_reform_icons//landscape.dds"

@@ -32,6 +32,7 @@
 vassal = {}
 march = {}
 daimyo_vassal = {}
+appanage = {}
 personal_union = {}
 client_vassal = {}
 client_march = {}
@@ -40,6 +41,10 @@ crown_colony = {}
 private_enterprise = {}
 self_governing_colony = {}
 tributary_state = {}
+eyalet = {}
+core_eyalet = {}
+commercial_enterprise = {}
+trade_protectorate = {}
 
 default = {
 	# Graphics:

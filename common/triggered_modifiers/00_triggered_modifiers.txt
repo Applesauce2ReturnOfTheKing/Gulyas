@@ -499,7 +499,7 @@ reaction = {
 	discipline = 0.025
 	culture_conversion_cost = -0.80
 	monarch_admin_power = 1
-	monarch_mil_power = 1
+	monarch_military_power = 1
 	
 }
 

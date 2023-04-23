@@ -152,7 +152,7 @@ pirate_ideas = {
 	}	
 	pirates_plunder = {
 		loot_amount = 0.25
-		merchant = 1
+        coast_raid_range = 1
 	}
 	pirates_bucanneers_ideas = {	
 		infantry_power = 0.1
