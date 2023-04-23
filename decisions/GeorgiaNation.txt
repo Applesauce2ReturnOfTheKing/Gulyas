@@ -13,7 +13,6 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			tag = GEO
 			government = monarchy
-			NOT = { has_reform = georgian_monarchy_legacy }
 		}
 
 		allow = {
@@ -130,10 +129,5 @@ country_decisions = {
 			}
 			set_country_flag = formed_georgia_flag
 		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 400 #
 	}
-	
 }

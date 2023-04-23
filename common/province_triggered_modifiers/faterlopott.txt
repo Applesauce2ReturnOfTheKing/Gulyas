@@ -465,19 +465,16 @@ conquest_of_berlin = {
 	potential = {
 		normal_or_historical_nations = yes
 	}
-
 	trigger = {
 		owner = {
-				NOT = { tag = BRA }
-				NOT = { tag = PRU }
-			berlin_area	 = {
+			mittelmark_area	 = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_non_sovereign_subject_holds = PREV
 				}
 		}		
 		controlled_by = ROOT
 	}
-	land_morale = 0.05
+	yearly_army_professionalism = 0.005
  
 	
 	#Province scope
@@ -499,11 +496,11 @@ conquest_of_saint_petersburg = {
 		owner = {
 				moscow_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_non_sovereign_subject_holds = PREV
 				}
 			}
 		controlled_by = ROOT	
-	}	
+	}		
 
 	vassal_income = 0.25
  
@@ -704,7 +701,6 @@ conquest_of_pest = {
 		}	
 
 	land_morale = 0.05
- 
 	
 	#Province scope
 	on_activation = {
@@ -732,12 +728,12 @@ conquest_of_copenhagen = {
 				}
 				denmark_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_non_sovereign_subject_holds = PREV
 				}
 			}
 		controlled_by = ROOT
 		
-	}	
+	}
 
 	discipline = 0.03
 	ship_durability = 0.05
@@ -846,12 +842,16 @@ gc_cagliari_copper = {
 gc_catanzaro_silk = {
 	potential = {
 		normal_or_historical_nations = yes
-		has_global_flag = gc_catanzaro_silk
+		always = no
 	}
-	trigger = {controlled_by = ROOT
+	trigger = {
+		owner = {
+			has_global_flag = gc_catanzaro_silk
+		}
+		controlled_by = ROOT
 	}
 	trade_goods_size = 3
-	local_development_cost = -0.05
+	local_development_cost = -0.10
 }
 
 conquest_of_amsterdam = {

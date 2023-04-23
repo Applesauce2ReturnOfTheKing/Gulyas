@@ -520,7 +520,7 @@ crusader = {
 		crusade_target = {
 			war_with = ROOT
 			any_province = {
-				controlled_by = root
+				controlled_by = ROOT # NOTE: was root
 			}
 		}  
 		land_maintenance = 1.0
